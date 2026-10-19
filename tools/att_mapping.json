@@ -1,0 +1,1658 @@
+[
+ {
+  "id": "ts-w1800v",
+  "name": "TS-W1800V",
+  "kind": "圧砕",
+  "class": 1.6,
+  "maker": "オカダ",
+  "units": [
+   1
+  ],
+  "memo": "",
+  "pdfs": [
+   {
+    "file": "TS-350・1100V.pdf",
+    "pages": [
+     1
+    ]
+   }
+  ],
+  "flag": "",
+  "as": "TS-W1800V",
+  "caution": ""
+ },
+ {
+  "id": "ts-w1600v",
+  "name": "TS-W1600V",
+  "kind": "圧砕",
+  "class": 1.6,
+  "maker": "オカダ",
+  "units": [
+   2
+  ],
+  "memo": "",
+  "pdfs": [
+   {
+    "file": "TS-350・1100V.pdf",
+    "pages": [
+     1
+    ]
+   }
+  ],
+  "flag": "",
+  "as": "TS-W1600V",
+  "caution": ""
+ },
+ {
+  "id": "mr1800",
+  "name": "MR1800",
+  "kind": "圧砕",
+  "class": 1.6,
+  "maker": "オオスミ",
+  "units": [
+   3
+  ],
+  "memo": "",
+  "pdfs": [],
+  "flag": "",
+  "as": "",
+  "caution": ""
+ },
+ {
+  "id": "sv-47x",
+  "name": "SV-47X",
+  "kind": "圧砕",
+  "class": 1.6,
+  "maker": "ニューマチック",
+  "units": [
+   4
+  ],
+  "memo": "",
+  "pdfs": [
+   {
+    "file": "SV-24XR-SV36X.pdf",
+    "pages": [
+     1
+    ]
+   }
+  ],
+  "flag": "",
+  "as": "SV-47X(R)",
+  "caution": ""
+ },
+ {
+  "id": "osc-360a",
+  "name": "OSC-360A",
+  "kind": "小割",
+  "class": 1.6,
+  "maker": "オカダ",
+  "units": [
+   46
+  ],
+  "memo": "",
+  "pdfs": [
+   {
+    "file": "OSC-135A.pdf",
+    "pages": [
+     1
+    ]
+   }
+  ],
+  "flag": "",
+  "as": "OSC-360A",
+  "caution": ""
+ },
+ {
+  "id": "ts-w1350v",
+  "name": "TS-W1350V",
+  "kind": "圧砕",
+  "class": 1.2,
+  "maker": "オカダ",
+  "units": [
+   5
+  ],
+  "memo": "",
+  "pdfs": [
+   {
+    "file": "TS-350・1100V.pdf",
+    "pages": [
+     1
+    ]
+   }
+  ],
+  "flag": "",
+  "as": "TS-W1350V（FR/HRのうち標準の行）",
+  "caution": ""
+ },
+ {
+  "id": "ts-w1350v-pench",
+  "name": "TS-W1350V（ペンチ刃）",
+  "kind": "圧砕",
+  "class": 1.2,
+  "maker": "オカダ",
+  "units": [
+   6
+  ],
+  "memo": "",
+  "pdfs": [],
+  "flag": "",
+  "as": "",
+  "caution": ""
+ },
+ {
+  "id": "mr1500",
+  "name": "MR1500",
+  "kind": "圧砕",
+  "class": 1.2,
+  "maker": "オオスミ",
+  "units": [
+   7
+  ],
+  "memo": "",
+  "pdfs": [
+   {
+    "file": "オオスミ MR900.pdf",
+    "pages": [
+     1
+    ]
+   }
+  ],
+  "flag": "",
+  "as": "MR1500",
+  "caution": ""
+ },
+ {
+  "id": "sv-36x",
+  "name": "SV-36X",
+  "kind": "圧砕",
+  "class": 1.2,
+  "maker": "ニューマチック",
+  "units": [
+   8
+  ],
+  "memo": "",
+  "pdfs": [
+   {
+    "file": "SV-24XR-SV36X.pdf",
+    "pages": [
+     1
+    ]
+   }
+  ],
+  "flag": "",
+  "as": "SV-36X(R)",
+  "caution": ""
+ },
+ {
+  "id": "sv380",
+  "name": "SV380",
+  "kind": "圧砕",
+  "class": 1.2,
+  "maker": "ニューマチック",
+  "units": [
+   9
+  ],
+  "memo": "",
+  "pdfs": [
+   {
+    "file": "SV400カタログ.pdf",
+    "pages": [
+     1
+    ]
+   }
+  ],
+  "flag": "",
+  "as": "SV380(R)",
+  "caution": ""
+ },
+ {
+  "id": "sv400",
+  "name": "SV400",
+  "kind": "圧砕",
+  "class": 1.2,
+  "maker": "ニューマチック",
+  "units": [
+   10
+  ],
+  "memo": "",
+  "pdfs": [
+   {
+    "file": "SV400カタログ.pdf",
+    "pages": [
+     1
+    ]
+   }
+  ],
+  "flag": "",
+  "as": "SV400(R)",
+  "caution": ""
+ },
+ {
+  "id": "src38",
+  "name": "SRC38",
+  "kind": "SRC",
+  "class": 1.2,
+  "maker": "ニューマチック",
+  "units": [
+   41
+  ],
+  "memo": "",
+  "pdfs": [
+   {
+    "file": "ニューマ　SRCシリーズ.pdf",
+    "pages": [
+     1
+    ]
+   }
+  ],
+  "flag": "",
+  "as": "SRC38(R)",
+  "caution": ""
+ },
+ {
+  "id": "osc-350v",
+  "name": "OSC-350V",
+  "kind": "小割",
+  "class": 1.2,
+  "maker": "オカダ",
+  "units": [
+   47
+  ],
+  "memo": "",
+  "pdfs": [],
+  "flag": "",
+  "as": "",
+  "caution": ""
+ },
+ {
+  "id": "top300",
+  "name": "TOP300",
+  "kind": "ブレーカ",
+  "class": 1.2,
+  "maker": "オカダ",
+  "units": [
+   78
+  ],
+  "memo": "",
+  "pdfs": [
+   {
+    "file": "オカダブレーカTOPシリーズ.pdf",
+    "pages": [
+     1
+    ]
+   }
+  ],
+  "flag": "",
+  "as": "TOP-300",
+  "caution": ""
+ },
+ {
+  "id": "mkb2000",
+  "name": "MKB2000",
+  "kind": "ブレーカ",
+  "class": 1.2,
+  "maker": "甲南電機",
+  "units": [
+   79
+  ],
+  "memo": "",
+  "pdfs": [],
+  "flag": "",
+  "as": "",
+  "caution": ""
+ },
+ {
+  "id": "mr1300",
+  "name": "MR1300",
+  "kind": "圧砕",
+  "class": 0.7,
+  "maker": "オオスミ",
+  "units": [
+   11
+  ],
+  "memo": "",
+  "pdfs": [],
+  "flag": "",
+  "as": "",
+  "caution": ""
+ },
+ {
+  "id": "sv-24xr-5p",
+  "name": "SV-24XR（5本配管）",
+  "kind": "圧砕",
+  "class": 0.7,
+  "maker": "ニューマチック",
+  "units": [
+   12
+  ],
+  "memo": "",
+  "pdfs": [
+   {
+    "file": "SV-24XR-SV36X.pdf",
+    "pages": [
+     1
+    ]
+   }
+  ],
+  "flag": "",
+  "as": "SV-24X(R)",
+  "caution": ""
+ },
+ {
+  "id": "sv24",
+  "name": "SV24",
+  "kind": "圧砕",
+  "class": 0.7,
+  "maker": "ニューマチック",
+  "units": [
+   12,
+   13
+  ],
+  "memo": "",
+  "pdfs": [
+   {
+    "file": "SV-24XR-SV36X.pdf",
+    "pages": [
+     1
+    ]
+   }
+  ],
+  "flag": "",
+  "as": "SV-24X(R)",
+  "caution": "カタログに同じ名前が無いため、SV-24X の数字です"
+ },
+ {
+  "id": "ds-200a",
+  "name": "DS-200A",
+  "kind": "圧砕",
+  "class": 0.7,
+  "maker": "タグチ工業",
+  "units": [
+   15
+  ],
+  "memo": "",
+  "pdfs": [],
+  "flag": "",
+  "as": "",
+  "caution": ""
+ },
+ {
+  "id": "d-211a-1300",
+  "name": "D-211A（1300）",
+  "kind": "圧砕",
+  "class": 0.7,
+  "maker": "タグチ工業",
+  "units": [
+   16
+  ],
+  "memo": "",
+  "pdfs": [],
+  "flag": "",
+  "as": "",
+  "caution": ""
+ },
+ {
+  "id": "ts-w1100v-arts-5p",
+  "name": "TS-W1100V ARTS（5本配管）",
+  "kind": "圧砕",
+  "class": 0.7,
+  "maker": "オカダ",
+  "units": [
+   17
+  ],
+  "memo": "",
+  "pdfs": [
+   {
+    "file": "TS-350・1100V.pdf",
+    "pages": [
+     1
+    ]
+   }
+  ],
+  "flag": "",
+  "as": "TS-WB1100V ARTS",
+  "caution": "カタログに同じ名前が無いため、TS-WB1100V の数字です"
+ },
+ {
+  "id": "ts-w1100v-arts",
+  "name": "TS-W1100V ARTS",
+  "kind": "圧砕",
+  "class": 0.7,
+  "maker": "オカダ",
+  "units": [
+   18,
+   19,
+   20,
+   21,
+   22,
+   23
+  ],
+  "memo": "",
+  "pdfs": [
+   {
+    "file": "TS-350・1100V.pdf",
+    "pages": [
+     1
+    ]
+   }
+  ],
+  "flag": "",
+  "as": "TS-WB1100V ARTS",
+  "caution": "カタログに同じ名前が無いため、TS-WB1100V の数字です"
+ },
+ {
+  "id": "ts-w1100v-free",
+  "name": "TS-W1100V（フリー）",
+  "kind": "圧砕",
+  "class": 0.7,
+  "maker": "オカダ",
+  "units": [
+   24
+  ],
+  "memo": "",
+  "pdfs": [
+   {
+    "file": "TS-350・1100V.pdf",
+    "pages": [
+     1
+    ]
+   }
+  ],
+  "flag": "",
+  "as": "TS-WB1100V FR",
+  "caution": "カタログに同じ名前が無いため、TS-WB1100V FR の数字です"
+ },
+ {
+  "id": "mr1100-8",
+  "name": "MR1100-8",
+  "kind": "圧砕",
+  "class": 0.7,
+  "maker": "オオスミ",
+  "units": [
+   25
+  ],
+  "memo": "",
+  "pdfs": [
+   {
+    "file": "オオスミ MR900.pdf",
+    "pages": [
+     1
+    ]
+   }
+  ],
+  "flag": "",
+  "as": "MR1100",
+  "caution": "カタログに同じ名前が無いため、MR1100 の数字です"
+ },
+ {
+  "id": "vx225",
+  "name": "VX225",
+  "kind": "圧砕",
+  "class": 0.7,
+  "maker": "フルカワ",
+  "units": [
+   26
+  ],
+  "memo": "",
+  "pdfs": [],
+  "flag": "",
+  "as": "",
+  "caution": ""
+ },
+ {
+  "id": "tsrc-1000v",
+  "name": "TSRC-1000V",
+  "kind": "SRC",
+  "class": 0.7,
+  "maker": "オカダ",
+  "units": [
+   42
+  ],
+  "memo": "",
+  "pdfs": [],
+  "flag": "",
+  "as": "",
+  "caution": ""
+ },
+ {
+  "id": "src25",
+  "name": "SRC25",
+  "kind": "SRC",
+  "class": 0.7,
+  "maker": "ニューマチック",
+  "units": [
+   43,
+   44
+  ],
+  "memo": "",
+  "pdfs": [
+   {
+    "file": "SRC25 カタログ.pdf",
+    "pages": [
+     1
+    ]
+   }
+  ],
+  "flag": "",
+  "as": "SRC25(R)",
+  "caution": ""
+ },
+ {
+  "id": "magnum1800",
+  "name": "マグナム1800",
+  "kind": "小割",
+  "class": 0.7,
+  "maker": "サカト",
+  "units": [
+   46
+  ],
+  "memo": "",
+  "pdfs": [
+   {
+    "file": "マグナム1400（坂戸小割0.7）.pdf",
+    "pages": [
+     1
+    ]
+   }
+  ],
+  "flag": "",
+  "as": "マグナム1800",
+  "caution": ""
+ },
+ {
+  "id": "magnum1650",
+  "name": "マグナム1650",
+  "kind": "小割",
+  "class": 0.7,
+  "maker": "サカト",
+  "units": [
+   49,
+   50,
+   51,
+   52,
+   53
+  ],
+  "memo": "",
+  "pdfs": [],
+  "flag": "",
+  "as": "",
+  "caution": ""
+ },
+ {
+  "id": "magnum1400",
+  "name": "マグナム1400",
+  "kind": "小割",
+  "class": 0.7,
+  "maker": "サカト",
+  "units": [
+   52
+  ],
+  "memo": "",
+  "pdfs": [
+   {
+    "file": "マグナム1400（坂戸小割0.7）.pdf",
+    "pages": [
+     1
+    ]
+   }
+  ],
+  "flag": "",
+  "as": "マグナム1400",
+  "caution": ""
+ },
+ {
+  "id": "osc210v",
+  "name": "OSC210V",
+  "kind": "小割",
+  "class": 0.7,
+  "maker": "オカダ",
+  "units": [
+   55
+  ],
+  "memo": "",
+  "pdfs": [],
+  "flag": "",
+  "as": "",
+  "caution": ""
+ },
+ {
+  "id": "osc-200a",
+  "name": "OSC-200A",
+  "kind": "小割",
+  "class": 0.7,
+  "maker": "オカダ",
+  "units": [
+   56,
+   57,
+   58
+  ],
+  "memo": "",
+  "pdfs": [
+   {
+    "file": "OSC-135A.pdf",
+    "pages": [
+     1
+    ]
+   }
+  ],
+  "flag": "",
+  "as": "OSC-200A",
+  "caution": ""
+ },
+ {
+  "id": "osc82v",
+  "name": "OSC82V",
+  "kind": "小割",
+  "class": 0.7,
+  "maker": "オカダ",
+  "units": [
+   59
+  ],
+  "memo": "",
+  "pdfs": [
+   {
+    "file": "OSC30V　オカダ0.25小割.pdf",
+    "pages": [
+     1
+    ]
+   }
+  ],
+  "flag": "",
+  "as": "82V",
+  "caution": ""
+ },
+ {
+  "id": "cut-80fr",
+  "name": "カットクンCUT-80FR",
+  "kind": "カッター",
+  "class": 0.7,
+  "maker": "オカダ",
+  "units": [
+   70
+  ],
+  "memo": "",
+  "pdfs": [
+   {
+    "file": "オカダ　カットクン　CUT-80FR.pdf",
+    "pages": [
+     1
+    ]
+   }
+  ],
+  "flag": "",
+  "as": "CUT-80FR",
+  "caution": ""
+ },
+ {
+  "id": "ts-w650xcv",
+  "name": "TS-W650XCV",
+  "kind": "カッター",
+  "class": 0.7,
+  "maker": "オカダ",
+  "units": [
+   71,
+   72
+  ],
+  "memo": "",
+  "pdfs": [
+   {
+    "file": "TS-W650.pdf",
+    "pages": [
+     1
+    ]
+   }
+  ],
+  "flag": "",
+  "as": "TS-W650XCV",
+  "caution": ""
+ },
+ {
+  "id": "penchernpo7r",
+  "name": "ペンチャーNPO7R",
+  "kind": "カッター",
+  "class": 0.7,
+  "maker": "サカト",
+  "units": [
+   73
+  ],
+  "memo": "",
+  "pdfs": [],
+  "flag": "",
+  "as": "",
+  "caution": ""
+ },
+ {
+  "id": "sds250",
+  "name": "SDS250",
+  "kind": "カッター",
+  "class": 0.7,
+  "maker": "サカト",
+  "units": [
+   74
+  ],
+  "memo": "",
+  "pdfs": [],
+  "flag": "",
+  "as": "",
+  "caution": ""
+ },
+ {
+  "id": "top210",
+  "name": "TOP210",
+  "kind": "ブレーカ",
+  "class": 0.7,
+  "maker": "オカダ",
+  "units": [
+   80
+  ],
+  "memo": "",
+  "pdfs": [
+   {
+    "file": "オカダブレーカTOPシリーズ.pdf",
+    "pages": [
+     1
+    ]
+   }
+  ],
+  "flag": "",
+  "as": "TOP-210",
+  "caution": ""
+ },
+ {
+  "id": "s-210b",
+  "name": "S-210B",
+  "kind": "ブレーカ",
+  "class": 0.7,
+  "maker": "オカダ",
+  "units": [
+   81
+  ],
+  "memo": "",
+  "pdfs": [
+   {
+    "file": "TOP210B　カタログ.pdf",
+    "pages": [
+     1
+    ]
+   }
+  ],
+  "flag": "",
+  "as": "S-210B",
+  "caution": ""
+ },
+ {
+  "id": "mkb1400",
+  "name": "MKB1400",
+  "kind": "ブレーカ",
+  "class": 0.7,
+  "maker": "甲南電機",
+  "units": [
+   82
+  ],
+  "memo": "",
+  "pdfs": [],
+  "flag": "",
+  "as": "",
+  "caution": ""
+ },
+ {
+  "id": "gh-10",
+  "name": "GH-10",
+  "kind": "ブレーカ",
+  "class": 0.7,
+  "maker": "ニューマチック",
+  "units": [
+   83
+  ],
+  "memo": "",
+  "pdfs": [
+   {
+    "file": "ニューマブレーカＧHシリーズ.pdf",
+    "pages": [
+     1
+    ]
+   }
+  ],
+  "flag": "",
+  "as": "GH-10",
+  "caution": ""
+ },
+ {
+  "id": "vx145-5p",
+  "name": "VX145（5本配管）",
+  "kind": "圧砕",
+  "class": 0.45,
+  "maker": "フルカワ",
+  "units": [
+   27
+  ],
+  "memo": "",
+  "pdfs": [
+   {
+    "file": "古河　VXシリーズ.pdf",
+    "pages": [
+     1
+    ]
+   }
+  ],
+  "flag": "",
+  "as": "Vx145",
+  "caution": ""
+ },
+ {
+  "id": "vx135",
+  "name": "VX135",
+  "kind": "圧砕",
+  "class": 0.45,
+  "maker": "フルカワ",
+  "units": [
+   28
+  ],
+  "memo": "",
+  "pdfs": [],
+  "flag": "",
+  "as": "",
+  "caution": ""
+ },
+ {
+  "id": "vp15",
+  "name": "Vp15",
+  "kind": "圧砕",
+  "class": 0.45,
+  "maker": "フルカワ",
+  "units": [
+   29
+  ],
+  "memo": "",
+  "pdfs": [],
+  "flag": "",
+  "as": "",
+  "caution": ""
+ },
+ {
+  "id": "ts-w950v-nocover",
+  "name": "TS-W950V（シリンダーカバーなし）",
+  "kind": "圧砕",
+  "class": 0.45,
+  "maker": "オカダ",
+  "units": [
+   30
+  ],
+  "memo": "",
+  "pdfs": [
+   {
+    "file": "TS-W950V.pdf",
+    "pages": [
+     2
+    ]
+   }
+  ],
+  "flag": "",
+  "as": "TS-W950V",
+  "caution": ""
+ },
+ {
+  "id": "ts-w950v",
+  "name": "TS-W950V",
+  "kind": "圧砕",
+  "class": 0.45,
+  "maker": "オカダ",
+  "units": [
+   31
+  ],
+  "memo": "",
+  "pdfs": [
+   {
+    "file": "TS-W950V.pdf",
+    "pages": [
+     2
+    ]
+   }
+  ],
+  "flag": "",
+  "as": "TS-W950V",
+  "caution": ""
+ },
+ {
+  "id": "ts-wb950v-f",
+  "name": "TS-WB950V-F",
+  "kind": "圧砕",
+  "class": 0.45,
+  "maker": "オカダ",
+  "units": [
+   32
+  ],
+  "memo": "",
+  "pdfs": [
+   {
+    "file": "TS-W950V.pdf",
+    "pages": [
+     2
+    ]
+   }
+  ],
+  "flag": "",
+  "as": "TS-W950V FR",
+  "caution": "カタログに同じ名前が無いため、TS-W950V FR の数字です"
+ },
+ {
+  "id": "mr900",
+  "name": "MR900",
+  "kind": "圧砕",
+  "class": 0.45,
+  "maker": "オオスミ",
+  "units": [
+   33
+  ],
+  "memo": "",
+  "pdfs": [
+   {
+    "file": "オオスミ MR900.pdf",
+    "pages": [
+     1
+    ]
+   }
+  ],
+  "flag": "",
+  "as": "MR900",
+  "caution": ""
+ },
+ {
+  "id": "jayc950-1",
+  "name": "JAYC950-1",
+  "kind": "圧砕",
+  "class": 0.45,
+  "maker": "コマツ",
+  "units": [
+   34
+  ],
+  "memo": "",
+  "pdfs": [],
+  "flag": "",
+  "as": "",
+  "caution": ""
+ },
+ {
+  "id": "src15",
+  "name": "SRC15",
+  "kind": "SRC",
+  "class": 0.45,
+  "maker": "ニューマチック",
+  "units": [
+   45
+  ],
+  "memo": "",
+  "pdfs": [
+   {
+    "file": "ニューマ　SRCシリーズ.pdf",
+    "pages": [
+     1
+    ]
+   }
+  ],
+  "flag": "",
+  "as": "SRC15(R)",
+  "caution": ""
+ },
+ {
+  "id": "osc135a",
+  "name": "OSC135A",
+  "kind": "小割",
+  "class": 0.45,
+  "maker": "オカダ",
+  "units": [
+   60,
+   61,
+   62
+  ],
+  "memo": "",
+  "pdfs": [
+   {
+    "file": "OSC-135A.pdf",
+    "pages": [
+     1
+    ]
+   }
+  ],
+  "flag": "",
+  "as": "OSC-135A",
+  "caution": ""
+ },
+ {
+  "id": "osc52v",
+  "name": "OSC52V",
+  "kind": "小割",
+  "class": 0.45,
+  "maker": "オカダ",
+  "units": [
+   63
+  ],
+  "memo": "",
+  "pdfs": [
+   {
+    "file": "OSC30V　オカダ0.25小割.pdf",
+    "pages": [
+     1
+    ]
+   }
+  ],
+  "flag": "",
+  "as": "51V",
+  "caution": "カタログに同じ名前が無いため、51V の数字です"
+ },
+ {
+  "id": "vs-15",
+  "name": "Vs-15",
+  "kind": "小割",
+  "class": 0.45,
+  "maker": "フルカワ",
+  "units": [
+   64
+  ],
+  "memo": "",
+  "pdfs": [],
+  "flag": "",
+  "as": "",
+  "caution": ""
+ },
+ {
+  "id": "magnum1300",
+  "name": "マグナム1300",
+  "kind": "小割",
+  "class": 0.45,
+  "maker": "サカト",
+  "units": [
+   65
+  ],
+  "memo": "",
+  "pdfs": [
+   {
+    "file": "マグナム1400（坂戸小割0.7）.pdf",
+    "pages": [
+     1
+    ]
+   }
+  ],
+  "flag": "",
+  "as": "1300Y",
+  "caution": "カタログに同じ名前が無いため、1300Y の数字です"
+ },
+ {
+  "id": "magnum1200",
+  "name": "マグナム1200",
+  "kind": "小割",
+  "class": 0.45,
+  "maker": "サカト",
+  "units": [
+   66
+  ],
+  "memo": "",
+  "pdfs": [],
+  "flag": "",
+  "as": "",
+  "caution": ""
+ },
+ {
+  "id": "fe350-g",
+  "name": "FE350-G",
+  "kind": "カッター",
+  "class": 0.45,
+  "maker": "オオスミ",
+  "units": [
+   75
+  ],
+  "memo": "0.25と0.45兼用機",
+  "pdfs": [
+   {
+    "file": "FE350.pdf",
+    "pages": [
+     1
+    ]
+   }
+  ],
+  "flag": "",
+  "as": "FE350",
+  "caution": "カタログに同じ名前が無いため、FE350 の数字です"
+ },
+ {
+  "id": "ts-w600xcv-a",
+  "name": "TS-W600XCV-A",
+  "kind": "カッター",
+  "class": 0.45,
+  "maker": "オカダ",
+  "units": [
+   76
+  ],
+  "memo": "",
+  "pdfs": [
+   {
+    "file": "TS-W600XCV.pdf",
+    "pages": [
+     1
+    ]
+   }
+  ],
+  "flag": "",
+  "as": "TS-W600XCV",
+  "caution": "カタログに同じ名前が無いため、TS-W600XCV の数字です"
+ },
+ {
+  "id": "ghe6-2",
+  "name": "GHE6-2",
+  "kind": "ブレーカ",
+  "class": 0.45,
+  "maker": "ニューマチック",
+  "units": [
+   84
+  ],
+  "memo": "",
+  "pdfs": [
+   {
+    "file": "GHE6-2 カタログGHE9-2.pdf",
+    "pages": [
+     1
+    ]
+   },
+   {
+    "file": "GHE6-2.pdf",
+    "pages": [
+     1
+    ]
+   }
+  ],
+  "flag": "",
+  "as": "GHE6-2",
+  "caution": ""
+ },
+ {
+  "id": "mkb900",
+  "name": "MKB900",
+  "kind": "ブレーカ",
+  "class": 0.45,
+  "maker": "甲南電機",
+  "units": [
+   85
+  ],
+  "memo": "",
+  "pdfs": [
+   {
+    "file": "MKB500N2（0.25ﾌﾞﾚｰｶｰ）.pdf",
+    "pages": [
+     2
+    ]
+   }
+  ],
+  "flag": "",
+  "as": "MKB900N",
+  "caution": "カタログに同じ名前が無いため、MKB900N の数字です"
+ },
+ {
+  "id": "ironclawhs500n",
+  "name": "アイアンクローHS500N",
+  "kind": "つかみ",
+  "class": 0.45,
+  "maker": "飯田鐵工",
+  "units": [
+   90
+  ],
+  "memo": "",
+  "pdfs": [],
+  "flag": "",
+  "as": "",
+  "caution": ""
+ },
+ {
+  "id": "ironclaw500",
+  "name": "アイアンクロー500",
+  "kind": "つかみ",
+  "class": 0.45,
+  "maker": "飯田鐵工",
+  "units": [
+   91
+  ],
+  "memo": "",
+  "pdfs": [],
+  "flag": "",
+  "as": "",
+  "caution": ""
+ },
+ {
+  "id": "gv-122s-5p",
+  "name": "GV-122S（5本配管）",
+  "kind": "つかみ",
+  "class": 0.45,
+  "maker": "タグチ工業",
+  "units": [
+   92
+  ],
+  "memo": "",
+  "pdfs": [
+   {
+    "file": "GV122S_250731.pdf",
+    "pages": [
+     2
+    ]
+   }
+  ],
+  "flag": "",
+  "as": "GV-122S",
+  "caution": ""
+ },
+ {
+  "id": "hm-51t",
+  "name": "ハイマグHM-51T",
+  "kind": "その他",
+  "class": 0.45,
+  "maker": "オカダ",
+  "units": [
+   101
+  ],
+  "memo": "",
+  "pdfs": [],
+  "flag": "",
+  "as": "",
+  "caution": ""
+ },
+ {
+  "id": "ts-wb620v",
+  "name": "TS-WB620V",
+  "kind": "圧砕",
+  "class": 0.25,
+  "maker": "オカダ",
+  "units": [
+   35,
+   36
+  ],
+  "memo": "",
+  "pdfs": [
+   {
+    "file": "TS-350・1100V.pdf",
+    "pages": [
+     1
+    ]
+   }
+  ],
+  "flag": "",
+  "as": "TS-W620V FR",
+  "caution": "カタログに同じ名前が無いため、TS-W620V FR の数字です"
+ },
+ {
+  "id": "ts-500rcd",
+  "name": "TS-500RCD",
+  "kind": "圧砕",
+  "class": 0.25,
+  "maker": "オカダ",
+  "units": [
+   37
+  ],
+  "memo": "",
+  "pdfs": [],
+  "flag": "",
+  "as": "",
+  "caution": ""
+ },
+ {
+  "id": "mr600",
+  "name": "MR600",
+  "kind": "圧砕",
+  "class": 0.25,
+  "maker": "オオスミ",
+  "units": [
+   38
+  ],
+  "memo": "",
+  "pdfs": [
+   {
+    "file": "オオスミ MR900.pdf",
+    "pages": [
+     1
+    ]
+   }
+  ],
+  "flag": "",
+  "as": "MR600",
+  "caution": ""
+ },
+ {
+  "id": "sv-7x",
+  "name": "SV-7X",
+  "kind": "圧砕",
+  "class": 0.25,
+  "maker": "ニューマチック",
+  "units": [
+   39
+  ],
+  "memo": "",
+  "pdfs": [
+   {
+    "file": "SV400カタログ.pdf",
+    "pages": [
+     1
+    ]
+   }
+  ],
+  "flag": "",
+  "as": "SV-7X(R)",
+  "caution": ""
+ },
+ {
+  "id": "magnum850",
+  "name": "マグナム850",
+  "kind": "小割",
+  "class": 0.25,
+  "maker": "サカト",
+  "units": [
+   67
+  ],
+  "memo": "",
+  "pdfs": [
+   {
+    "file": "マグナム1400（坂戸小割0.7）.pdf",
+    "pages": [
+     1
+    ]
+   }
+  ],
+  "flag": "",
+  "as": "マグナム850",
+  "caution": ""
+ },
+ {
+  "id": "osc25",
+  "name": "OSC25",
+  "kind": "小割",
+  "class": 0.25,
+  "maker": "オカダ",
+  "units": [
+   68
+  ],
+  "memo": "",
+  "pdfs": [
+   {
+    "file": "OSC30V　オカダ0.25小割.pdf",
+    "pages": [
+     1
+    ]
+   }
+  ],
+  "flag": "",
+  "as": "OSC30V",
+  "caution": "カタログに同じ名前が無いため、OSC30V の数字です"
+ },
+ {
+  "id": "g70",
+  "name": "G70",
+  "kind": "小割",
+  "class": 0.25,
+  "maker": "ニューマチック",
+  "units": [
+   69
+  ],
+  "memo": "",
+  "pdfs": [
+   {
+    "file": "ニューマ　G70.pdf",
+    "pages": [
+     1
+    ]
+   }
+  ],
+  "flag": "",
+  "as": "G70",
+  "caution": ""
+ },
+ {
+  "id": "fc90",
+  "name": "FC90",
+  "kind": "ブレーカ",
+  "class": 0.25,
+  "maker": "フルカワ",
+  "units": [
+   86
+  ],
+  "memo": "",
+  "pdfs": [
+   {
+    "file": "古河　ﾌﾞﾚｰｶｰ　Fc90 Fx45.pdf",
+    "pages": [
+     1
+    ]
+   }
+  ],
+  "flag": "",
+  "as": "Fc90",
+  "caution": ""
+ },
+ {
+  "id": "mkb500n",
+  "name": "MKB500N",
+  "kind": "ブレーカ",
+  "class": 0.25,
+  "maker": "甲南電機",
+  "units": [
+   87
+  ],
+  "memo": "",
+  "pdfs": [
+   {
+    "file": "MKB500N2（0.25ﾌﾞﾚｰｶｰ）.pdf",
+    "pages": [
+     2
+    ]
+   }
+  ],
+  "flag": "",
+  "as": "MKB500N",
+  "caution": ""
+ },
+ {
+  "id": "gv-60l",
+  "name": "GV-60L",
+  "kind": "つかみ",
+  "class": 0.25,
+  "maker": "タグチ工業",
+  "units": [
+   93,
+   94
+  ],
+  "memo": "",
+  "pdfs": [
+   {
+    "file": "タグチ　GV-30L.pdf",
+    "pages": [
+     2
+    ]
+   }
+  ],
+  "flag": "",
+  "as": "GV-60L",
+  "caution": ""
+ },
+ {
+  "id": "ironclaw250",
+  "name": "アイアンクロー250",
+  "kind": "つかみ",
+  "class": 0.25,
+  "maker": "飯田鐵工",
+  "units": [
+   94,
+   95,
+   95
+  ],
+  "memo": "",
+  "pdfs": [],
+  "flag": "",
+  "as": "",
+  "caution": ""
+ },
+ {
+  "id": "rd1100",
+  "name": "RD1100",
+  "kind": "その他",
+  "class": 0.25,
+  "maker": "オオスミ",
+  "units": [
+   102
+  ],
+  "memo": "",
+  "pdfs": [],
+  "flag": "",
+  "as": "",
+  "caution": ""
+ },
+ {
+  "id": "hu500",
+  "name": "HU500",
+  "kind": "その他",
+  "class": 0.25,
+  "maker": "オオスミ",
+  "units": [
+   103
+  ],
+  "memo": "",
+  "pdfs": [],
+  "flag": "",
+  "as": "",
+  "caution": ""
+ },
+ {
+  "id": "ts-wb350-f",
+  "name": "TS-WB350-F",
+  "kind": "圧砕",
+  "class": 0.1,
+  "maker": "オカダ",
+  "units": [
+   40
+  ],
+  "memo": "",
+  "pdfs": [
+   {
+    "file": "TS-350・1100V.pdf",
+    "pages": [
+     1
+    ]
+   }
+  ],
+  "flag": "",
+  "as": "TS-WB350",
+  "caution": "カタログに同じ名前が無いため、TS-WB350 の数字です"
+ },
+ {
+  "id": "oni150",
+  "name": "ONI150",
+  "kind": "カッター",
+  "class": 0.1,
+  "maker": "オオスミ",
+  "units": [
+   77
+  ],
+  "memo": "",
+  "pdfs": [
+   {
+    "file": "オニムシ150.pdf",
+    "pages": [
+     2
+    ]
+   }
+  ],
+  "flag": "",
+  "as": "オニムシ150",
+  "caution": ""
+ },
+ {
+  "id": "mkb150",
+  "name": "MKB150",
+  "kind": "ブレーカ",
+  "class": 0.1,
+  "maker": "甲南電機",
+  "units": [
+   88
+  ],
+  "memo": "",
+  "pdfs": [
+   {
+    "file": "MKB500N2（0.25ﾌﾞﾚｰｶｰ）.pdf",
+    "pages": [
+     2
+    ]
+   }
+  ],
+  "flag": "",
+  "as": "MKB150M",
+  "caution": "カタログに同じ名前が無いため、MKB150M の数字です"
+ },
+ {
+  "id": "fx45",
+  "name": "FX45",
+  "kind": "ブレーカ",
+  "class": 0.1,
+  "maker": "フルカワ",
+  "units": [
+   89
+  ],
+  "memo": "",
+  "pdfs": [
+   {
+    "file": "古河　ﾌﾞﾚｰｶｰ　Fc90 Fx45.pdf",
+    "pages": [
+     1
+    ]
+   }
+  ],
+  "flag": "",
+  "as": "Fx45",
+  "caution": ""
+ },
+ {
+  "id": "g-30v",
+  "name": "G-30V",
+  "kind": "つかみ",
+  "class": 0.1,
+  "maker": "タグチ工業",
+  "units": [
+   98
+  ],
+  "memo": "",
+  "pdfs": [],
+  "flag": "",
+  "as": "",
+  "caution": ""
+ },
+ {
+  "id": "gv-30l",
+  "name": "GV-30L",
+  "kind": "つかみ",
+  "class": 0.1,
+  "maker": "タグチ工業",
+  "units": [
+   99
+  ],
+  "memo": "",
+  "pdfs": [
+   {
+    "file": "タグチ　GV-30L.pdf",
+    "pages": [
+     2
+    ]
+   }
+  ],
+  "flag": "",
+  "as": "GV-30L",
+  "caution": ""
+ },
+ {
+  "id": "ironclaw150",
+  "name": "アイアンクロー150",
+  "kind": "つかみ",
+  "class": 0.1,
+  "maker": "飯田鐵工",
+  "units": [
+   100
+  ],
+  "memo": "",
+  "pdfs": [],
+  "flag": "",
+  "as": "",
+  "caution": ""
+ }
+]
