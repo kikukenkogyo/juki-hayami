@@ -74,3 +74,57 @@ test("detailNote: 空欄でも参考値の注記は出す（指摘1）", () => {
 test("formatValue: 空欄でも要確認なら⚠を残す（軽微5）", () => {
   assert.equal(formatValue("width_mm", { v: null, note: "x", check: true }), "カタログに記載なし ⚠要確認");
 });
+
+// ---- アタッチメント（第2弾） ----
+import { KINDS, filterAtts, sortAtts, formatAttValue } from "../lib.js";
+import { KINDS as SCHEMA_KINDS } from "../tools/schema.mjs";
+
+const A = (id, name, kind, cls, maker, units, memo = "") => ({ id, name, kind, class: cls, maker, units, memo, catalog: true, values: {} });
+const atts = [
+  A("ts-w1100v-arts", "TS-W1100V ARTS", "圧砕", 0.7, "オカダ", [18, 19]),
+  A("ts-w1100v-arts-5p", "TS-W1100V ARTS（5本配管）", "圧砕", 0.7, "オカダ", [17]),
+  A("ts-w1100v-free", "TS-W1100V（フリー）", "圧砕", 0.7, "オカダ", [24]),
+  A("top210", "TOP210", "ブレーカ", 0.7, "オカダ", [80]),
+  A("osc-200a", "OSC-200A", "小割", 0.7, "オカダ", [56, 57]),
+  A("fe350-g", "FE350-G", "カッター", 0.45, "オオスミ", [75], "0.25と0.45兼用機"),
+];
+const anone = { query: "", classes: [], kinds: [] };
+const ids = (r) => r.map((m) => m.id);
+
+test("KINDS は schema と同じ並び", () => assert.deepEqual(KINDS, SCHEMA_KINDS));
+test("1100 で TS-W1100V の3機種", () =>
+  assert.deepEqual(ids(filterAtts(atts, { ...anone, query: "1100" })), ["ts-w1100v-arts", "ts-w1100v-arts-5p", "ts-w1100v-free"]));
+test("半角カナと全角カナで同じ結果", () =>
+  assert.deepEqual(ids(filterAtts(atts, { ...anone, query: "ｵｶﾀﾞ" })), ids(filterAtts(atts, { ...anone, query: "オカダ" }))));
+test("管理番号 17 でも 017 でも出る", () => {
+  assert.deepEqual(ids(filterAtts(atts, { ...anone, query: "017" })), ["ts-w1100v-arts-5p"]);
+  assert.ok(ids(filterAtts(atts, { ...anone, query: "17" })).includes("ts-w1100v-arts-5p"));
+});
+test("備考・種類でも検索できる", () => {
+  assert.deepEqual(ids(filterAtts(atts, { ...anone, query: "兼用" })), ["fe350-g"]);
+  assert.deepEqual(ids(filterAtts(atts, { ...anone, query: "ブレーカ" })), ["top210"]);
+});
+test("種類とクラスの組み合わせ", () => {
+  assert.deepEqual(ids(filterAtts(atts, { ...anone, kinds: ["ブレーカ"], classes: [0.7] })), ["top210"]);
+  assert.deepEqual(ids(filterAtts(atts, { ...anone, kinds: ["ブレーカ"], classes: [0.45] })), []);
+});
+test("並びはクラス → 種類 → 名前", () =>
+  assert.deepEqual(ids(sortAtts([atts[3], atts[4], atts[1], atts[5], atts[0]])),
+    ["fe350-g", "ts-w1100v-arts", "ts-w1100v-arts-5p", "osc-200a", "top210"]));
+test("formatAttValue の単位と範囲", () => {
+  const f = (k, v, check = false) => formatAttValue(k, { v, note: "", check });
+  assert.equal(f("mass_kg", 2100), "2,100 kg");
+  assert.equal(f("oil_lpm", [100, 150]), "100〜150 L/min");
+  assert.equal(f("force_kn", 1471, true), "1,471 kN ⚠要確認");
+  assert.equal(f("rotation", "有"), "有");
+  assert.equal(f("base_t", [20, 30]), "20〜30 t");
+  assert.equal(f("pressure_mpa", 24.5), "24.5 MPa");
+  assert.equal(f("pipes", 5), "5 本");
+  assert.equal(f("blows_per_min", [400, 800]), "400〜800 回/分");
+  assert.equal(f("open_mm", 1100), "1,100 mm");
+});
+test("formatAttValue の空欄とカタログなし", () => {
+  assert.equal(formatAttValue("mass_kg", { v: null, note: "カタログに記載なし", check: false }), "カタログに記載なし");
+  assert.equal(formatAttValue("mass_kg", { v: null, note: "カタログなし", check: false }, false), "カタログなし");
+  assert.equal(formatAttValue("mass_kg", undefined), "カタログに記載なし");
+});

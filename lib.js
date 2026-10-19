@@ -58,3 +58,35 @@ export function formatValue(key, cell) {
   const text = unit === "t" ? (Math.round(cell.v * 10) / 10).toFixed(1) : cell.v.toLocaleString("en-US");
   return `${text} ${unit}` + (cell.check ? " ⚠要確認" : "");
 }
+
+// ---- アタッチメント（att.json） ----
+export const KINDS = ["圧砕", "SRC", "小割", "カッター", "ブレーカ", "つかみ", "その他"];
+
+function attMatches(a, q) {
+  if (!q) return true;
+  const hay = [a.name, a.maker, a.kind, a.memo, ...a.units.flatMap((u) => [u, pad3(u)])].map(normalize).join("|");
+  return hay.includes(q);
+}
+
+export function filterAtts(atts, cond) {
+  const q = normalize(cond.query);
+  return atts.filter((a) => attMatches(a, q)
+    && (!cond.classes.length || cond.classes.includes(a.class))
+    && (!cond.kinds.length || cond.kinds.includes(a.kind)));
+}
+
+export function sortAtts(atts) {
+  return [...atts].sort((a, b) =>
+    a.class - b.class || KINDS.indexOf(a.kind) - KINDS.indexOf(b.kind) || a.name.localeCompare(b.name, "ja"));
+}
+
+const ATT_UNIT = { mass_kg: "kg", force_kn: "kN", blows_per_min: "回/分", base_t: "t", oil_lpm: "L/min", pressure_mpa: "MPa", pipes: "本", rotation: "" };
+const num = (n) => n.toLocaleString("en-US");
+
+export function formatAttValue(key, cell, catalog = true) {
+  if (!cell || cell.v === null || cell.v === undefined) return catalog ? "カタログに記載なし" : "カタログなし";
+  const unit = ATT_UNIT[key] ?? "mm";
+  const v = cell.v;
+  const text = typeof v === "string" ? v : Array.isArray(v) ? `${num(v[0])}〜${num(v[1])}` : num(v);
+  return text + (unit ? ` ${unit}` : "") + (cell.check ? " ⚠要確認" : "");
+}
