@@ -14,6 +14,11 @@
 <body>
 <header class="bar">
   <h1>重機早見表</h1>
+  <div id="tabs" class="tabs" role="group" aria-label="表示の切り替え">
+    <button type="button" data-tab="juki" aria-pressed="true">重機</button>
+    <button type="button" data-tab="att" aria-pressed="false">アタッチメント</button>
+  </div>
+  <div id="jukiBar">
   <input id="q" type="search" placeholder="機種名・番号・仕様（例: 228, ロング）" autocomplete="off">
   <div id="classes" class="chips" role="group" aria-label="クラス"></div>
   <details id="limits">
@@ -26,9 +31,17 @@
     </div>
   </details>
   <p id="count" class="count"></p>
+  </div>
+  <div id="attBar" hidden>
+    <input id="aq" type="search" placeholder="機種名・番号・メーカー（例: 1100）" autocomplete="off">
+    <div id="aclasses" class="chips" role="group" aria-label="クラス"></div>
+    <div id="akinds" class="chips" role="group" aria-label="種類"></div>
+    <p id="acount" class="count"></p>
+  </div>
 </header>
 
 <main id="list"></main>
+<main id="alist" hidden></main>
 
 <section id="detail" hidden>
   <button id="back" type="button" class="back">← 一覧へ</button>
