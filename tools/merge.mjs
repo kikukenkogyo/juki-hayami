@@ -1,3 +1,4 @@
+// 注意: 一度だけ使う道具。流し直すと resolve・画像の結果が消えるので、作り直すとき以外は使わない（その後 resolve.mjs → make_images.py を流す）
 // 1回目・2回目の読み取りをまとめて突き合わせ、juki.json の下書きを作る
 // 使い方: node tools/merge.mjs <passフォルダ>
 import fs from "node:fs";

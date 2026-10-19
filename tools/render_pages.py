@@ -6,6 +6,8 @@ import sys
 import fitz
 
 pdf, page, out = sys.argv[1], int(sys.argv[2]), sys.argv[3]
+if page < 1:
+    sys.exit("ページ番号は1以上")
 p = fitz.open(pdf)[page - 1]
 if len(sys.argv) > 4:
     p.get_pixmap(dpi=int(sys.argv[4])).save(out)

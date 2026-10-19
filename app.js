@@ -1,4 +1,4 @@
-import { filterMachines, sortMachines, parseLimit, formatValue } from "./lib.js";
+import { filterMachines, sortMachines, parseLimit, formatValue, detailNote } from "./lib.js";
 
 const CLASSES = [0.1, 0.25, 0.45, 0.7, 1.2, 1.6];
 const SECTIONS = [
@@ -14,15 +14,24 @@ const label = (m) => (m.no == null ? "番号なし" : String(m.no).padStart(3, "
 const hashOf = (m) => (m.no == null ? `#name-${encodeURIComponent(m.name)}` : `#no-${m.no}`);
 
 let machines = [];
+let loaded = false;
+let cameFromList = false;
 const selected = new Set();
+
+// 何か入っているのに数字として読めない欄は赤枠にして、条件が効いていないことを知らせる
+function limit(id) {
+  const el = $(id), v = parseLimit(el.value);
+  el.classList.toggle("bad", el.value.trim() !== "" && v === null);
+  return v;
+}
 
 function cond() {
   return {
     query: $("q").value,
     classes: [...selected],
-    maxWidth: parseLimit($("maxWidth").value),
-    maxHeight: parseLimit($("maxHeight").value),
-    maxMass: parseLimit($("maxMass").value),
+    maxWidth: limit("maxWidth"),
+    maxHeight: limit("maxHeight"),
+    maxMass: limit("maxMass"),
   };
 }
 
@@ -31,11 +40,12 @@ function card(m) {
   const n = (k, t) => `<div><small>${t}</small><b>${esc(short(k))}</b></div>`;
   return `<a class="card" href="${hashOf(m)}">
     <div class="top"><span class="no">${label(m)}</span><span class="name">${esc(m.name)}</span>
-    <span class="spec">${m.class}㎥・${esc(m.spec)}</span></div>
+    <span class="spec">${m.class}㎥・${esc(m.spec)}</span>${m.caution ? `<span class="ref">※参考値</span>` : ""}</div>
     <div class="nums">${n("width_mm", "全幅")}${n("height_mm", "全高")}${n("mass_t", "重量")}</div></a>`;
 }
 
 function renderList() {
+  if (!loaded) return;
   const { hits, unknown } = filterMachines(machines, cond());
   let html = sortMachines(hits).map(card).join("");
   if (unknown.length) {
@@ -50,7 +60,8 @@ function renderDetail(m) {
     .filter(([k]) => k !== "crane_capacity_t" || m.values[k])
     .map(([k, t]) => {
       const c = m.values[k];
-      const note = c && c.v !== null && c.note ? `<small>${esc(c.note)}</small>` : "";
+      const n = detailNote(c);
+      const note = n ? `<small>${esc(n)}</small>` : "";
       return `<div><dt>${t}</dt><dd class="${c?.check ? "warn" : ""}">${esc(formatValue(k, c))}${note}</dd></div>`;
     }).join("");
   const secs = SECTIONS.map(([title, items]) => {
@@ -59,7 +70,7 @@ function renderDetail(m) {
   }).join("");
   const pages = m.images.length
     ? `<h2 class="sec">カタログのページ</h2><div class="pages">${m.images.map((p) =>
-        `<a href="${esc(p)}" target="_blank" rel="noopener"><img src="${esc(p)}" alt="カタログのページ" loading="lazy"></a>`).join("")}</div>`
+        `<a href="${esc(p)}"><img src="${esc(p)}" alt="カタログのページ" loading="lazy"></a>`).join("")}</div>`
     : "";
   const src = m.source.map((s) => `${esc(s.file)} ${s.page}ページ（${esc(s.where)}）`).join("<br>");
   $("detailBody").innerHTML = `
@@ -71,7 +82,8 @@ function renderDetail(m) {
 }
 
 function route() {
-  const h = decodeURIComponent(location.hash);
+  let h = "";
+  try { h = decodeURIComponent(location.hash); } catch { /* 壊れたアドレスは一覧に戻す */ }
   const m = h.startsWith("#no-") ? machines.find((x) => String(x.no) === h.slice(4))
     : h.startsWith("#name-") ? machines.find((x) => x.no == null && x.name === h.slice(6)) : null;
   const showDetail = Boolean(m);
@@ -95,7 +107,10 @@ function setup() {
     for (const id of ["maxWidth", "maxHeight", "maxMass"]) $(id).value = "";
     renderList();
   });
-  $("back").addEventListener("click", () => (history.length > 1 ? history.back() : (location.hash = "")));
+  $("list").addEventListener("click", (e) => { if (e.target.closest(".card")) cameFromList = true; });
+  $("back").addEventListener("click", () => {
+    if (cameFromList) { cameFromList = false; history.back(); } else location.hash = "";
+  });
   window.addEventListener("hashchange", route);
 }
 
@@ -103,7 +118,9 @@ async function main() {
   setup();
   try {
     const res = await fetch("juki.json", { cache: "no-cache" });
+    if (!res.ok) throw new Error(res.status);
     machines = await res.json();
+    loaded = true;
   } catch {
     $("list").innerHTML = `<p class="count">データを読み込めませんでした。電波のある所でもう一度開いてください。</p>`;
     return;

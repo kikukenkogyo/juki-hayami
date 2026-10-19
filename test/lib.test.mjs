@@ -54,3 +54,23 @@ test("formatValue", () => {
   assert.equal(formatValue("width_mm", undefined), "カタログに記載なし");
   assert.equal(formatValue("width_mm", { v: 2490, note: "", check: true }), "2,490 mm ⚠要確認");
 });
+
+import { detailNote } from "../lib.js";
+
+test("parseLimit: カンマと単位付きも数値（指摘4）", () => {
+  assert.equal(parseLimit("2,500"), 2500);
+  assert.equal(parseLimit("２，５００"), 2500);
+  assert.equal(parseLimit("2500mm"), 2500);
+  assert.equal(parseLimit("2.5t"), 2.5);
+  assert.equal(parseLimit("2.5m"), null);
+  assert.equal(parseLimit("あ"), null);
+});
+test("detailNote: 空欄でも参考値の注記は出す（指摘1）", () => {
+  assert.equal(detailNote({ v: null, note: "カタログに記載なし", check: false }), "");
+  assert.equal(detailNote({ v: null, note: "参考: 標準機33,600kg", check: false }), "参考: 標準機33,600kg");
+  assert.equal(detailNote({ v: 2490, note: "輸送時", check: false }), "輸送時");
+  assert.equal(detailNote(undefined), "");
+});
+test("formatValue: 空欄でも要確認なら⚠を残す（軽微5）", () => {
+  assert.equal(formatValue("width_mm", { v: null, note: "x", check: true }), "カタログに記載なし ⚠要確認");
+});

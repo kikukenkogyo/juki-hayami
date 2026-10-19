@@ -4,8 +4,9 @@ export function normalize(s) {
   return String(s ?? "").normalize("NFKC").toLowerCase().replace(/\s+/g, "");
 }
 
+// 「2,500」「2500mm」「2.5t」のようなカンマ・単位付きも数値として読む
 export function parseLimit(input) {
-  const s = normalize(input);
+  const s = normalize(input).replace(/,/g, "").replace(/(mm|t)$/, "");
   if (s === "" || !/^\d+(\.\d+)?$/.test(s)) return null;
   return Number(s);
 }
@@ -45,8 +46,14 @@ export function sortMachines(machines) {
 
 const UNIT = { mass_t: "t", crane_capacity_t: "t", ground_pressure_kpa: "kPa" };
 
+// 詳細画面で値の下に出す注記。空欄の値でも参考値などが書いてあれば出す
+export function detailNote(cell) {
+  if (!cell || !cell.note || cell.note === "カタログに記載なし") return "";
+  return cell.note;
+}
+
 export function formatValue(key, cell) {
-  if (!cell || cell.v === null || cell.v === undefined) return "カタログに記載なし";
+  if (!cell || cell.v === null || cell.v === undefined) return "カタログに記載なし" + (cell?.check ? " ⚠要確認" : "");
   const unit = UNIT[key] ?? "mm";
   const text = unit === "t" ? (Math.round(cell.v * 10) / 10).toFixed(1) : cell.v.toLocaleString("en-US");
   return `${text} ${unit}` + (cell.check ? " ⚠要確認" : "");

@@ -1,16 +1,24 @@
-// 電波なしでも開けるようにする仕組み。画面のファイルを直したら VERSION を上げる
-const VERSION = "v1";
+// 電波なしでも開けるようにする仕組み
+// - juki.json: 通信できれば新しい方。3秒たっても返事がない・エラーのときは保存分
+// - 画面のファイルと画像: すぐ保存分を出し、裏で新しいものを取ってきて保存（次に開いたとき新しくなる）
+// 保存の形を大きく変えたときだけ VERSION を上げる（古い保存分を消す）
+const VERSION = "v2";
 const CACHE = `juki-hayami-${VERSION}`;
-const CORE = ["./", "index.html", "style.css", "app.js", "lib.js", "juki.json", "manifest.json", "icon-192.png"];
+const CORE = ["./", "index.html", "style.css", "app.js", "lib.js", "juki.json", "manifest.json", "icon-192.png", "icon-512.png"];
+const DATA_TIMEOUT_MS = 3000;
+
+const fresh = (u) => new Request(u, { cache: "reload" });
 
 self.addEventListener("install", (e) => {
   e.waitUntil((async () => {
     const cache = await caches.open(CACHE);
-    await cache.addAll(CORE);
+    await Promise.all(CORE.map(async (u) => cache.put(u, await fetch(fresh(u)))));
     // ページ画像も全部保存しておく（juki.json に書かれたもの）
     const machines = await (await cache.match("juki.json")).json();
     const imgs = [...new Set(machines.flatMap((m) => m.images))];
-    await Promise.all(imgs.map((u) => cache.add(u).catch(() => {})));
+    await Promise.all(imgs.map(async (u) => {
+      try { const res = await fetch(fresh(u)); if (res.ok) await cache.put(u, res); } catch { /* 次回に回す */ }
+    }));
     self.skipWaiting();
   })());
 });
@@ -22,28 +30,43 @@ self.addEventListener("activate", (e) => {
   })());
 });
 
+async function dataFirst(request) {
+  const cache = await caches.open(CACHE);
+  const ctrl = new AbortController();
+  const timer = setTimeout(() => ctrl.abort(), DATA_TIMEOUT_MS);
+  try {
+    const res = await fetch(request, { cache: "no-cache", signal: ctrl.signal });
+    if (!res.ok) throw new Error(String(res.status));
+    await cache.put("juki.json", res.clone());
+    // 新しい機種の画像があれば、電波のあるうちに保存しておく
+    res.clone().json().then((ms) => ms.flatMap((m) => m.images).forEach(async (u) => {
+      if (!(await cache.match(u))) cache.add(u).catch(() => {});
+    })).catch(() => {});
+    return res;
+  } catch {
+    return (await cache.match("juki.json")) || Response.error();
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
+async function cacheThenUpdate(e) {
+  const cache = await caches.open(CACHE);
+  const hit = await cache.match(e.request, { ignoreSearch: true });
+  const update = fetch(fresh(e.request.url)).then((res) => {
+    if (res.ok) cache.put(e.request, res.clone());
+    return res;
+  });
+  if (hit) {
+    e.waitUntil(update.catch(() => {}));
+    return hit;
+  }
+  return update;
+}
+
 self.addEventListener("fetch", (e) => {
   const url = new URL(e.request.url);
   if (e.request.method !== "GET" || url.origin !== location.origin) return;
-  if (url.pathname.endsWith("/juki.json")) {
-    // データは通信できれば新しい方、だめなら保存分
-    e.respondWith((async () => {
-      const cache = await caches.open(CACHE);
-      try {
-        const res = await fetch(e.request, { cache: "no-cache" });
-        if (res.ok) cache.put("juki.json", res.clone());
-        return res;
-      } catch {
-        return (await cache.match("juki.json")) || Response.error();
-      }
-    })());
-    return;
-  }
-  e.respondWith((async () => {
-    const hit = await caches.match(e.request, { ignoreSearch: true });
-    if (hit) return hit;
-    const res = await fetch(e.request);
-    if (res.ok && url.pathname.includes("/img/")) (await caches.open(CACHE)).put(e.request, res.clone());
-    return res;
-  })());
+  if (url.pathname.endsWith("/juki.json")) e.respondWith(dataFirst(e.request));
+  else e.respondWith(cacheThenUpdate(e));
 });
