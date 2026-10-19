@@ -2146,59 +2146,66 @@
   "maker": "日立",
   "values": {
    "mass_t": {
-    "v": null,
-    "note": "カタログに記載なし",
+    "v": 1.99,
+    "note": "2柱キャノピ（標準）。4柱キャノピは2.04t",
     "check": false
    },
    "width_mm": {
-    "v": null,
-    "note": "カタログに記載なし",
+    "v": 1450,
+    "note": "クローラ全幅・ブレード幅",
     "check": false
    },
    "height_mm": {
-    "v": null,
-    "note": "カタログに記載なし",
+    "v": 2410,
+    "note": "2柱キャノピ。4柱キャノピは2,390",
     "check": false
    },
    "length_mm": {
-    "v": null,
-    "note": "カタログに記載なし",
+    "v": 3860,
+    "note": "寸法図の全長",
     "check": false
    },
    "crawler_width_mm": {
-    "v": null,
-    "note": "カタログに記載なし",
+    "v": 250,
+    "note": "ゴムクローラ",
     "check": false
    },
    "tail_radius_mm": {
-    "v": null,
-    "note": "カタログに記載なし",
+    "v": 725,
+    "note": "",
     "check": false
    },
    "ground_pressure_kpa": {
-    "v": null,
-    "note": "カタログに記載なし",
+    "v": 24.2,
+    "note": "0.25kgf/cm²",
     "check": false
    },
    "max_work_height_mm": {
-    "v": null,
-    "note": "カタログに記載なし",
+    "v": 4080,
+    "note": "最大掘削高さ（標準アーム0.97m）",
     "check": false
    },
    "max_reach_mm": {
-    "v": null,
-    "note": "カタログに記載なし",
+    "v": 4190,
+    "note": "最大掘削半径（標準アーム0.97m）",
     "check": false
    },
    "max_dig_depth_mm": {
-    "v": null,
-    "note": "カタログに記載なし",
+    "v": 2330,
+    "note": "標準アーム0.97m",
     "check": false
    }
   },
-  "source": [],
-  "caution": "この機種のカタログが手元にありません",
-  "images": []
+  "source": [
+   {
+    "file": "ＸＺ20　カタログ.pdf",
+    "page": 6,
+    "where": "仕様・寸法図/作業範囲図"
+   }
+  ],
+  "images": [
+   "img/033-1.jpg"
+  ]
  },
  {
   "no": 34,
