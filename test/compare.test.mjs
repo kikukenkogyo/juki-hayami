@@ -24,3 +24,15 @@ test("2回目に無い台は例外", () => {
   const b = m({}); b[0].no = 7;
   assert.throws(() => compare(m({}), b));
 });
+
+// ---- アタッチメント: id で突き合わせ、範囲値も比べる ----
+const a = (v) => [{ id: "sv-36x", name: "SV-36X", values: { oil_lpm: { v, note: "", check: false } }, source: [] }];
+test("範囲値が同じなら check:false", () => {
+  const r = compare(a([150, 250]), a([150, 250]), (m) => m.id);
+  assert.equal(r[0].values.oil_lpm.check, false);
+});
+test("範囲値が違えば check:true と2回目を注記", () => {
+  const r = compare(a([150, 250]), a([150, 240]), (m) => m.id);
+  assert.equal(r[0].values.oil_lpm.check, true);
+  assert.ok(r[0].values.oil_lpm.note.endsWith("（2回目: 150,240）"));
+});
