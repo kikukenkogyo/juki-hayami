@@ -149,6 +149,8 @@ function renderAttDetail(a) {
 }
 
 function setTab(t) {
+  if (!$("tabs")) return;
+  if (t !== tab) window.scrollTo(0, 0);
   tab = t;
   for (const b of $("tabs").querySelectorAll("button")) b.setAttribute("aria-pressed", String(b.dataset.tab === t));
   $("jukiBar").hidden = t !== "juki";
@@ -157,8 +159,13 @@ function setTab(t) {
   $("alist").hidden = t !== "att";
 }
 
-function pressOnlyClass(value) {
-  aSelected.clear(); aSelected.add(value);
+// 重機からのジャンプ: 検索と種類は消して、そのクラスだけ選んだ状態にする
+function showOnlyClass(value) {
+  $("aq").value = "";
+  kSelected.clear();
+  for (const b of $("akinds").querySelectorAll("button")) b.setAttribute("aria-pressed", "false");
+  aSelected.clear();
+  if (CLASSES.includes(value)) aSelected.add(value);
   for (const b of $("aclasses").querySelectorAll("button")) b.setAttribute("aria-pressed", String(Number(b.dataset.c) === value));
 }
 
@@ -166,11 +173,12 @@ function route() {
   let h = "";
   try { h = decodeURIComponent(location.hash); } catch { /* 壊れたアドレスは一覧に戻す */ }
   // 重機の詳細から「このクラスに付くアタッチメント」: そのクラスだけ選んだ一覧にする
-  if (h.startsWith("#att/c/")) {
-    pressOnlyClass(Number(h.slice(7)));
+  if (h.startsWith("#att/c/") && $("attBar")) {
+    showOnlyClass(Number(h.slice(7)));
     history.replaceState(null, "", "#att");
     h = "#att";
     renderAttList();
+    window.scrollTo(0, 0);
   }
   const m = h.startsWith("#no-") ? machines.find((x) => String(x.no) === h.slice(4))
     : h.startsWith("#name-") ? machines.find((x) => x.no == null && x.name === h.slice(6)) : null;
@@ -181,7 +189,7 @@ function route() {
   document.querySelector(".bar").hidden = showDetail;
   if (showDetail) {
     $("list").hidden = true;
-    $("alist").hidden = true;
+    if ($("alist")) $("alist").hidden = true;
     if (m) renderDetail(m); else renderAttDetail(a);
     window.scrollTo(0, 0);
   }
@@ -197,6 +205,8 @@ function setup() {
     renderList();
   });
   for (const id of ["q", "maxWidth", "maxHeight", "maxMass"]) $(id).addEventListener("input", renderList);
+  // 古い index.html（アタッチメントの欄なし）と組み合わさっても重機側は動かす
+  if (!$("attBar")) return;
   $("aclasses").innerHTML = $("classes").innerHTML;
   $("akinds").innerHTML = KINDS.map((k) => `<button type="button" data-k="${k}" aria-pressed="false">${k}</button>`).join("");
   const toggle = (box, set, key, conv) => $(box).addEventListener("click", (e) => {
@@ -227,6 +237,7 @@ function setup() {
 
 // アタッチメントは重機と別に読む（読めなくても重機側は使える）
 async function loadAtts() {
+  if (!$("attBar")) return;
   try {
     const res = await fetch("att.json", { cache: "no-cache" });
     if (!res.ok) throw new Error(res.status);
