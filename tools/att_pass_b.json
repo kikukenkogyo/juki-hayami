@@ -1,0 +1,4785 @@
+[
+ {
+  "id": "ts-w1800v",
+  "name": "TS-W1800V",
+  "kind": "圧砕",
+  "class": 1.6,
+  "maker": "オカダ",
+  "values": {
+   "mass_kg": {
+    "v": 6600,
+    "note": "",
+    "check": false
+   },
+   "length_mm": {
+    "v": 3010,
+    "note": "",
+    "check": false
+   },
+   "width_mm": {
+    "v": 2560,
+    "note": "最大全幅（アーム全開時）",
+    "check": false
+   },
+   "height_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "open_mm": {
+    "v": 1800,
+    "note": "最大/最小 1800/0",
+    "check": false
+   },
+   "force_kn": {
+    "v": 2010,
+    "note": "先端破砕力の値（中央の記載なし）",
+    "check": false
+   },
+   "blows_per_min": {
+    "v": null,
+    "note": "ブレーカ以外は対象外",
+    "check": false
+   },
+   "chisel_mm": {
+    "v": null,
+    "note": "ブレーカ以外は対象外",
+    "check": false
+   },
+   "base_t": {
+    "v": [
+     45,
+     70
+    ],
+    "note": "TS-W1800V・TS-W2000V 共通欄 45〜70",
+    "check": false
+   },
+   "oil_lpm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "pressure_mpa": {
+    "v": 30,
+    "note": "TS-W1800V・TS-W2000V 共通欄",
+    "check": false
+   },
+   "rotation": {
+    "v": null,
+    "note": "旋回方式の記載なし",
+    "check": false
+   },
+   "pipes": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "TS-350・1100V.pdf",
+    "page": 1,
+    "where": "右下 超大型TS-Wクラッシャー表 TS-W1800V列"
+   }
+  ]
+ },
+ {
+  "id": "ts-w1600v",
+  "name": "TS-W1600V",
+  "kind": "圧砕",
+  "class": 1.6,
+  "maker": "オカダ",
+  "values": {
+   "mass_kg": {
+    "v": 5200,
+    "note": "",
+    "check": false
+   },
+   "length_mm": {
+    "v": 3175,
+    "note": "",
+    "check": false
+   },
+   "width_mm": {
+    "v": 2295,
+    "note": "最大全幅",
+    "check": false
+   },
+   "height_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "open_mm": {
+    "v": 1600,
+    "note": "最大/最小 1600/0",
+    "check": false
+   },
+   "force_kn": {
+    "v": 1300,
+    "note": "先端破砕力の値（中央の記載なし）",
+    "check": false
+   },
+   "blows_per_min": {
+    "v": null,
+    "note": "ブレーカ以外は対象外",
+    "check": false
+   },
+   "chisel_mm": {
+    "v": null,
+    "note": "ブレーカ以外は対象外",
+    "check": false
+   },
+   "base_t": {
+    "v": [
+     40,
+     48
+    ],
+    "note": "",
+    "check": false
+   },
+   "oil_lpm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "pressure_mpa": {
+    "v": 30,
+    "note": "",
+    "check": false
+   },
+   "rotation": {
+    "v": null,
+    "note": "見出しが FR/HR で数字は1つだけ。どちらか判断できない",
+    "check": false
+   },
+   "pipes": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "TS-350・1100V.pdf",
+    "page": 1,
+    "where": "左下 TS-Wクラッシャー表 TS-W1600V FR/HR列"
+   }
+  ]
+ },
+ {
+  "id": "ts-w1350v",
+  "name": "TS-W1350V",
+  "kind": "圧砕",
+  "class": 1.2,
+  "maker": "オカダ",
+  "values": {
+   "mass_kg": {
+    "v": 3730,
+    "note": "FR 3730 / HR 3930。標準（FR）の値",
+    "check": false
+   },
+   "length_mm": {
+    "v": 2720,
+    "note": "FR 2720 / HR 2875",
+    "check": false
+   },
+   "width_mm": {
+    "v": 1920,
+    "note": "最大全幅",
+    "check": false
+   },
+   "height_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "open_mm": {
+    "v": 1350,
+    "note": "最大/最小 1350/0",
+    "check": false
+   },
+   "force_kn": {
+    "v": 1170,
+    "note": "先端破砕力の値（中央の記載なし）",
+    "check": false
+   },
+   "blows_per_min": {
+    "v": null,
+    "note": "ブレーカ以外は対象外",
+    "check": false
+   },
+   "chisel_mm": {
+    "v": null,
+    "note": "ブレーカ以外は対象外",
+    "check": false
+   },
+   "base_t": {
+    "v": [
+     30,
+     40
+    ],
+    "note": "",
+    "check": false
+   },
+   "oil_lpm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "pressure_mpa": {
+    "v": 30,
+    "note": "",
+    "check": false
+   },
+   "rotation": {
+    "v": "フリー",
+    "note": "表の注記「仕様はフリー旋回」、HRはオプション",
+    "check": false
+   },
+   "pipes": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "TS-350・1100V.pdf",
+    "page": 1,
+    "where": "左下 TS-Wクラッシャー表 TS-W1350V FR/HR列のFR側"
+   }
+  ]
+ },
+ {
+  "id": "ts-w1100v-arts",
+  "name": "TS-W1100V ARTS",
+  "kind": "圧砕",
+  "class": 0.7,
+  "maker": "オカダ",
+  "values": {
+   "mass_kg": {
+    "v": 2470,
+    "note": "FR/ARTS/HR = 2360/2470/2470 のARTSの値",
+    "check": false
+   },
+   "length_mm": {
+    "v": 2635,
+    "note": "FR/ARTS/HR = 2525/2635/2635 のARTSの値",
+    "check": false
+   },
+   "width_mm": {
+    "v": 1625,
+    "note": "最大全幅",
+    "check": false
+   },
+   "height_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "open_mm": {
+    "v": 1100,
+    "note": "最大/最小 1100/0",
+    "check": false
+   },
+   "force_kn": {
+    "v": 940,
+    "note": "先端破砕力の値（中央の記載なし）",
+    "check": false
+   },
+   "blows_per_min": {
+    "v": null,
+    "note": "ブレーカ以外は対象外",
+    "check": false
+   },
+   "chisel_mm": {
+    "v": null,
+    "note": "ブレーカ以外は対象外",
+    "check": false
+   },
+   "base_t": {
+    "v": [
+     18,
+     25
+    ],
+    "note": "",
+    "check": false
+   },
+   "oil_lpm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "pressure_mpa": {
+    "v": 30,
+    "note": "",
+    "check": false
+   },
+   "rotation": {
+    "v": "有",
+    "note": "ARTS旋回",
+    "check": false
+   },
+   "pipes": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "TS-350・1100V.pdf",
+    "page": 1,
+    "where": "左下 TS-Wクラッシャー表 TS-WB1100V FR/ARTS/HR列のARTS値"
+   }
+  ]
+ },
+ {
+  "id": "ts-w1100v-arts-5p",
+  "name": "TS-W1100V ARTS（5本配管）",
+  "kind": "圧砕",
+  "class": 0.7,
+  "maker": "オカダ",
+  "values": {
+   "mass_kg": {
+    "v": 2470,
+    "note": "FR/ARTS/HR = 2360/2470/2470 のARTSの値",
+    "check": false
+   },
+   "length_mm": {
+    "v": 2635,
+    "note": "FR/ARTS/HR = 2525/2635/2635 のARTSの値",
+    "check": false
+   },
+   "width_mm": {
+    "v": 1625,
+    "note": "最大全幅",
+    "check": false
+   },
+   "height_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "open_mm": {
+    "v": 1100,
+    "note": "最大/最小 1100/0",
+    "check": false
+   },
+   "force_kn": {
+    "v": 940,
+    "note": "先端破砕力の値（中央の記載なし）",
+    "check": false
+   },
+   "blows_per_min": {
+    "v": null,
+    "note": "ブレーカ以外は対象外",
+    "check": false
+   },
+   "chisel_mm": {
+    "v": null,
+    "note": "ブレーカ以外は対象外",
+    "check": false
+   },
+   "base_t": {
+    "v": [
+     18,
+     25
+    ],
+    "note": "",
+    "check": false
+   },
+   "oil_lpm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "pressure_mpa": {
+    "v": 30,
+    "note": "",
+    "check": false
+   },
+   "rotation": {
+    "v": "有",
+    "note": "ARTS旋回",
+    "check": false
+   },
+   "pipes": {
+    "v": null,
+    "note": "名前は5本配管だがカタログに配管本数の記載なし",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "TS-350・1100V.pdf",
+    "page": 1,
+    "where": "左下 TS-Wクラッシャー表 TS-WB1100V FR/ARTS/HR列のARTS値"
+   }
+  ]
+ },
+ {
+  "id": "ts-w1100v-free",
+  "name": "TS-W1100V（フリー）",
+  "kind": "圧砕",
+  "class": 0.7,
+  "maker": "オカダ",
+  "values": {
+   "mass_kg": {
+    "v": 2360,
+    "note": "FR/ARTS/HR = 2360/2470/2470 のFRの値",
+    "check": false
+   },
+   "length_mm": {
+    "v": 2525,
+    "note": "FR/ARTS/HR = 2525/2635/2635 のFRの値",
+    "check": false
+   },
+   "width_mm": {
+    "v": 1625,
+    "note": "最大全幅",
+    "check": false
+   },
+   "height_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "open_mm": {
+    "v": 1100,
+    "note": "最大/最小 1100/0",
+    "check": false
+   },
+   "force_kn": {
+    "v": 940,
+    "note": "先端破砕力の値（中央の記載なし）",
+    "check": false
+   },
+   "blows_per_min": {
+    "v": null,
+    "note": "ブレーカ以外は対象外",
+    "check": false
+   },
+   "chisel_mm": {
+    "v": null,
+    "note": "ブレーカ以外は対象外",
+    "check": false
+   },
+   "base_t": {
+    "v": [
+     18,
+     25
+    ],
+    "note": "",
+    "check": false
+   },
+   "oil_lpm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "pressure_mpa": {
+    "v": 30,
+    "note": "",
+    "check": false
+   },
+   "rotation": {
+    "v": "フリー",
+    "note": "FR（フリー旋回）",
+    "check": false
+   },
+   "pipes": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "TS-350・1100V.pdf",
+    "page": 1,
+    "where": "左下 TS-Wクラッシャー表 TS-WB1100V FR/ARTS/HR列のFR値"
+   }
+  ]
+ },
+ {
+  "id": "ts-wb620v",
+  "name": "TS-WB620V",
+  "kind": "圧砕",
+  "class": 0.25,
+  "maker": "オカダ",
+  "values": {
+   "mass_kg": {
+    "v": 650,
+    "note": "",
+    "check": false
+   },
+   "length_mm": {
+    "v": 1610,
+    "note": "",
+    "check": false
+   },
+   "width_mm": {
+    "v": 1120,
+    "note": "最大全幅",
+    "check": false
+   },
+   "height_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "open_mm": {
+    "v": 620,
+    "note": "最大/最小 620/0",
+    "check": false
+   },
+   "force_kn": {
+    "v": 350,
+    "note": "先端破砕力の値（中央の記載なし）",
+    "check": false
+   },
+   "blows_per_min": {
+    "v": null,
+    "note": "ブレーカ以外は対象外",
+    "check": false
+   },
+   "chisel_mm": {
+    "v": null,
+    "note": "ブレーカ以外は対象外",
+    "check": false
+   },
+   "base_t": {
+    "v": [
+     6,
+     9
+    ],
+    "note": "",
+    "check": false
+   },
+   "oil_lpm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "pressure_mpa": {
+    "v": 28,
+    "note": "",
+    "check": false
+   },
+   "rotation": {
+    "v": "フリー",
+    "note": "TS-W620V FR",
+    "check": false
+   },
+   "pipes": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "TS-350・1100V.pdf",
+    "page": 1,
+    "where": "左下 TS-Wクラッシャー表 TS-W620V FR列"
+   }
+  ]
+ },
+ {
+  "id": "ts-wb350-f",
+  "name": "TS-WB350-F",
+  "kind": "圧砕",
+  "class": 0.1,
+  "maker": "オカダ",
+  "values": {
+   "mass_kg": {
+    "v": 240,
+    "note": "",
+    "check": false
+   },
+   "length_mm": {
+    "v": 1070,
+    "note": "",
+    "check": false
+   },
+   "width_mm": {
+    "v": 680,
+    "note": "最大全幅",
+    "check": false
+   },
+   "height_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "open_mm": {
+    "v": 360,
+    "note": "最大/最小 360/0",
+    "check": false
+   },
+   "force_kn": {
+    "v": 240,
+    "note": "先端破砕力の値（中央の記載なし）",
+    "check": false
+   },
+   "blows_per_min": {
+    "v": null,
+    "note": "ブレーカ以外は対象外",
+    "check": false
+   },
+   "chisel_mm": {
+    "v": null,
+    "note": "ブレーカ以外は対象外",
+    "check": false
+   },
+   "base_t": {
+    "v": [
+     2.5,
+     4
+    ],
+    "note": "",
+    "check": false
+   },
+   "oil_lpm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "pressure_mpa": {
+    "v": 25,
+    "note": "",
+    "check": false
+   },
+   "rotation": {
+    "v": null,
+    "note": "TS-WB350の表に旋回方式の記載なし（社内名の -F はフリーとみられる）",
+    "check": false
+   },
+   "pipes": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "TS-350・1100V.pdf",
+    "page": 1,
+    "where": "右上 TS-WBクラッシャー表 TS-WB350列"
+   }
+  ]
+ },
+ {
+  "id": "ts-w950v-nocover",
+  "name": "TS-W950V（シリンダーカバーなし）",
+  "kind": "圧砕",
+  "class": 0.45,
+  "maker": "オカダ",
+  "values": {
+   "mass_kg": {
+    "v": 1400,
+    "note": "両カタログとも1,400（FR値）。ARTS/HRは1630",
+    "check": false
+   },
+   "length_mm": {
+    "v": 2052,
+    "note": "単品カタログは「全高 2,052」と表記。別カタログ(TS-350・1100V)のFR全長 2050。同じ寸法とみて全長に入れた",
+    "check": false
+   },
+   "width_mm": {
+    "v": 1395,
+    "note": "最大全幅。別カタログ(TS-W950V単品) 1,394",
+    "check": false
+   },
+   "height_mm": {
+    "v": null,
+    "note": "単品カタログの「全高2,052」は全長と同じ寸法とみて length_mm に入れた",
+    "check": false
+   },
+   "open_mm": {
+    "v": 950,
+    "note": "TS-350・1100V表 950/0。単品カタログ 930/0",
+    "check": false
+   },
+   "force_kn": {
+    "v": 605,
+    "note": "圧砕力（先端/中央の区別なし）",
+    "check": false
+   },
+   "blows_per_min": {
+    "v": null,
+    "note": "ブレーカ以外は対象外",
+    "check": false
+   },
+   "chisel_mm": {
+    "v": null,
+    "note": "ブレーカ以外は対象外",
+    "check": false
+   },
+   "base_t": {
+    "v": [
+     12,
+     20
+    ],
+    "note": "単品カタログは 12〜20（ロング）",
+    "check": false
+   },
+   "oil_lpm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "pressure_mpa": {
+    "v": 32,
+    "note": "単品カタログ 32。TS-350・1100V表は 30",
+    "check": false
+   },
+   "rotation": {
+    "v": null,
+    "note": "単品カタログに旋回方式の記載なし（標準はFR、ARTS/HRはオプション）",
+    "check": false
+   },
+   "pipes": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "TS-W950V.pdf",
+    "page": 2,
+    "where": "TS-W950V 仕様表"
+   },
+   {
+    "file": "TS-350・1100V.pdf",
+    "page": 1,
+    "where": "左下 TS-Wクラッシャー表 TS-W950V FR/ARTS/HR列のFR値"
+   }
+  ]
+ },
+ {
+  "id": "ts-w950v",
+  "name": "TS-W950V",
+  "kind": "圧砕",
+  "class": 0.45,
+  "maker": "オカダ",
+  "values": {
+   "mass_kg": {
+    "v": 1400,
+    "note": "両カタログとも1,400（FR値）。ARTS/HRは1630",
+    "check": false
+   },
+   "length_mm": {
+    "v": 2052,
+    "note": "単品カタログは「全高 2,052」と表記。別カタログ(TS-350・1100V)のFR全長 2050。同じ寸法とみて全長に入れた",
+    "check": false
+   },
+   "width_mm": {
+    "v": 1395,
+    "note": "最大全幅。別カタログ(TS-W950V単品) 1,394",
+    "check": false
+   },
+   "height_mm": {
+    "v": null,
+    "note": "単品カタログの「全高2,052」は全長と同じ寸法とみて length_mm に入れた",
+    "check": false
+   },
+   "open_mm": {
+    "v": 950,
+    "note": "TS-350・1100V表 950/0。単品カタログ 930/0",
+    "check": false
+   },
+   "force_kn": {
+    "v": 605,
+    "note": "圧砕力（先端/中央の区別なし）",
+    "check": false
+   },
+   "blows_per_min": {
+    "v": null,
+    "note": "ブレーカ以外は対象外",
+    "check": false
+   },
+   "chisel_mm": {
+    "v": null,
+    "note": "ブレーカ以外は対象外",
+    "check": false
+   },
+   "base_t": {
+    "v": [
+     12,
+     20
+    ],
+    "note": "単品カタログは 12〜20（ロング）",
+    "check": false
+   },
+   "oil_lpm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "pressure_mpa": {
+    "v": 32,
+    "note": "単品カタログ 32。TS-350・1100V表は 30",
+    "check": false
+   },
+   "rotation": {
+    "v": null,
+    "note": "単品カタログに旋回方式の記載なし（標準はFR、ARTS/HRはオプション）",
+    "check": false
+   },
+   "pipes": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "TS-W950V.pdf",
+    "page": 2,
+    "where": "TS-W950V 仕様表"
+   },
+   {
+    "file": "TS-350・1100V.pdf",
+    "page": 1,
+    "where": "左下 TS-Wクラッシャー表 TS-W950V FR/ARTS/HR列のFR値"
+   }
+  ]
+ },
+ {
+  "id": "ts-wb950v-f",
+  "name": "TS-WB950V-F",
+  "kind": "圧砕",
+  "class": 0.45,
+  "maker": "オカダ",
+  "values": {
+   "mass_kg": {
+    "v": 1400,
+    "note": "両カタログとも1,400（FR値）。ARTS/HRは1630",
+    "check": false
+   },
+   "length_mm": {
+    "v": 2052,
+    "note": "単品カタログは「全高 2,052」と表記。別カタログ(TS-350・1100V)のFR全長 2050。同じ寸法とみて全長に入れた",
+    "check": false
+   },
+   "width_mm": {
+    "v": 1395,
+    "note": "最大全幅。別カタログ(TS-W950V単品) 1,394",
+    "check": false
+   },
+   "height_mm": {
+    "v": null,
+    "note": "単品カタログの「全高2,052」は全長と同じ寸法とみて length_mm に入れた",
+    "check": false
+   },
+   "open_mm": {
+    "v": 950,
+    "note": "TS-350・1100V表 950/0。単品カタログ 930/0",
+    "check": false
+   },
+   "force_kn": {
+    "v": 605,
+    "note": "圧砕力（先端/中央の区別なし）",
+    "check": false
+   },
+   "blows_per_min": {
+    "v": null,
+    "note": "ブレーカ以外は対象外",
+    "check": false
+   },
+   "chisel_mm": {
+    "v": null,
+    "note": "ブレーカ以外は対象外",
+    "check": false
+   },
+   "base_t": {
+    "v": [
+     12,
+     20
+    ],
+    "note": "単品カタログは 12〜20（ロング）",
+    "check": false
+   },
+   "oil_lpm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "pressure_mpa": {
+    "v": 32,
+    "note": "単品カタログ 32。TS-350・1100V表は 30",
+    "check": false
+   },
+   "rotation": {
+    "v": "フリー",
+    "note": "TS-W950V FR",
+    "check": false
+   },
+   "pipes": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "TS-W950V.pdf",
+    "page": 2,
+    "where": "TS-W950V 仕様表"
+   },
+   {
+    "file": "TS-350・1100V.pdf",
+    "page": 1,
+    "where": "左下 TS-Wクラッシャー表 TS-W950V FR/ARTS/HR列のFR値"
+   }
+  ]
+ },
+ {
+  "id": "ts-w600xcv-a",
+  "name": "TS-W600XCV-A",
+  "kind": "カッター",
+  "class": 0.45,
+  "maker": "オカダ",
+  "values": {
+   "mass_kg": {
+    "v": 1490,
+    "note": "FR/ARTS/HR = 1400/1490/1480 のうち、社内名 -A をARTSとみてARTS値（-Aの意味は推定）。最軽量ARTS 1430",
+    "check": false
+   },
+   "length_mm": {
+    "v": 2120,
+    "note": "FR/ARTS/HR = 2010/2120/2065 のARTS値",
+    "check": false
+   },
+   "width_mm": {
+    "v": 1160,
+    "note": "",
+    "check": false
+   },
+   "height_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "open_mm": {
+    "v": 590,
+    "note": "開口幅 最大/最小 590/-250",
+    "check": false
+   },
+   "force_kn": {
+    "v": 1275,
+    "note": "中央部。先端部 590",
+    "check": false
+   },
+   "blows_per_min": {
+    "v": null,
+    "note": "ブレーカ以外は対象外",
+    "check": false
+   },
+   "chisel_mm": {
+    "v": null,
+    "note": "ブレーカ以外は対象外",
+    "check": false
+   },
+   "base_t": {
+    "v": [
+     11,
+     16
+    ],
+    "note": "",
+    "check": false
+   },
+   "oil_lpm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "pressure_mpa": {
+    "v": [
+     30,
+     32
+    ],
+    "note": "",
+    "check": false
+   },
+   "rotation": {
+    "v": "有",
+    "note": "社内名 -A をARTS旋回とみた（推定）",
+    "check": false
+   },
+   "pipes": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "TS-W600XCV.pdf",
+    "page": 1,
+    "where": "諸元表 TS-Wクロスカッター TS-W600XCV列（ARTS値）"
+   }
+  ]
+ },
+ {
+  "id": "ts-w650xcv",
+  "name": "TS-W650XCV",
+  "kind": "カッター",
+  "class": 0.7,
+  "maker": "オカダ",
+  "values": {
+   "mass_kg": {
+    "v": 2480,
+    "note": "TS-W650.pdf 2480（油圧・ARTSはオプションとあるため標準FR値とみられる）。別カタログ(TS-W600XCV.pdf) FR/ARTS/HR/FHR = 2450/2550/2530/2540",
+    "check": false
+   },
+   "length_mm": {
+    "v": 2470,
+    "note": "別カタログ FR/ARTS/HR/FHR = 2370/2520/2480/2480",
+    "check": false
+   },
+   "width_mm": {
+    "v": 1350,
+    "note": "",
+    "check": false
+   },
+   "height_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "open_mm": {
+    "v": 680,
+    "note": "別カタログ(TS-W600XCV.pdf) 680/-270。TS-W650.pdf 675（最小 -270）",
+    "check": false
+   },
+   "force_kn": {
+    "v": 1500,
+    "note": "中央。先端 800",
+    "check": false
+   },
+   "blows_per_min": {
+    "v": null,
+    "note": "ブレーカ以外は対象外",
+    "check": false
+   },
+   "chisel_mm": {
+    "v": null,
+    "note": "ブレーカ以外は対象外",
+    "check": false
+   },
+   "base_t": {
+    "v": [
+     20,
+     25
+    ],
+    "note": "",
+    "check": false
+   },
+   "oil_lpm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "pressure_mpa": {
+    "v": 30,
+    "note": "",
+    "check": false
+   },
+   "rotation": {
+    "v": null,
+    "note": "標準はフリーとみられるが、2台(units 71,72)の旋回方式はカタログから判断できない",
+    "check": false
+   },
+   "pipes": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "TS-W650.pdf",
+    "page": 1,
+    "where": "TS-Wクロスカッター表 TS-W650XCV列"
+   },
+   {
+    "file": "TS-W600XCV.pdf",
+    "page": 1,
+    "where": "諸元表 TS-Wクロスカッター TS-W650XCV列"
+   }
+  ]
+ },
+ {
+  "id": "cut-80fr",
+  "name": "カットクンCUT-80FR",
+  "kind": "カッター",
+  "class": 0.7,
+  "maker": "オカダ",
+  "values": {
+   "mass_kg": {
+    "v": 2100,
+    "note": "FR 2100（HR 2150）",
+    "check": false
+   },
+   "length_mm": {
+    "v": 2545,
+    "note": "",
+    "check": false
+   },
+   "width_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "height_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "open_mm": {
+    "v": 838,
+    "note": "",
+    "check": false
+   },
+   "force_kn": {
+    "v": 1344,
+    "note": "切断力137t を換算。破砕力 60t（588kN）",
+    "check": false
+   },
+   "blows_per_min": {
+    "v": null,
+    "note": "ブレーカ以外は対象外",
+    "check": false
+   },
+   "chisel_mm": {
+    "v": null,
+    "note": "ブレーカ以外は対象外",
+    "check": false
+   },
+   "base_t": {
+    "v": null,
+    "note": "0.7〜0.9m³クラス",
+    "check": false
+   },
+   "oil_lpm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "pressure_mpa": {
+    "v": 27.5,
+    "note": "280kgf/cm² を換算",
+    "check": false
+   },
+   "rotation": {
+    "v": "フリー",
+    "note": "CUT-80FR（フリー旋回）",
+    "check": false
+   },
+   "pipes": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "オカダ　カットクン　CUT-80FR.pdf",
+    "page": 1,
+    "where": "カットクン諸元表 CUT-80FR列"
+   }
+  ]
+ },
+ {
+  "id": "osc-360a",
+  "name": "OSC-360A",
+  "kind": "小割",
+  "class": 1.6,
+  "maker": "オカダ",
+  "values": {
+   "mass_kg": {
+    "v": 3090,
+    "note": "",
+    "check": false
+   },
+   "length_mm": {
+    "v": 2700,
+    "note": "",
+    "check": false
+   },
+   "width_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "height_mm": {
+    "v": 1760,
+    "note": "",
+    "check": false
+   },
+   "open_mm": {
+    "v": 1105,
+    "note": "",
+    "check": false
+   },
+   "force_kn": {
+    "v": 1000,
+    "note": "中央破砕力",
+    "check": false
+   },
+   "blows_per_min": {
+    "v": null,
+    "note": "ブレーカ以外は対象外",
+    "check": false
+   },
+   "chisel_mm": {
+    "v": null,
+    "note": "ブレーカ以外は対象外",
+    "check": false
+   },
+   "base_t": {
+    "v": [
+     30,
+     45
+    ],
+    "note": "",
+    "check": false
+   },
+   "oil_lpm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "pressure_mpa": {
+    "v": 32,
+    "note": "",
+    "check": false
+   },
+   "rotation": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "pipes": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "OSC-135A.pdf",
+    "page": 1,
+    "where": "コワリクン表 OSC-360A列"
+   }
+  ]
+ },
+ {
+  "id": "osc-200a",
+  "name": "OSC-200A",
+  "kind": "小割",
+  "class": 0.7,
+  "maker": "オカダ",
+  "values": {
+   "mass_kg": {
+    "v": 1790,
+    "note": "",
+    "check": false
+   },
+   "length_mm": {
+    "v": 2175,
+    "note": "",
+    "check": false
+   },
+   "width_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "height_mm": {
+    "v": 1410,
+    "note": "",
+    "check": false
+   },
+   "open_mm": {
+    "v": 860,
+    "note": "",
+    "check": false
+   },
+   "force_kn": {
+    "v": 880,
+    "note": "中央破砕力",
+    "check": false
+   },
+   "blows_per_min": {
+    "v": null,
+    "note": "ブレーカ以外は対象外",
+    "check": false
+   },
+   "chisel_mm": {
+    "v": null,
+    "note": "ブレーカ以外は対象外",
+    "check": false
+   },
+   "base_t": {
+    "v": [
+     18,
+     25
+    ],
+    "note": "",
+    "check": false
+   },
+   "oil_lpm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "pressure_mpa": {
+    "v": 32,
+    "note": "",
+    "check": false
+   },
+   "rotation": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "pipes": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "OSC-135A.pdf",
+    "page": 1,
+    "where": "コワリクン表 OSC-200A列（osc-200a.pdf も同じページ）"
+   }
+  ]
+ },
+ {
+  "id": "osc135a",
+  "name": "OSC135A",
+  "kind": "小割",
+  "class": 0.45,
+  "maker": "オカダ",
+  "values": {
+   "mass_kg": {
+    "v": 1090,
+    "note": "",
+    "check": false
+   },
+   "length_mm": {
+    "v": 1930,
+    "note": "",
+    "check": false
+   },
+   "width_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "height_mm": {
+    "v": 1175,
+    "note": "",
+    "check": false
+   },
+   "open_mm": {
+    "v": 720,
+    "note": "",
+    "check": false
+   },
+   "force_kn": {
+    "v": 600,
+    "note": "中央破砕力",
+    "check": false
+   },
+   "blows_per_min": {
+    "v": null,
+    "note": "ブレーカ以外は対象外",
+    "check": false
+   },
+   "chisel_mm": {
+    "v": null,
+    "note": "ブレーカ以外は対象外",
+    "check": false
+   },
+   "base_t": {
+    "v": [
+     10,
+     16
+    ],
+    "note": "",
+    "check": false
+   },
+   "oil_lpm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "pressure_mpa": {
+    "v": 28,
+    "note": "",
+    "check": false
+   },
+   "rotation": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "pipes": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "OSC-135A.pdf",
+    "page": 1,
+    "where": "コワリクン表 OSC-135A列"
+   }
+  ]
+ },
+ {
+  "id": "osc82v",
+  "name": "OSC82V",
+  "kind": "小割",
+  "class": 0.7,
+  "maker": "オカダ",
+  "values": {
+   "mass_kg": {
+    "v": 1850,
+    "note": "左から3列目。表の上の型式名は OSC30V・51V・82V の3つ、数字の列は4列。取付ショベル欄が 0.25 / 0.4〜0.45 / 0.7 / 1.2m³ と小さい順で、名前の数字（30・51・82）も小さい順なので左から3列を 30V・51V・82V に当て、4列目(1.2m³・2,650kg・増速バルブ無)は名前なしとみた。OSC-135A(0.45級 1090kg/720mm/600kN)・OSC-200A(0.7級 880kN)の値とも近く整合。",
+    "check": false
+   },
+   "length_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "width_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "height_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "open_mm": {
+    "v": 880,
+    "note": "",
+    "check": false
+   },
+   "force_kn": {
+    "v": 880,
+    "note": "中央破砕",
+    "check": false
+   },
+   "blows_per_min": {
+    "v": null,
+    "note": "ブレーカ以外は対象外",
+    "check": false
+   },
+   "chisel_mm": {
+    "v": null,
+    "note": "ブレーカ以外は対象外",
+    "check": false
+   },
+   "base_t": {
+    "v": null,
+    "note": "0.7m³クラス",
+    "check": false
+   },
+   "oil_lpm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "pressure_mpa": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "rotation": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "pipes": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "OSC30V　オカダ0.25小割.pdf",
+    "page": 1,
+    "where": "オカダ小割表 左から3列目（82V・0.7m³）"
+   }
+  ]
+ },
+ {
+  "id": "osc52v",
+  "name": "OSC52V",
+  "kind": "小割",
+  "class": 0.45,
+  "maker": "オカダ",
+  "values": {
+   "mass_kg": {
+    "v": 1100,
+    "note": "左から2列目。表の上の型式名は OSC30V・51V・82V の3つ、数字の列は4列。取付ショベル欄が 0.25 / 0.4〜0.45 / 0.7 / 1.2m³ と小さい順で、名前の数字（30・51・82）も小さい順なので左から3列を 30V・51V・82V に当て、4列目(1.2m³・2,650kg・増速バルブ無)は名前なしとみた。OSC-135A(0.45級 1090kg/720mm/600kN)・OSC-200A(0.7級 880kN)の値とも近く整合。",
+    "check": false
+   },
+   "length_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "width_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "height_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "open_mm": {
+    "v": 715,
+    "note": "",
+    "check": false
+   },
+   "force_kn": {
+    "v": 600,
+    "note": "中央破砕",
+    "check": false
+   },
+   "blows_per_min": {
+    "v": null,
+    "note": "ブレーカ以外は対象外",
+    "check": false
+   },
+   "chisel_mm": {
+    "v": null,
+    "note": "ブレーカ以外は対象外",
+    "check": false
+   },
+   "base_t": {
+    "v": null,
+    "note": "0.4〜0.45m³クラス",
+    "check": false
+   },
+   "oil_lpm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "pressure_mpa": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "rotation": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "pipes": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "OSC30V　オカダ0.25小割.pdf",
+    "page": 1,
+    "where": "オカダ小割表 左から2列目（51V・0.4〜0.45m³）"
+   }
+  ]
+ },
+ {
+  "id": "osc25",
+  "name": "OSC25",
+  "kind": "小割",
+  "class": 0.25,
+  "maker": "オカダ",
+  "values": {
+   "mass_kg": {
+    "v": 600,
+    "note": "左から1列目。表の上の型式名は OSC30V・51V・82V の3つ、数字の列は4列。取付ショベル欄が 0.25 / 0.4〜0.45 / 0.7 / 1.2m³ と小さい順で、名前の数字（30・51・82）も小さい順なので左から3列を 30V・51V・82V に当て、4列目(1.2m³・2,650kg・増速バルブ無)は名前なしとみた。OSC-135A(0.45級 1090kg/720mm/600kN)・OSC-200A(0.7級 880kN)の値とも近く整合。",
+    "check": false
+   },
+   "length_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "width_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "height_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "open_mm": {
+    "v": 580,
+    "note": "",
+    "check": false
+   },
+   "force_kn": {
+    "v": 400,
+    "note": "中央破砕",
+    "check": false
+   },
+   "blows_per_min": {
+    "v": null,
+    "note": "ブレーカ以外は対象外",
+    "check": false
+   },
+   "chisel_mm": {
+    "v": null,
+    "note": "ブレーカ以外は対象外",
+    "check": false
+   },
+   "base_t": {
+    "v": null,
+    "note": "0.25m³クラス",
+    "check": false
+   },
+   "oil_lpm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "pressure_mpa": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "rotation": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "pipes": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "OSC30V　オカダ0.25小割.pdf",
+    "page": 1,
+    "where": "オカダ小割表 左から1列目（OSC30V・0.25m³）"
+   }
+  ]
+ },
+ {
+  "id": "sv-47x",
+  "name": "SV-47X",
+  "kind": "圧砕",
+  "class": 1.6,
+  "maker": "ニューマチック",
+  "values": {
+   "mass_kg": {
+    "v": 4890,
+    "note": "標準 4890kg／(R)油圧旋回タイプ 4890kg",
+    "check": false
+   },
+   "length_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "width_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "height_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "open_mm": {
+    "v": 1600,
+    "note": "最大/最小開口幅 1600/0",
+    "check": false
+   },
+   "force_kn": {
+    "v": 1600,
+    "note": "先端破砕力（中央の記載なし）",
+    "check": false
+   },
+   "blows_per_min": {
+    "v": null,
+    "note": "ブレーカではないため対象外",
+    "check": false
+   },
+   "chisel_mm": {
+    "v": null,
+    "note": "ブレーカではないため対象外",
+    "check": false
+   },
+   "base_t": {
+    "v": [
+     39,
+     48
+    ],
+    "note": "参考取付ショベル tonクラス",
+    "check": false
+   },
+   "oil_lpm": {
+    "v": [
+     175,
+     275
+    ],
+    "note": "",
+    "check": false
+   },
+   "pressure_mpa": {
+    "v": 30,
+    "note": "ATT配管設定圧30MPa。圧砕機搭載リリーフ弁圧力 26MPa",
+    "check": false
+   },
+   "rotation": {
+    "v": null,
+    "note": "カタログでは(R)が油圧旋回タイプ。機種名に R が無く、旋回の有無はカタログから判断できない",
+    "check": false
+   },
+   "pipes": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "SV-24XR-SV36X.pdf",
+    "page": 1,
+    "where": "ツーシリンダ圧砕機SVシリーズ 仕様表 SV-47X(R)行"
+   }
+  ]
+ },
+ {
+  "id": "sv-36x",
+  "name": "SV-36X",
+  "kind": "圧砕",
+  "class": 1.2,
+  "maker": "ニューマチック",
+  "values": {
+   "mass_kg": {
+    "v": 3870,
+    "note": "標準 3870kg／(R)油圧旋回タイプ 3920kg",
+    "check": false
+   },
+   "length_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "width_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "height_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "open_mm": {
+    "v": 1350,
+    "note": "最大/最小開口幅 1350/0",
+    "check": false
+   },
+   "force_kn": {
+    "v": 1260,
+    "note": "先端破砕力（中央の記載なし）",
+    "check": false
+   },
+   "blows_per_min": {
+    "v": null,
+    "note": "ブレーカではないため対象外",
+    "check": false
+   },
+   "chisel_mm": {
+    "v": null,
+    "note": "ブレーカではないため対象外",
+    "check": false
+   },
+   "base_t": {
+    "v": [
+     29,
+     38
+    ],
+    "note": "参考取付ショベル tonクラス",
+    "check": false
+   },
+   "oil_lpm": {
+    "v": [
+     150,
+     250
+    ],
+    "note": "",
+    "check": false
+   },
+   "pressure_mpa": {
+    "v": 30,
+    "note": "ATT配管設定圧30MPa。圧砕機搭載リリーフ弁圧力 25MPa",
+    "check": false
+   },
+   "rotation": {
+    "v": null,
+    "note": "カタログでは(R)が油圧旋回タイプ。機種名に R が無く、旋回の有無はカタログから判断できない",
+    "check": false
+   },
+   "pipes": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "SV-24XR-SV36X.pdf",
+    "page": 1,
+    "where": "ツーシリンダ圧砕機SVシリーズ 仕様表 SV-36X(R)行"
+   }
+  ]
+ },
+ {
+  "id": "sv-24xr-5p",
+  "name": "SV-24XR（5本配管）",
+  "kind": "圧砕",
+  "class": 0.7,
+  "maker": "ニューマチック",
+  "values": {
+   "mass_kg": {
+    "v": 2565,
+    "note": "(R)油圧旋回タイプの質量。標準(無印)は2510kg",
+    "check": false
+   },
+   "length_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "width_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "height_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "open_mm": {
+    "v": 1100,
+    "note": "最大/最小開口幅 1100/0",
+    "check": false
+   },
+   "force_kn": {
+    "v": 1100,
+    "note": "先端破砕力（中央の記載なし）",
+    "check": false
+   },
+   "blows_per_min": {
+    "v": null,
+    "note": "ブレーカではないため対象外",
+    "check": false
+   },
+   "chisel_mm": {
+    "v": null,
+    "note": "ブレーカではないため対象外",
+    "check": false
+   },
+   "base_t": {
+    "v": [
+     19,
+     21
+    ],
+    "note": "参考取付ショベル tonクラス",
+    "check": false
+   },
+   "oil_lpm": {
+    "v": [
+     100,
+     200
+    ],
+    "note": "",
+    "check": false
+   },
+   "pressure_mpa": {
+    "v": 30,
+    "note": "ATT配管設定圧30MPa。圧砕機搭載リリーフ弁圧力 28MPa",
+    "check": false
+   },
+   "rotation": {
+    "v": "有",
+    "note": "機種名がSV-24XR。カタログ注記「(R)は油圧旋回タイプ」より",
+    "check": false
+   },
+   "pipes": {
+    "v": null,
+    "note": "カタログに記載なし（機種名では5本配管）",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "SV-24XR-SV36X.pdf",
+    "page": 1,
+    "where": "ツーシリンダ圧砕機SVシリーズ 仕様表 SV-24X(R)行"
+   }
+  ]
+ },
+ {
+  "id": "sv24",
+  "name": "SV24",
+  "kind": "圧砕",
+  "class": 0.7,
+  "maker": "ニューマチック",
+  "values": {
+   "mass_kg": {
+    "v": 2510,
+    "note": "標準 2510kg／(R)油圧旋回タイプ 2565kg。カタログに同じ名前が無いため SV-24X の数字",
+    "check": false
+   },
+   "length_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "width_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "height_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "open_mm": {
+    "v": 1100,
+    "note": "最大/最小開口幅 1100/0",
+    "check": false
+   },
+   "force_kn": {
+    "v": 1100,
+    "note": "先端破砕力（中央の記載なし）",
+    "check": false
+   },
+   "blows_per_min": {
+    "v": null,
+    "note": "ブレーカではないため対象外",
+    "check": false
+   },
+   "chisel_mm": {
+    "v": null,
+    "note": "ブレーカではないため対象外",
+    "check": false
+   },
+   "base_t": {
+    "v": [
+     19,
+     21
+    ],
+    "note": "参考取付ショベル tonクラス",
+    "check": false
+   },
+   "oil_lpm": {
+    "v": [
+     100,
+     200
+    ],
+    "note": "",
+    "check": false
+   },
+   "pressure_mpa": {
+    "v": 30,
+    "note": "ATT配管設定圧30MPa。圧砕機搭載リリーフ弁圧力 28MPa",
+    "check": false
+   },
+   "rotation": {
+    "v": null,
+    "note": "機種名SV24。カタログに同名なし。R付きか不明のため判断できない",
+    "check": false
+   },
+   "pipes": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "SV-24XR-SV36X.pdf",
+    "page": 1,
+    "where": "ツーシリンダ圧砕機SVシリーズ 仕様表 SV-24X(R)行"
+   }
+  ]
+ },
+ {
+  "id": "sv380",
+  "name": "SV380",
+  "kind": "圧砕",
+  "class": 1.2,
+  "maker": "ニューマチック",
+  "values": {
+   "mass_kg": {
+    "v": 3735,
+    "note": "標準 3735kg／(R)油圧旋回タイプ 3745kg",
+    "check": false
+   },
+   "length_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "width_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "height_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "open_mm": {
+    "v": 1400,
+    "note": "最大/最小開口幅 1400/0",
+    "check": false
+   },
+   "force_kn": {
+    "v": 1400,
+    "note": "先端破砕力（中央の記載なし）。別カタログ（SV-7X.pdf）も1400",
+    "check": false
+   },
+   "blows_per_min": {
+    "v": null,
+    "note": "ブレーカではないため対象外",
+    "check": false
+   },
+   "chisel_mm": {
+    "v": null,
+    "note": "ブレーカではないため対象外",
+    "check": false
+   },
+   "base_t": {
+    "v": [
+     29,
+     38
+    ],
+    "note": "参考取付ショベル tonクラス",
+    "check": false
+   },
+   "oil_lpm": {
+    "v": [
+     150,
+     500
+    ],
+    "note": "",
+    "check": false
+   },
+   "pressure_mpa": {
+    "v": 30,
+    "note": "ATT油圧配管設定圧力30MPa。本体内蔵リリーフ弁設定圧力28MPa",
+    "check": false
+   },
+   "rotation": {
+    "v": null,
+    "note": "カタログでは(R)が油圧旋回タイプ。機種名に R が無く、旋回の有無はカタログから判断できない",
+    "check": false
+   },
+   "pipes": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "SV400カタログ.pdf",
+    "page": 1,
+    "where": "圧砕機SVシリーズ 仕様表 SV380(R)行"
+   },
+   {
+    "file": "ニューマ　SV-7X.pdf",
+    "page": 1,
+    "where": "右ページ 圧砕機SVシリーズ 仕様表 SV380(R)行（同じ表の別版）"
+   }
+  ]
+ },
+ {
+  "id": "sv400",
+  "name": "SV400",
+  "kind": "圧砕",
+  "class": 1.2,
+  "maker": "ニューマチック",
+  "values": {
+   "mass_kg": {
+    "v": 4100,
+    "note": "標準 4100kg／(R)油圧旋回タイプ 4090kg",
+    "check": false
+   },
+   "length_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "width_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "height_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "open_mm": {
+    "v": 1500,
+    "note": "最大/最小開口幅 1500/0",
+    "check": false
+   },
+   "force_kn": {
+    "v": 1540,
+    "note": "先端破砕力。ニューマ SV-7X.pdf の同じ表では1540、SV400カタログ.pdfでは1500（大きい方を採用）",
+    "check": false
+   },
+   "blows_per_min": {
+    "v": null,
+    "note": "ブレーカではないため対象外",
+    "check": false
+   },
+   "chisel_mm": {
+    "v": null,
+    "note": "ブレーカではないため対象外",
+    "check": false
+   },
+   "base_t": {
+    "v": [
+     29,
+     38
+    ],
+    "note": "参考取付ショベル tonクラス",
+    "check": false
+   },
+   "oil_lpm": {
+    "v": [
+     150,
+     500
+    ],
+    "note": "",
+    "check": false
+   },
+   "pressure_mpa": {
+    "v": 30,
+    "note": "ATT油圧配管設定圧力30MPa。本体内蔵リリーフ弁設定圧力28MPa",
+    "check": false
+   },
+   "rotation": {
+    "v": null,
+    "note": "カタログでは(R)が油圧旋回タイプ。機種名に R が無く、旋回の有無はカタログから判断できない",
+    "check": false
+   },
+   "pipes": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "SV400カタログ.pdf",
+    "page": 1,
+    "where": "圧砕機SVシリーズ 仕様表 SV400(R)行"
+   },
+   {
+    "file": "ニューマ　SV-7X.pdf",
+    "page": 1,
+    "where": "右ページ 圧砕機SVシリーズ 仕様表 SV400(R)行（同じ表の別版）"
+   }
+  ]
+ },
+ {
+  "id": "sv-7x",
+  "name": "SV-7X",
+  "kind": "圧砕",
+  "class": 0.25,
+  "maker": "ニューマチック",
+  "values": {
+   "mass_kg": {
+    "v": 745,
+    "note": "標準 745kg／(R)油圧旋回タイプ 745kg",
+    "check": false
+   },
+   "length_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "width_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "height_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "open_mm": {
+    "v": 700,
+    "note": "最大/最小開口幅 700/0",
+    "check": false
+   },
+   "force_kn": {
+    "v": 470,
+    "note": "先端破砕力（中央の記載なし）",
+    "check": false
+   },
+   "blows_per_min": {
+    "v": null,
+    "note": "ブレーカではないため対象外",
+    "check": false
+   },
+   "chisel_mm": {
+    "v": null,
+    "note": "ブレーカではないため対象外",
+    "check": false
+   },
+   "base_t": {
+    "v": [
+     6,
+     9
+    ],
+    "note": "参考取付ショベル tonクラス",
+    "check": false
+   },
+   "oil_lpm": {
+    "v": [
+     50,
+     130
+    ],
+    "note": "",
+    "check": false
+   },
+   "pressure_mpa": {
+    "v": 28,
+    "note": "ATT油圧配管の最大設定圧力28MPa（※指定圧力に設定）。本体内蔵リリーフ弁なし（－）",
+    "check": false
+   },
+   "rotation": {
+    "v": null,
+    "note": "カタログでは(R)が油圧旋回タイプ。機種名に R が無く、旋回の有無はカタログから判断できない",
+    "check": false
+   },
+   "pipes": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "SV400カタログ.pdf",
+    "page": 1,
+    "where": "圧砕機SVシリーズ 仕様表 SV-7X(R)行"
+   },
+   {
+    "file": "ニューマ　SV-7X.pdf",
+    "page": 1,
+    "where": "右ページ 圧砕機SVシリーズ 仕様表 SV-7X(R)行（同じ表の別版）"
+   }
+  ]
+ },
+ {
+  "id": "src38",
+  "name": "SRC38",
+  "kind": "SRC",
+  "class": 1.2,
+  "maker": "ニューマチック",
+  "values": {
+   "mass_kg": {
+    "v": 3825,
+    "note": "標準 3825kg／(R)油圧旋回タイプ 3805kg",
+    "check": false
+   },
+   "length_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "width_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "height_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "open_mm": {
+    "v": 1300,
+    "note": "最大/最小開口幅 1300/0",
+    "check": false
+   },
+   "force_kn": {
+    "v": 3470,
+    "note": "中央切断力。先端破砕力 1250kN",
+    "check": false
+   },
+   "blows_per_min": {
+    "v": null,
+    "note": "ブレーカではないため対象外",
+    "check": false
+   },
+   "chisel_mm": {
+    "v": null,
+    "note": "ブレーカではないため対象外",
+    "check": false
+   },
+   "base_t": {
+    "v": [
+     29,
+     38
+    ],
+    "note": "参考取付ショベル tonクラス",
+    "check": false
+   },
+   "oil_lpm": {
+    "v": null,
+    "note": "カタログに記載なし（油量はショベルの油量に準じる）",
+    "check": false
+   },
+   "pressure_mpa": {
+    "v": 32,
+    "note": "ショベル設定圧力32MPa（本体内蔵リリーフ弁なし）",
+    "check": false
+   },
+   "rotation": {
+    "v": null,
+    "note": "カタログでは(R)が油圧旋回タイプ。機種名に R が無く、旋回の有無はカタログから判断できない",
+    "check": false
+   },
+   "pipes": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "ニューマ　SRCシリーズ.pdf",
+    "page": 1,
+    "where": "右ページ SRCシリーズ 仕様表 SRC38(R)行"
+   }
+  ]
+ },
+ {
+  "id": "src15",
+  "name": "SRC15",
+  "kind": "SRC",
+  "class": 0.45,
+  "maker": "ニューマチック",
+  "values": {
+   "mass_kg": {
+    "v": 1520,
+    "note": "標準 1520kg／(R)油圧旋回タイプ 1525kg",
+    "check": false
+   },
+   "length_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "width_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "height_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "open_mm": {
+    "v": 930,
+    "note": "最大/最小開口幅 930/0",
+    "check": false
+   },
+   "force_kn": {
+    "v": 1865,
+    "note": "中央切断力。先端破砕力 680kN",
+    "check": false
+   },
+   "blows_per_min": {
+    "v": null,
+    "note": "ブレーカではないため対象外",
+    "check": false
+   },
+   "chisel_mm": {
+    "v": null,
+    "note": "ブレーカではないため対象外",
+    "check": false
+   },
+   "base_t": {
+    "v": [
+     12,
+     16
+    ],
+    "note": "参考取付ショベル tonクラス",
+    "check": false
+   },
+   "oil_lpm": {
+    "v": null,
+    "note": "カタログに記載なし（油量はショベルの油量に準じる）",
+    "check": false
+   },
+   "pressure_mpa": {
+    "v": 32,
+    "note": "ショベル設定圧力32MPa（本体内蔵リリーフ弁なし）",
+    "check": false
+   },
+   "rotation": {
+    "v": null,
+    "note": "カタログでは(R)が油圧旋回タイプ。機種名に R が無く、旋回の有無はカタログから判断できない",
+    "check": false
+   },
+   "pipes": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "ニューマ　SRCシリーズ.pdf",
+    "page": 1,
+    "where": "右ページ SRCシリーズ 仕様表 SRC15(R)行"
+   }
+  ]
+ },
+ {
+  "id": "src25",
+  "name": "SRC25",
+  "kind": "SRC",
+  "class": 0.7,
+  "maker": "ニューマチック",
+  "values": {
+   "mass_kg": {
+    "v": 2595,
+    "note": "標準 2595kg／(R)油圧旋回タイプ 2595kg。SRC25カタログ.pdfでは2450kg（R付も2450、シリンダカバー付2560kg）。大きい方2595を採用",
+    "check": false
+   },
+   "length_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "width_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "height_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "open_mm": {
+    "v": 1025,
+    "note": "最大/最小開口幅 1025/0",
+    "check": false
+   },
+   "force_kn": {
+    "v": 2550,
+    "note": "中央切断力。先端破砕力 960kN",
+    "check": false
+   },
+   "blows_per_min": {
+    "v": null,
+    "note": "ブレーカではないため対象外",
+    "check": false
+   },
+   "chisel_mm": {
+    "v": null,
+    "note": "ブレーカではないため対象外",
+    "check": false
+   },
+   "base_t": {
+    "v": [
+     19,
+     28
+    ],
+    "note": "参考取付ショベル tonクラス。SRC25カタログ.pdfでは適合ショベル19〜21",
+    "check": false
+   },
+   "oil_lpm": {
+    "v": [
+     200,
+     300
+    ],
+    "note": "SRC25カタログ.pdfの必要油量。SRCシリーズ.pdfは「ショベルの油量に準じる」",
+    "check": false
+   },
+   "pressure_mpa": {
+    "v": 32,
+    "note": "ショベル設定圧力32MPa（本体内蔵リリーフ弁なし）。SRC25カタログ.pdfは最大使用圧力32MPa。R型の旋回部最大使用圧力14MPa・旋回部必要油量10〜20L/min",
+    "check": false
+   },
+   "rotation": {
+    "v": null,
+    "note": "カタログでは(R)が油圧旋回タイプ。機種名に R が無く、旋回の有無はカタログから判断できない",
+    "check": false
+   },
+   "pipes": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "SRC25 カタログ.pdf",
+    "page": 1,
+    "where": "下部の仕様表 SRC25／SRC25R行"
+   },
+   {
+    "file": "ニューマ　SRCシリーズ.pdf",
+    "page": 1,
+    "where": "右ページ SRCシリーズ 仕様表 SRC25(R)行"
+   }
+  ]
+ },
+ {
+  "id": "g70",
+  "name": "G70",
+  "kind": "小割",
+  "class": 0.25,
+  "maker": "ニューマチック",
+  "values": {
+   "mass_kg": {
+    "v": 690,
+    "note": "",
+    "check": false
+   },
+   "length_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "width_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "height_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "open_mm": {
+    "v": 600,
+    "note": "最大/最小開口幅 600/0",
+    "check": false
+   },
+   "force_kn": {
+    "v": 410,
+    "note": "先端破砕力（中央の記載なし）",
+    "check": false
+   },
+   "blows_per_min": {
+    "v": null,
+    "note": "ブレーカではないため対象外",
+    "check": false
+   },
+   "chisel_mm": {
+    "v": null,
+    "note": "ブレーカではないため対象外",
+    "check": false
+   },
+   "base_t": {
+    "v": [
+     6,
+     9
+    ],
+    "note": "参考取付ショベル tonクラス",
+    "check": false
+   },
+   "oil_lpm": {
+    "v": [
+     50,
+     130
+    ],
+    "note": "",
+    "check": false
+   },
+   "pressure_mpa": {
+    "v": 28,
+    "note": "ショベル設定圧力28MPa。本体内蔵リリーフ弁26MPa",
+    "check": false
+   },
+   "rotation": {
+    "v": null,
+    "note": "カタログに旋回の記載なし",
+    "check": false
+   },
+   "pipes": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "ニューマ　G70.pdf",
+    "page": 1,
+    "where": "右ページ 小割圧砕機Gシリーズ 仕様表 G70行"
+   }
+  ]
+ },
+ {
+  "id": "gh-10",
+  "name": "GH-10",
+  "kind": "ブレーカ",
+  "class": 0.7,
+  "maker": "ニューマチック",
+  "values": {
+   "mass_kg": {
+    "v": 1705,
+    "note": "ブラケット・チゼル付（砕石仕様）1705kg。土木仕様1600kg、本体（チゼル付）990kg",
+    "check": false
+   },
+   "length_mm": {
+    "v": 2520,
+    "note": "全長（ブラケット・チゼル付）。土木・砕石とも2520",
+    "check": false
+   },
+   "width_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "height_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "open_mm": {
+    "v": null,
+    "note": "ブレーカのため対象外",
+    "check": false
+   },
+   "force_kn": {
+    "v": null,
+    "note": "ブレーカのため対象外",
+    "check": false
+   },
+   "blows_per_min": {
+    "v": [
+     430,
+     550
+    ],
+    "note": "ジャッキアップ時の参考数値",
+    "check": false
+   },
+   "chisel_mm": {
+    "v": 136,
+    "note": "φ136",
+    "check": false
+   },
+   "base_t": {
+    "v": [
+     19,
+     21
+    ],
+    "note": "参考取付ショベル tonクラス",
+    "check": false
+   },
+   "oil_lpm": {
+    "v": [
+     165,
+     210
+    ],
+    "note": "ジャッキアップ時の参考数値",
+    "check": false
+   },
+   "pressure_mpa": {
+    "v": [
+     15,
+     17
+    ],
+    "note": "作動圧力15〜17MPa。ショベル設定25MPa",
+    "check": false
+   },
+   "rotation": {
+    "v": null,
+    "note": "カタログに旋回の記載なし（ブレーカ）",
+    "check": false
+   },
+   "pipes": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "ニューマブレーカＧHシリーズ.pdf",
+    "page": 1,
+    "where": "中・大型油圧ブレーカGHシリーズ 仕様表 GH-10行"
+   }
+  ]
+ },
+ {
+  "id": "ghe6-2",
+  "name": "GHE6-2",
+  "kind": "ブレーカ",
+  "class": 0.45,
+  "maker": "ニューマチック",
+  "values": {
+   "mass_kg": {
+    "v": 1050,
+    "note": "総質量",
+    "check": false
+   },
+   "length_mm": {
+    "v": 2007,
+    "note": "外観図の全長2007（チゼル459含む）。カタログ仕様表では全長(チゼル付)2005",
+    "check": false
+   },
+   "width_mm": {
+    "v": 450,
+    "note": "外観図 正面図の最大幅450。側面図の横幅（ブラケット奥行）は1115",
+    "check": false
+   },
+   "height_mm": {
+    "v": null,
+    "note": "ブレーカは全長が縦方向（2007）。側面の横幅1115mm",
+    "check": false
+   },
+   "open_mm": {
+    "v": null,
+    "note": "ブレーカのため対象外",
+    "check": false
+   },
+   "force_kn": {
+    "v": null,
+    "note": "ブレーカのため対象外",
+    "check": false
+   },
+   "blows_per_min": {
+    "v": [
+     450,
+     800
+    ],
+    "note": "",
+    "check": false
+   },
+   "chisel_mm": {
+    "v": 106,
+    "note": "外観図 φ106",
+    "check": false
+   },
+   "base_t": {
+    "v": [
+     10,
+     16
+    ],
+    "note": "参考適合ショベル tonクラス",
+    "check": false
+   },
+   "oil_lpm": {
+    "v": [
+     90,
+     150
+    ],
+    "note": "",
+    "check": false
+   },
+   "pressure_mpa": {
+    "v": [
+     15,
+     17
+    ],
+    "note": "作動圧力15〜17MPa。ATT配管設定圧25MPa",
+    "check": false
+   },
+   "rotation": {
+    "v": null,
+    "note": "カタログに旋回の記載なし（ブレーカ）",
+    "check": false
+   },
+   "pipes": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "GHE6-2 カタログGHE9-2.pdf",
+    "page": 1,
+    "where": "超静音ブレーカGHEシリーズ 仕様表 GHE6-2行"
+   },
+   {
+    "file": "GHE6-2.pdf",
+    "page": 1,
+    "where": "GHE6-2 外観図（寸法）"
+   }
+  ]
+ },
+ {
+  "id": "mr1500",
+  "name": "MR1500",
+  "kind": "圧砕",
+  "class": 1.2,
+  "maker": "オオスミ",
+  "values": {
+   "mass_kg": {
+    "v": 4200,
+    "note": "",
+    "check": false
+   },
+   "length_mm": {
+    "v": 2950,
+    "note": "",
+    "check": false
+   },
+   "width_mm": {
+    "v": 1750,
+    "note": "",
+    "check": false
+   },
+   "height_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "open_mm": {
+    "v": 1500,
+    "note": "最小開口幅 0",
+    "check": false
+   },
+   "force_kn": {
+    "v": 1852,
+    "note": "中央破砕力。先端破砕力 1372kN",
+    "check": false
+   },
+   "blows_per_min": {
+    "v": null,
+    "note": "ブレーカ以外のため対象外",
+    "check": false
+   },
+   "chisel_mm": {
+    "v": null,
+    "note": "ブレーカ以外のため対象外",
+    "check": false
+   },
+   "base_t": {
+    "v": 30,
+    "note": "適合台車 30t〜（上限の記載なし）",
+    "check": false
+   },
+   "oil_lpm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "pressure_mpa": {
+    "v": 31.4,
+    "note": "最大使用圧力 31.36MPa",
+    "check": false
+   },
+   "rotation": {
+    "v": "フリー",
+    "note": "旋回方式 360度（本文「360°反力自由回転」）。油圧旋回の記載なし",
+    "check": false
+   },
+   "pipes": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "オオスミ MR900.pdf",
+    "page": 1,
+    "where": "仕様表 MR1500列"
+   }
+  ]
+ },
+ {
+  "id": "mr1100-8",
+  "name": "MR1100-8",
+  "kind": "圧砕",
+  "class": 0.7,
+  "maker": "オオスミ",
+  "values": {
+   "mass_kg": {
+    "v": 2350,
+    "note": "",
+    "check": false
+   },
+   "length_mm": {
+    "v": 2250,
+    "note": "",
+    "check": false
+   },
+   "width_mm": {
+    "v": 1350,
+    "note": "",
+    "check": false
+   },
+   "height_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "open_mm": {
+    "v": 1060,
+    "note": "最小開口幅 0",
+    "check": false
+   },
+   "force_kn": {
+    "v": 1539,
+    "note": "中央破砕力。先端破砕力 804kN",
+    "check": false
+   },
+   "blows_per_min": {
+    "v": null,
+    "note": "ブレーカ以外のため対象外",
+    "check": false
+   },
+   "chisel_mm": {
+    "v": null,
+    "note": "ブレーカ以外のため対象外",
+    "check": false
+   },
+   "base_t": {
+    "v": [
+     20,
+     30
+    ],
+    "note": "カタログに MR1100-8 の名前は無く、MR1100 の数字",
+    "check": false
+   },
+   "oil_lpm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "pressure_mpa": {
+    "v": 31.4,
+    "note": "最大使用圧力 31.36MPa",
+    "check": false
+   },
+   "rotation": {
+    "v": "フリー",
+    "note": "旋回方式 360度（本文「360°反力自由回転」）。油圧旋回の記載なし",
+    "check": false
+   },
+   "pipes": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "オオスミ MR900.pdf",
+    "page": 1,
+    "where": "仕様表 MR1100列"
+   }
+  ]
+ },
+ {
+  "id": "mr900",
+  "name": "MR900",
+  "kind": "圧砕",
+  "class": 0.45,
+  "maker": "オオスミ",
+  "values": {
+   "mass_kg": {
+    "v": 1750,
+    "note": "",
+    "check": false
+   },
+   "length_mm": {
+    "v": 2000,
+    "note": "",
+    "check": false
+   },
+   "width_mm": {
+    "v": 1300,
+    "note": "",
+    "check": false
+   },
+   "height_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "open_mm": {
+    "v": 900,
+    "note": "最小開口幅 0",
+    "check": false
+   },
+   "force_kn": {
+    "v": 980,
+    "note": "中央破砕力。先端破砕力 578kN",
+    "check": false
+   },
+   "blows_per_min": {
+    "v": null,
+    "note": "ブレーカ以外のため対象外",
+    "check": false
+   },
+   "chisel_mm": {
+    "v": null,
+    "note": "ブレーカ以外のため対象外",
+    "check": false
+   },
+   "base_t": {
+    "v": [
+     12,
+     20
+    ],
+    "note": "",
+    "check": false
+   },
+   "oil_lpm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "pressure_mpa": {
+    "v": 31.4,
+    "note": "最大使用圧力 31.36MPa",
+    "check": false
+   },
+   "rotation": {
+    "v": "フリー",
+    "note": "旋回方式 360度（本文「360°反力自由回転」）。油圧旋回の記載なし",
+    "check": false
+   },
+   "pipes": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "オオスミ MR900.pdf",
+    "page": 1,
+    "where": "仕様表 MR900列"
+   }
+  ]
+ },
+ {
+  "id": "mr600",
+  "name": "MR600",
+  "kind": "圧砕",
+  "class": 0.25,
+  "maker": "オオスミ",
+  "values": {
+   "mass_kg": {
+    "v": 600,
+    "note": "",
+    "check": false
+   },
+   "length_mm": {
+    "v": 1510,
+    "note": "",
+    "check": false
+   },
+   "width_mm": {
+    "v": 910,
+    "note": "",
+    "check": false
+   },
+   "height_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "open_mm": {
+    "v": 600,
+    "note": "最小開口幅 0",
+    "check": false
+   },
+   "force_kn": {
+    "v": 549,
+    "note": "中央破砕力。先端破砕力 363kN",
+    "check": false
+   },
+   "blows_per_min": {
+    "v": null,
+    "note": "ブレーカ以外のため対象外",
+    "check": false
+   },
+   "chisel_mm": {
+    "v": null,
+    "note": "ブレーカ以外のため対象外",
+    "check": false
+   },
+   "base_t": {
+    "v": [
+     7,
+     10
+    ],
+    "note": "",
+    "check": false
+   },
+   "oil_lpm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "pressure_mpa": {
+    "v": 31.4,
+    "note": "最大使用圧力 31.36MPa",
+    "check": false
+   },
+   "rotation": {
+    "v": "フリー",
+    "note": "旋回方式 360度（本文「360°反力自由回転」）。油圧旋回の記載なし",
+    "check": false
+   },
+   "pipes": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "オオスミ MR900.pdf",
+    "page": 1,
+    "where": "仕様表 MR600列"
+   }
+  ]
+ },
+ {
+  "id": "fe350-g",
+  "name": "FE350-G",
+  "kind": "カッター",
+  "class": 0.45,
+  "maker": "オオスミ",
+  "values": {
+   "mass_kg": {
+    "v": 860,
+    "note": "",
+    "check": false
+   },
+   "length_mm": {
+    "v": 1523,
+    "note": "表記は「全長 H」",
+    "check": false
+   },
+   "width_mm": {
+    "v": 1120,
+    "note": "",
+    "check": false
+   },
+   "height_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "open_mm": {
+    "v": 350,
+    "note": "最小開口幅 -150。カッター長さ 380mm",
+    "check": false
+   },
+   "force_kn": {
+    "v": 549,
+    "note": "中央切断力。先端切断力 451kN",
+    "check": false
+   },
+   "blows_per_min": {
+    "v": null,
+    "note": "ブレーカ以外のため対象外",
+    "check": false
+   },
+   "chisel_mm": {
+    "v": null,
+    "note": "ブレーカ以外のため対象外",
+    "check": false
+   },
+   "base_t": {
+    "v": [
+     7,
+     10
+    ],
+    "note": "",
+    "check": false
+   },
+   "oil_lpm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "pressure_mpa": {
+    "v": 31.4,
+    "note": "最大使用圧力",
+    "check": false
+   },
+   "rotation": {
+    "v": "フリー",
+    "note": "旋回方式 360°フリー",
+    "check": false
+   },
+   "pipes": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "FE350.pdf",
+    "page": 1,
+    "where": "仕様表 FE350列（FE350-G の名前は無く FE350 の数字。手書き書き込みは FE150/FE200 欄なので無視）"
+   }
+  ]
+ },
+ {
+  "id": "oni150",
+  "name": "ONI150",
+  "kind": "カッター",
+  "class": 0.1,
+  "maker": "オオスミ",
+  "values": {
+   "mass_kg": {
+    "v": 205,
+    "note": "総重量",
+    "check": false
+   },
+   "length_mm": {
+    "v": null,
+    "note": "全長の記載なし（全高H 1,018mm が外形図の縦寸法）",
+    "check": false
+   },
+   "width_mm": {
+    "v": 700,
+    "note": "",
+    "check": false
+   },
+   "height_mm": {
+    "v": 1018,
+    "note": "全高 H",
+    "check": false
+   },
+   "open_mm": {
+    "v": 150,
+    "note": "最大開口幅 C",
+    "check": false
+   },
+   "force_kn": {
+    "v": 145,
+    "note": "破砕アーム先端出力 14.8ton を換算（中央の記載なし）。シリンダー出力 19.6ton（192kN）",
+    "check": false
+   },
+   "blows_per_min": {
+    "v": null,
+    "note": "ブレーカ以外のため対象外",
+    "check": false
+   },
+   "chisel_mm": {
+    "v": null,
+    "note": "ブレーカ以外のため対象外",
+    "check": false
+   },
+   "base_t": {
+    "v": [
+     1.7,
+     2
+    ],
+    "note": "取付台車 1.7ton〜2.0ton",
+    "check": false
+   },
+   "oil_lpm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "pressure_mpa": {
+    "v": 24.5,
+    "note": "使用油圧 250kgf/cm² を換算",
+    "check": false
+   },
+   "rotation": {
+    "v": "フリー",
+    "note": "反力自由回転（360度・当回し）",
+    "check": false
+   },
+   "pipes": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "オニムシ150.pdf",
+    "page": 2,
+    "where": "仕様表 オニムシ150列"
+   }
+  ]
+ },
+ {
+  "id": "magnum1800",
+  "name": "マグナム1800",
+  "kind": "小割",
+  "class": 0.7,
+  "maker": "サカト",
+  "values": {
+   "mass_kg": {
+    "v": 1800,
+    "note": "〈1700Y は 1700kg〉",
+    "check": false
+   },
+   "length_mm": {
+    "v": 1920,
+    "note": "",
+    "check": false
+   },
+   "width_mm": {
+    "v": 530,
+    "note": "",
+    "check": false
+   },
+   "height_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "open_mm": {
+    "v": 860,
+    "note": "",
+    "check": false
+   },
+   "force_kn": {
+    "v": 745,
+    "note": "破砕力(F.B.部) 76ton を換算。先端・中央の区別なし",
+    "check": false
+   },
+   "blows_per_min": {
+    "v": null,
+    "note": "ブレーカ以外のため対象外",
+    "check": false
+   },
+   "chisel_mm": {
+    "v": null,
+    "note": "ブレーカ以外のため対象外",
+    "check": false
+   },
+   "base_t": {
+    "v": null,
+    "note": "0.7m³〜0.9m³クラス（適合ショベル。t表記なし）",
+    "check": false
+   },
+   "oil_lpm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "pressure_mpa": {
+    "v": 31.4,
+    "note": "320kgf/cm²併記",
+    "check": false
+   },
+   "rotation": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "pipes": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "マグナム1400（坂戸小割0.7）.pdf",
+    "page": 1,
+    "where": "パクラ・マグナムシリーズ仕様 MAGNUM 1800 欄（使用圧力の見出しは付箋で隠れているが値は読める）"
+   }
+  ]
+ },
+ {
+  "id": "magnum1400",
+  "name": "マグナム1400",
+  "kind": "小割",
+  "class": 0.7,
+  "maker": "サカト",
+  "values": {
+   "mass_kg": {
+    "v": 1400,
+    "note": "〈1300Y は 1300kg〉",
+    "check": false
+   },
+   "length_mm": {
+    "v": 1680,
+    "note": "",
+    "check": false
+   },
+   "width_mm": {
+    "v": 500,
+    "note": "",
+    "check": false
+   },
+   "height_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "open_mm": {
+    "v": 850,
+    "note": "",
+    "check": false
+   },
+   "force_kn": {
+    "v": 569,
+    "note": "破砕力(F.B.部) 58ton を換算。先端・中央の区別なし",
+    "check": false
+   },
+   "blows_per_min": {
+    "v": null,
+    "note": "ブレーカ以外のため対象外",
+    "check": false
+   },
+   "chisel_mm": {
+    "v": null,
+    "note": "ブレーカ以外のため対象外",
+    "check": false
+   },
+   "base_t": {
+    "v": null,
+    "note": "0.45m³〜0.7m³クラス（適合ショベル。t表記なし）",
+    "check": false
+   },
+   "oil_lpm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "pressure_mpa": {
+    "v": 27.5,
+    "note": "280kgf/cm²併記",
+    "check": false
+   },
+   "rotation": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "pipes": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "マグナム1400（坂戸小割0.7）.pdf",
+    "page": 1,
+    "where": "パクラ・マグナムシリーズ仕様 MAGNUM 1400 欄"
+   }
+  ]
+ },
+ {
+  "id": "magnum850",
+  "name": "マグナム850",
+  "kind": "小割",
+  "class": 0.25,
+  "maker": "サカト",
+  "values": {
+   "mass_kg": {
+    "v": 850,
+    "note": "〈800Y は 800kg〉",
+    "check": false
+   },
+   "length_mm": {
+    "v": 1340,
+    "note": "",
+    "check": false
+   },
+   "width_mm": {
+    "v": 400,
+    "note": "",
+    "check": false
+   },
+   "height_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "open_mm": {
+    "v": 580,
+    "note": "",
+    "check": false
+   },
+   "force_kn": {
+    "v": 392,
+    "note": "破砕力(F.B.部) 40ton を換算。先端・中央の区別なし",
+    "check": false
+   },
+   "blows_per_min": {
+    "v": null,
+    "note": "ブレーカ以外のため対象外",
+    "check": false
+   },
+   "chisel_mm": {
+    "v": null,
+    "note": "ブレーカ以外のため対象外",
+    "check": false
+   },
+   "base_t": {
+    "v": null,
+    "note": "0.25m³〜0.4m³クラス（適合ショベル。t表記なし）",
+    "check": false
+   },
+   "oil_lpm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "pressure_mpa": {
+    "v": 27.5,
+    "note": "280kgf/cm²併記",
+    "check": false
+   },
+   "rotation": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "pipes": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "マグナム1400（坂戸小割0.7）.pdf",
+    "page": 1,
+    "where": "パクラ・マグナムシリーズ仕様 MAGNUM 850 欄"
+   }
+  ]
+ },
+ {
+  "id": "magnum1300",
+  "name": "マグナム1300",
+  "kind": "小割",
+  "class": 0.45,
+  "maker": "サカト",
+  "values": {
+   "mass_kg": {
+    "v": 1300,
+    "note": "1300Y の括弧内の値（1400 は 1400kg）",
+    "check": false
+   },
+   "length_mm": {
+    "v": 1680,
+    "note": "Yシリーズ個別の値は無く、1400 と共通の欄の値",
+    "check": false
+   },
+   "width_mm": {
+    "v": 500,
+    "note": "Yシリーズ個別の値は無く、1400 と共通の欄の値",
+    "check": false
+   },
+   "height_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "open_mm": {
+    "v": 850,
+    "note": "Yシリーズ個別の値は無く、1400 と共通の欄の値",
+    "check": false
+   },
+   "force_kn": {
+    "v": 569,
+    "note": "破砕力(F.B.部) 58ton を換算。先端・中央の区別なし。Yシリーズ個別の値は無く、1400 と共通の欄の値",
+    "check": false
+   },
+   "blows_per_min": {
+    "v": null,
+    "note": "ブレーカ以外のため対象外",
+    "check": false
+   },
+   "chisel_mm": {
+    "v": null,
+    "note": "ブレーカ以外のため対象外",
+    "check": false
+   },
+   "base_t": {
+    "v": null,
+    "note": "0.45m³〜0.7m³クラス（適合ショベル。t表記なし）。Yシリーズ個別の値は無く、1400 と共通の欄の値",
+    "check": false
+   },
+   "oil_lpm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "pressure_mpa": {
+    "v": 27.5,
+    "note": "280kgf/cm²併記。Yシリーズ個別の値は無く、1400 と共通の欄の値",
+    "check": false
+   },
+   "rotation": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "pipes": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "マグナム1400（坂戸小割0.7）.pdf",
+    "page": 1,
+    "where": "パクラ・マグナムシリーズ仕様 MAGNUM 1400〈1300Y〉欄"
+   }
+  ]
+ },
+ {
+  "id": "vx145-5p",
+  "name": "VX145（5本配管）",
+  "kind": "圧砕",
+  "class": 0.45,
+  "maker": "フルカワ",
+  "values": {
+   "mass_kg": {
+    "v": 1480,
+    "note": "標準。オプション対応 1,430kg",
+    "check": false
+   },
+   "length_mm": {
+    "v": 2123,
+    "note": "",
+    "check": false
+   },
+   "width_mm": {
+    "v": 1514,
+    "note": "",
+    "check": false
+   },
+   "height_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "open_mm": {
+    "v": 950,
+    "note": "",
+    "check": false
+   },
+   "force_kn": {
+    "v": 694,
+    "note": "先端歯圧砕力（中央の記載なし）。カッター長 160mm",
+    "check": false
+   },
+   "blows_per_min": {
+    "v": null,
+    "note": "ブレーカ以外のため対象外",
+    "check": false
+   },
+   "chisel_mm": {
+    "v": null,
+    "note": "ブレーカ以外のため対象外",
+    "check": false
+   },
+   "base_t": {
+    "v": [
+     10,
+     18
+    ],
+    "note": "推奨油圧ショベル質量",
+    "check": false
+   },
+   "oil_lpm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "pressure_mpa": {
+    "v": 32,
+    "note": "常用圧力",
+    "check": false
+   },
+   "rotation": {
+    "v": "フリー",
+    "note": "カタログはフリー旋回が標準・油圧旋回はオプション。5本配管の当社機は油圧旋回付きの可能性あり（カタログからは判断不可）",
+    "check": false
+   },
+   "pipes": {
+    "v": null,
+    "note": "カタログに記載なし（機種名の「5本配管」は当社の呼び名）",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "古河　VXシリーズ.pdf",
+    "page": 1,
+    "where": "Vxシリーズ仕様表 Vx145列"
+   }
+  ]
+ },
+ {
+  "id": "fc90",
+  "name": "FC90",
+  "kind": "ブレーカ",
+  "class": 0.25,
+  "maker": "フルカワ",
+  "values": {
+   "mass_kg": {
+    "v": 520,
+    "note": "総質量（SS-box超低騒音仕様）。本体質量（ロッド付）270kg。別ページ(Fx45-FC90 カタログ p3)のセットプレート・ショート仕様の総質量 450kg",
+    "check": false
+   },
+   "length_mm": {
+    "v": 1633,
+    "note": "全長（SS-box仕様）",
+    "check": false
+   },
+   "width_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "height_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "open_mm": {
+    "v": null,
+    "note": "ブレーカのため対象外",
+    "check": false
+   },
+   "force_kn": {
+    "v": null,
+    "note": "ブレーカのため対象外",
+    "check": false
+   },
+   "blows_per_min": {
+    "v": [
+     425,
+     675
+    ],
+    "note": "",
+    "check": false
+   },
+   "chisel_mm": {
+    "v": 90,
+    "note": "ロッド径",
+    "check": false
+   },
+   "base_t": {
+    "v": [
+     6,
+     9
+    ],
+    "note": "適合台車（バケット容量 0.28〜0.4m³）",
+    "check": false
+   },
+   "oil_lpm": {
+    "v": [
+     45,
+     80
+    ],
+    "note": "所要油量",
+    "check": false
+   },
+   "pressure_mpa": {
+    "v": [
+     12,
+     15
+    ],
+    "note": "作動油圧",
+    "check": false
+   },
+   "rotation": {
+    "v": null,
+    "note": "カタログに記載なし（ブレーカ）",
+    "check": false
+   },
+   "pipes": {
+    "v": null,
+    "note": "本数の記載なし（p3 にホース径 OUT/IN 25/25mm の記載）",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "古河　ﾌﾞﾚｰｶｰ　Fc90 Fx45.pdf",
+    "page": 1,
+    "where": "油圧ブレーカSS-boxシリーズ仕様 Fc90列"
+   },
+   {
+    "file": "Fx45-FC90 カタログ.pdf",
+    "page": 4,
+    "where": "油圧ブレーカSS-boxシリーズ仕様 Fc90列（上と同じ数字）"
+   },
+   {
+    "file": "Fx45-FC90 カタログ.pdf",
+    "page": 3,
+    "where": "油圧ブレーカ総合仕様表 Fc90列（照合用）"
+   }
+  ]
+ },
+ {
+  "id": "fx45",
+  "name": "FX45",
+  "kind": "ブレーカ",
+  "class": 0.1,
+  "maker": "フルカワ",
+  "values": {
+   "mass_kg": {
+    "v": 215,
+    "note": "総質量（SS-box超低騒音仕様）。本体質量（ロッド付）110kg。別ページ(Fx45-FC90 カタログ p3)のセットプレート・ショート仕様の総質量 170kg",
+    "check": false
+   },
+   "length_mm": {
+    "v": 1171,
+    "note": "全長（SS-box仕様）",
+    "check": false
+   },
+   "width_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "height_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "open_mm": {
+    "v": null,
+    "note": "ブレーカのため対象外",
+    "check": false
+   },
+   "force_kn": {
+    "v": null,
+    "note": "ブレーカのため対象外",
+    "check": false
+   },
+   "blows_per_min": {
+    "v": [
+     600,
+     1100
+    ],
+    "note": "",
+    "check": false
+   },
+   "chisel_mm": {
+    "v": 60,
+    "note": "ロッド径",
+    "check": false
+   },
+   "base_t": {
+    "v": [
+     3.5,
+     4.5
+    ],
+    "note": "適合台車（バケット容量 0.09〜0.12m³）。Fx45-FC90 カタログ p3 の総合表では 3.0〜4.5t",
+    "check": false
+   },
+   "oil_lpm": {
+    "v": [
+     30,
+     56
+    ],
+    "note": "所要油量",
+    "check": false
+   },
+   "pressure_mpa": {
+    "v": [
+     12,
+     16
+    ],
+    "note": "作動油圧",
+    "check": false
+   },
+   "rotation": {
+    "v": null,
+    "note": "カタログに記載なし（ブレーカ）",
+    "check": false
+   },
+   "pipes": {
+    "v": null,
+    "note": "本数の記載なし（p3 にホース径 OUT/IN 19/19mm の記載）",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "古河　ﾌﾞﾚｰｶｰ　Fc90 Fx45.pdf",
+    "page": 1,
+    "where": "油圧ブレーカSS-boxシリーズ仕様 Fx45列"
+   },
+   {
+    "file": "Fx45-FC90 カタログ.pdf",
+    "page": 4,
+    "where": "油圧ブレーカSS-boxシリーズ仕様 Fx45列（上と同じ数字）"
+   },
+   {
+    "file": "Fx45-FC90 カタログ.pdf",
+    "page": 3,
+    "where": "油圧ブレーカ総合仕様表 Fx45列（照合用）"
+   }
+  ]
+ },
+ {
+  "id": "top300",
+  "name": "TOP300",
+  "kind": "ブレーカ",
+  "class": 1.2,
+  "maker": "オカダ",
+  "values": {
+   "mass_kg": {
+    "v": 2480,
+    "note": "総質量（チゼル・ブラケット付）",
+    "check": false
+   },
+   "length_mm": {
+    "v": 2727,
+    "note": "全長（チゼル付）",
+    "check": false
+   },
+   "width_mm": {
+    "v": 534,
+    "note": "全幅（ブラケット先端）",
+    "check": false
+   },
+   "height_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "open_mm": {
+    "v": null,
+    "note": "ブレーカのため対象外",
+    "check": false
+   },
+   "force_kn": {
+    "v": null,
+    "note": "ブレーカのため対象外",
+    "check": false
+   },
+   "blows_per_min": {
+    "v": [
+     280,
+     420
+    ],
+    "note": "bpm",
+    "check": false
+   },
+   "chisel_mm": {
+    "v": 155,
+    "note": "チゼル径",
+    "check": false
+   },
+   "base_t": {
+    "v": [
+     30,
+     41
+    ],
+    "note": "取付ショベルクラス 30〜41t",
+    "check": false
+   },
+   "oil_lpm": {
+    "v": [
+     160,
+     215
+    ],
+    "note": "消費油量",
+    "check": false
+   },
+   "pressure_mpa": {
+    "v": [
+     14,
+     18
+    ],
+    "note": "作動油圧 14〜18MPa",
+    "check": false
+   },
+   "rotation": {
+    "v": null,
+    "note": "カタログに記載なし（ブレーカ）",
+    "check": false
+   },
+   "pipes": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "オカダブレーカTOPシリーズ.pdf",
+    "page": 1,
+    "where": "TOPシリーズ ラインナップ表 TOP-300列（アキュームレータータイプ）"
+   }
+  ]
+ },
+ {
+  "id": "top210",
+  "name": "TOP210",
+  "kind": "ブレーカ",
+  "class": 0.7,
+  "maker": "オカダ",
+  "values": {
+   "mass_kg": {
+    "v": 1550,
+    "note": "総質量（チゼル・ブラケット付）",
+    "check": false
+   },
+   "length_mm": {
+    "v": 2317,
+    "note": "全長（チゼル付）",
+    "check": false
+   },
+   "width_mm": {
+    "v": 466,
+    "note": "全幅（ブラケット先端）",
+    "check": false
+   },
+   "height_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "open_mm": {
+    "v": null,
+    "note": "ブレーカのため対象外",
+    "check": false
+   },
+   "force_kn": {
+    "v": null,
+    "note": "ブレーカのため対象外",
+    "check": false
+   },
+   "blows_per_min": {
+    "v": [
+     310,
+     480
+    ],
+    "note": "bpm",
+    "check": false
+   },
+   "chisel_mm": {
+    "v": 135,
+    "note": "チゼル径",
+    "check": false
+   },
+   "base_t": {
+    "v": [
+     20,
+     23
+    ],
+    "note": "取付ショベルクラス 20〜23t",
+    "check": false
+   },
+   "oil_lpm": {
+    "v": [
+     120,
+     160
+    ],
+    "note": "消費油量",
+    "check": false
+   },
+   "pressure_mpa": {
+    "v": [
+     14,
+     18
+    ],
+    "note": "作動油圧 14〜18MPa",
+    "check": false
+   },
+   "rotation": {
+    "v": null,
+    "note": "カタログに記載なし（ブレーカ）",
+    "check": false
+   },
+   "pipes": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "オカダブレーカTOPシリーズ.pdf",
+    "page": 1,
+    "where": "TOPシリーズ ラインナップ表 TOP-210列（アキュームレータータイプ）"
+   }
+  ]
+ },
+ {
+  "id": "s-210b",
+  "name": "S-210B",
+  "kind": "ブレーカ",
+  "class": 0.7,
+  "maker": "オカダ",
+  "values": {
+   "mass_kg": {
+    "v": 1910,
+    "note": "総質量（タガネ・ブラケット付）",
+    "check": false
+   },
+   "length_mm": {
+    "v": 2581,
+    "note": "全長（タガネ・ブラケット付）",
+    "check": false
+   },
+   "width_mm": {
+    "v": 418,
+    "note": "全幅（ブラケット先端）",
+    "check": false
+   },
+   "height_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "open_mm": {
+    "v": null,
+    "note": "ブレーカのため対象外",
+    "check": false
+   },
+   "force_kn": {
+    "v": null,
+    "note": "ブレーカのため対象外",
+    "check": false
+   },
+   "blows_per_min": {
+    "v": [
+     280,
+     410
+    ],
+    "note": "bpm",
+    "check": false
+   },
+   "chisel_mm": {
+    "v": 135,
+    "note": "タガネ径",
+    "check": false
+   },
+   "base_t": {
+    "v": [
+     20,
+     23
+    ],
+    "note": "取付ショベルクラス 20〜23t",
+    "check": false
+   },
+   "oil_lpm": {
+    "v": [
+     120,
+     160
+    ],
+    "note": "消費油量",
+    "check": false
+   },
+   "pressure_mpa": {
+    "v": [
+     14,
+     18
+    ],
+    "note": "作動油圧 14〜18MPa",
+    "check": false
+   },
+   "rotation": {
+    "v": null,
+    "note": "カタログに記載なし（ブレーカ）",
+    "check": false
+   },
+   "pipes": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "TOP210B　カタログ.pdf",
+    "page": 1,
+    "where": "左ページ 超低騒音ブレーカSシリーズ仕様表 S-210B列"
+   }
+  ]
+ },
+ {
+  "id": "mkb900",
+  "name": "MKB900",
+  "kind": "ブレーカ",
+  "class": 0.45,
+  "maker": "甲南電機",
+  "values": {
+   "mass_kg": {
+    "v": 790,
+    "note": "総質量",
+    "check": false
+   },
+   "length_mm": {
+    "v": 1823,
+    "note": "全長",
+    "check": false
+   },
+   "width_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "height_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "open_mm": {
+    "v": null,
+    "note": "ブレーカのため対象外",
+    "check": false
+   },
+   "force_kn": {
+    "v": null,
+    "note": "ブレーカのため対象外",
+    "check": false
+   },
+   "blows_per_min": {
+    "v": [
+     440,
+     750
+    ],
+    "note": "標準打撃回数",
+    "check": false
+   },
+   "chisel_mm": {
+    "v": 100,
+    "note": "チゼル寸法 φ100×1,000",
+    "check": false
+   },
+   "base_t": {
+    "v": [
+     10,
+     15
+    ],
+    "note": "装着ショベル 10〜15t（0.45〜0.6m³）",
+    "check": false
+   },
+   "oil_lpm": {
+    "v": [
+     65,
+     110
+    ],
+    "note": "必要油量",
+    "check": false
+   },
+   "pressure_mpa": {
+    "v": [
+     13.7,
+     16.7
+    ],
+    "note": "使用油圧 13.7〜16.7MPa {140〜170kgf/cm²}",
+    "check": false
+   },
+   "rotation": {
+    "v": null,
+    "note": "カタログに記載なし（ブレーカ）",
+    "check": false
+   },
+   "pipes": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "MKB500N2（0.25ﾌﾞﾚｰｶｰ）.pdf",
+    "page": 2,
+    "where": "仕様表 Nシリーズ MKB900N行（MKB900 はカタログに無く MKB900N の数字）"
+   }
+  ]
+ },
+ {
+  "id": "mkb500n",
+  "name": "MKB500N",
+  "kind": "ブレーカ",
+  "class": 0.25,
+  "maker": "甲南電機",
+  "values": {
+   "mass_kg": {
+    "v": 400,
+    "note": "総質量",
+    "check": false
+   },
+   "length_mm": {
+    "v": 1530,
+    "note": "全長",
+    "check": false
+   },
+   "width_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "height_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "open_mm": {
+    "v": null,
+    "note": "ブレーカのため対象外",
+    "check": false
+   },
+   "force_kn": {
+    "v": null,
+    "note": "ブレーカのため対象外",
+    "check": false
+   },
+   "blows_per_min": {
+    "v": [
+     470,
+     1000
+    ],
+    "note": "標準打撃回数",
+    "check": false
+   },
+   "chisel_mm": {
+    "v": 80,
+    "note": "チゼル寸法 φ80×900",
+    "check": false
+   },
+   "base_t": {
+    "v": [
+     6,
+     11
+    ],
+    "note": "装着ショベル 6〜11t（0.28〜0.45m³）",
+    "check": false
+   },
+   "oil_lpm": {
+    "v": [
+     40,
+     85
+    ],
+    "note": "必要油量",
+    "check": false
+   },
+   "pressure_mpa": {
+    "v": [
+     12.7,
+     14.7
+    ],
+    "note": "使用油圧 12.7〜14.7MPa {130〜150kgf/cm²}",
+    "check": false
+   },
+   "rotation": {
+    "v": null,
+    "note": "カタログに記載なし（ブレーカ）",
+    "check": false
+   },
+   "pipes": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "MKB500N2（0.25ﾌﾞﾚｰｶｰ）.pdf",
+    "page": 2,
+    "where": "仕様表 Nシリーズ MKB500N行（ピンクのマーカー行）"
+   }
+  ]
+ },
+ {
+  "id": "mkb150",
+  "name": "MKB150",
+  "kind": "ブレーカ",
+  "class": 0.1,
+  "maker": "甲南電機",
+  "values": {
+   "mass_kg": {
+    "v": 130,
+    "note": "総質量",
+    "check": false
+   },
+   "length_mm": {
+    "v": 1272,
+    "note": "全長",
+    "check": false
+   },
+   "width_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "height_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "open_mm": {
+    "v": null,
+    "note": "ブレーカのため対象外",
+    "check": false
+   },
+   "force_kn": {
+    "v": null,
+    "note": "ブレーカのため対象外",
+    "check": false
+   },
+   "blows_per_min": {
+    "v": [
+     800,
+     1200
+    ],
+    "note": "標準打撃回数（Mシリーズ共通欄）",
+    "check": false
+   },
+   "chisel_mm": {
+    "v": 55,
+    "note": "チゼル寸法 φ55×600",
+    "check": false
+   },
+   "base_t": {
+    "v": [
+     2.5,
+     4
+    ],
+    "note": "装着ショベル 2.5〜4t（0.08〜0.14m³）",
+    "check": false
+   },
+   "oil_lpm": {
+    "v": [
+     30,
+     45
+    ],
+    "note": "必要油量",
+    "check": false
+   },
+   "pressure_mpa": {
+    "v": [
+     11.8,
+     14.7
+    ],
+    "note": "使用油圧 11.8〜14.7MPa {120〜150kgf/cm²}（Mシリーズ共通欄）",
+    "check": false
+   },
+   "rotation": {
+    "v": null,
+    "note": "カタログに記載なし（ブレーカ）",
+    "check": false
+   },
+   "pipes": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "MKB500N2（0.25ﾌﾞﾚｰｶｰ）.pdf",
+    "page": 2,
+    "where": "仕様表 Mシリーズ MKB150M行（MKB150 はカタログに無く MKB150M の数字）"
+   }
+  ]
+ },
+ {
+  "id": "gv-122s-5p",
+  "name": "GV-122S（5本配管）",
+  "kind": "つかみ",
+  "class": 0.45,
+  "maker": "タグチ工業",
+  "values": {
+   "mass_kg": {
+    "v": 860,
+    "note": "質量",
+    "check": false
+   },
+   "length_mm": {
+    "v": 1900,
+    "note": "本体長さ",
+    "check": false
+   },
+   "width_mm": {
+    "v": 560,
+    "note": "爪幅（平面図の最大幅も560）",
+    "check": false
+   },
+   "height_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "open_mm": {
+    "v": 1860,
+    "note": "最大開口幅",
+    "check": false
+   },
+   "force_kn": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "blows_per_min": {
+    "v": null,
+    "note": "ブレーカ以外のため対象外",
+    "check": false
+   },
+   "chisel_mm": {
+    "v": null,
+    "note": "ブレーカ以外のため対象外",
+    "check": false
+   },
+   "base_t": {
+    "v": [
+     12,
+     14
+    ],
+    "note": "本体クラスの目安 12〜14ton",
+    "check": false
+   },
+   "oil_lpm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "pressure_mpa": {
+    "v": 34.3,
+    "note": "最大使用圧力 34.3MPa",
+    "check": false
+   },
+   "rotation": {
+    "v": "有",
+    "note": "全旋回型（360°全旋回、旋回速度 可変○）",
+    "check": false
+   },
+   "pipes": {
+    "v": 5,
+    "note": "注記「2往復の油圧配管が必要（背圧2MPa以上の場合はドレン配管が必要）」→ 2往復=4本＋ドレン1本=5本。対応表の名称「5本配管」と一致。ドレン不要なら4本",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "GV122S_250731.pdf",
+    "page": 2,
+    "where": "主な仕様表 GV-122S列・本体寸法図・表下の注記"
+   },
+   {
+    "file": "GV122S_250731.pdf",
+    "page": 1,
+    "where": "表紙（全旋回型つかみ機・360°全旋回）"
+   }
+  ]
+ },
+ {
+  "id": "gv-60l",
+  "name": "GV-60L",
+  "kind": "つかみ",
+  "class": 0.25,
+  "maker": "タグチ工業",
+  "values": {
+   "mass_kg": {
+    "v": 370,
+    "note": "重量",
+    "check": false
+   },
+   "length_mm": {
+    "v": 1360,
+    "note": "本体長さ B",
+    "check": false
+   },
+   "width_mm": {
+    "v": 470,
+    "note": "爪幅 C",
+    "check": false
+   },
+   "height_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "open_mm": {
+    "v": 1665,
+    "note": "最大開口幅 A",
+    "check": false
+   },
+   "force_kn": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "blows_per_min": {
+    "v": null,
+    "note": "ブレーカ以外のため対象外",
+    "check": false
+   },
+   "chisel_mm": {
+    "v": null,
+    "note": "ブレーカ以外のため対象外",
+    "check": false
+   },
+   "base_t": {
+    "v": [
+     6,
+     8
+    ],
+    "note": "本体クラスの目安 6〜8ton",
+    "check": false
+   },
+   "oil_lpm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "pressure_mpa": {
+    "v": 27.5,
+    "note": "最大使用圧力 280kgf/cm² を換算",
+    "check": false
+   },
+   "rotation": {
+    "v": "無",
+    "note": "首振り機構のみ（バケットシリンダーで首振り）。旋回機構の記載なし",
+    "check": false
+   },
+   "pipes": {
+    "v": 2,
+    "note": "本文「首振り操作…往復油圧配管が1セット必要です」→ 往復1セット=2本",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "タグチ　GV-30L.pdf",
+    "page": 2,
+    "where": "首振りグラスパーVL 仕様表 GV-60L列・本文"
+   }
+  ]
+ },
+ {
+  "id": "gv-30l",
+  "name": "GV-30L",
+  "kind": "つかみ",
+  "class": 0.1,
+  "maker": "タグチ工業",
+  "values": {
+   "mass_kg": {
+    "v": 140,
+    "note": "重量",
+    "check": false
+   },
+   "length_mm": {
+    "v": 1020,
+    "note": "本体長さ B",
+    "check": false
+   },
+   "width_mm": {
+    "v": 330,
+    "note": "爪幅 C",
+    "check": false
+   },
+   "height_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "open_mm": {
+    "v": 1200,
+    "note": "最大開口幅 A",
+    "check": false
+   },
+   "force_kn": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "blows_per_min": {
+    "v": null,
+    "note": "ブレーカ以外のため対象外",
+    "check": false
+   },
+   "chisel_mm": {
+    "v": null,
+    "note": "ブレーカ以外のため対象外",
+    "check": false
+   },
+   "base_t": {
+    "v": [
+     3,
+     4
+    ],
+    "note": "本体クラスの目安 3〜4ton",
+    "check": false
+   },
+   "oil_lpm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "pressure_mpa": {
+    "v": 24.5,
+    "note": "最大使用圧力 250kgf/cm²（GV-30L/40L共通欄）を換算",
+    "check": false
+   },
+   "rotation": {
+    "v": "無",
+    "note": "首振り機構のみ（バケットシリンダーで首振り）。旋回機構の記載なし",
+    "check": false
+   },
+   "pipes": {
+    "v": 2,
+    "note": "本文「首振り操作…往復油圧配管が1セット必要です」→ 往復1セット=2本",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "タグチ　GV-30L.pdf",
+    "page": 2,
+    "where": "首振りグラスパーVL 仕様表 GV-30L列・本文"
+   }
+  ]
+ }
+]
