@@ -1,0 +1,510 @@
+[
+ {
+  "no": 1,
+  "name": "PC138US-11（ビックヘッド）",
+  "class": 0.45,
+  "spec": "ビックヘッド",
+  "maker": "コマツ",
+  "pdfs": [
+   {
+    "file": "管理番号001　PC138US-11（ハンマーヘッド）.pdf",
+    "pages": []
+   }
+  ],
+  "flag": "",
+  "caution": ""
+ },
+ {
+  "no": 2,
+  "name": "SK350DLC-10③（セパ）",
+  "class": 1.2,
+  "spec": "セパレートブーム",
+  "maker": "コベルコ",
+  "pdfs": [
+   {
+    "file": "管理番号002　ＳＫ350セパ.pdf",
+    "pages": []
+   }
+  ],
+  "flag": "",
+  "caution": ""
+ },
+ {
+  "no": 3,
+  "name": "SK350DLC-9②（ロング）",
+  "class": 1.2,
+  "spec": "超ロングブーム",
+  "maker": "コベルコ",
+  "pdfs": [
+   {
+    "file": "管理番号003　SK350 超ロング　三つ折れ.pdf",
+    "pages": []
+   }
+  ],
+  "flag": "",
+  "caution": ""
+ },
+ {
+  "no": 5,
+  "name": "SK35SR-7",
+  "class": 0.1,
+  "spec": "スタンダード",
+  "maker": "コベルコ",
+  "pdfs": [
+   {
+    "file": "管理番号005　SK35SR-7.pdf",
+    "pages": []
+   }
+  ],
+  "flag": "",
+  "caution": ""
+ },
+ {
+  "no": 6,
+  "name": "ZX75US-3（コアマン）",
+  "class": 0.25,
+  "spec": "コアマン",
+  "maker": "日立",
+  "pdfs": [
+   {
+    "file": "管理番号006　ＺＸ７５　.pdf",
+    "pages": []
+   }
+  ],
+  "flag": "",
+  "caution": ""
+ },
+ {
+  "no": 7,
+  "name": "SK135SRD-7③（セパ）",
+  "class": 0.45,
+  "spec": "セパレートブーム",
+  "maker": "コベルコ",
+  "pdfs": [
+   {
+    "file": "管理番号007　ＳK135ＳRD-7④セパ.pdf",
+    "pages": []
+   }
+  ],
+  "flag": "",
+  "caution": ""
+ },
+ {
+  "no": 8,
+  "name": "CAT315-07",
+  "class": 0.45,
+  "spec": "クレーン仕様",
+  "maker": "CAT",
+  "pdfs": [
+   {
+    "file": "管理番号008　CAT315.pdf",
+    "pages": []
+   }
+  ],
+  "flag": "",
+  "caution": ""
+ },
+ {
+  "no": 9,
+  "name": "PC450LC-11",
+  "class": 1.6,
+  "spec": "スタンダード",
+  "maker": "コマツ",
+  "pdfs": [
+   {
+    "file": "管理番号009　ＰＣ450ＬＣ-8.pdf",
+    "pages": []
+   }
+  ],
+  "flag": "",
+  "caution": "旧型（PC400/450-8）カタログの数字"
+ },
+ {
+  "no": 10,
+  "name": "CAT308ECR",
+  "class": 0.25,
+  "spec": "スタンダード",
+  "maker": "CAT",
+  "pdfs": [
+   {
+    "file": "管理番号010　CAT308E CR.pdf",
+    "pages": []
+   }
+  ],
+  "flag": "",
+  "caution": ""
+ },
+ {
+  "no": 11,
+  "name": "SK75SRD-3E",
+  "class": 0.25,
+  "spec": "スタンダード",
+  "maker": "コベルコ",
+  "pdfs": [
+   {
+    "file": "管理番号011　SK75SRD-3E.pdf",
+    "pages": []
+   }
+  ],
+  "flag": "",
+  "caution": ""
+ },
+ {
+  "no": 12,
+  "name": "CAT318CW",
+  "class": 0.7,
+  "spec": "ナロータイプクローラー",
+  "maker": "CAT",
+  "pdfs": [
+   {
+    "file": "管理番号012　ＣＡＴ318ＣＬＮ　詳細.pdf",
+    "pages": []
+   },
+   {
+    "file": "管理番号012　ＣＡＴ318ＣＬＮ.pdf",
+    "pages": []
+   }
+  ],
+  "flag": "",
+  "caution": ""
+ },
+ {
+  "no": 13,
+  "name": "PC228US-8④（ツートン）",
+  "class": 0.7,
+  "spec": "スタンダード",
+  "maker": "コマツ",
+  "pdfs": [],
+  "flag": "PDFなし",
+  "caution": ""
+ },
+ {
+  "no": 14,
+  "name": "PC228US-3②",
+  "class": 0.7,
+  "spec": "スタンダード",
+  "maker": "コマツ",
+  "pdfs": [
+   {
+    "file": "管理番号013・014　ＰＣ228ＵＳ-3.pdf",
+    "pages": []
+   }
+  ],
+  "flag": "",
+  "caution": ""
+ },
+ {
+  "no": 15,
+  "name": "SK135SR-3②（カメラ1）",
+  "class": 0.45,
+  "spec": "クレーン仕様",
+  "maker": "コベルコ",
+  "pdfs": [
+   {
+    "file": "管理番号015　SK135SR-3 クレーン.pdf",
+    "pages": []
+   }
+  ],
+  "flag": "",
+  "caution": ""
+ },
+ {
+  "no": 17,
+  "name": "SK135SRD-5③（カメラ2）",
+  "class": 0.45,
+  "spec": "クレーン仕様",
+  "maker": "コベルコ",
+  "pdfs": [
+   {
+    "file": "管理番号017　SK135ﾊｲﾘｰﾁｸﾚｰﾝ.pdf",
+    "pages": []
+   }
+  ],
+  "flag": "",
+  "caution": ""
+ },
+ {
+  "no": 18,
+  "name": "PC228US-11⑥（クレーン）",
+  "class": 0.7,
+  "spec": "クレーン仕様",
+  "maker": "コマツ",
+  "pdfs": [
+   {
+    "file": "管理番号018　PC228US-11 クレーン仕様.pdf",
+    "pages": []
+   }
+  ],
+  "flag": "",
+  "caution": ""
+ },
+ {
+  "no": 19,
+  "name": "ZX225USRK-6⑤",
+  "class": 0.7,
+  "spec": "クレーン仕様",
+  "maker": "日立",
+  "pdfs": [
+   {
+    "file": "管理番号019　ZX225USRK-6クレーン.pdf",
+    "pages": []
+   }
+  ],
+  "flag": "",
+  "caution": ""
+ },
+ {
+  "no": 20,
+  "name": "ZX135USK-3HG（ショート）",
+  "class": 0.45,
+  "spec": "ショートリーチ",
+  "maker": "日立",
+  "pdfs": [
+   {
+    "file": "管理番号020　ZX135USK-3ショートリーチ.pdf",
+    "pages": []
+   }
+  ],
+  "flag": "",
+  "caution": ""
+ },
+ {
+  "no": 22,
+  "name": "CAT320DRR②",
+  "class": 0.7,
+  "spec": "スタンダード",
+  "maker": "CAT",
+  "pdfs": [
+   {
+    "file": "管理番号022　ＣＡＴ320ＤＲＲ.pdf",
+    "pages": []
+   }
+  ],
+  "flag": "",
+  "caution": ""
+ },
+ {
+  "no": 23,
+  "name": "ZX225USRK-3HG③（ショート）",
+  "class": 0.7,
+  "spec": "三段ショートリーチ",
+  "maker": "日立",
+  "pdfs": [
+   {
+    "file": "管理番号016・019　ZX225USRK-3HG.pdf",
+    "pages": []
+   }
+  ],
+  "flag": "",
+  "caution": ""
+ },
+ {
+  "no": 24,
+  "name": "ZX135USK-3PB③（セパ）",
+  "class": 0.45,
+  "spec": "セパレートブーム",
+  "maker": "日立",
+  "pdfs": [
+   {
+    "file": "管理番号004　ZX135USK-3.pdf",
+    "pages": []
+   }
+  ],
+  "flag": "",
+  "caution": "一般仕様のカタログの数字。セパ仕様は違う場合あり"
+ },
+ {
+  "no": 25,
+  "name": "SK350LC①",
+  "class": 1.2,
+  "spec": "ナロータイプクローラー",
+  "maker": "コベルコ",
+  "pdfs": [
+   {
+    "file": "管理番号025　ＳＫ350ＬＣ　詳細.pdf",
+    "pages": []
+   },
+   {
+    "file": "管理番号025　ＳＫ350ＬＣスタンダード.pdf",
+    "pages": []
+   }
+  ],
+  "flag": "",
+  "caution": ""
+ },
+ {
+  "no": 26,
+  "name": "ZX75US-3②（ショート）",
+  "class": 0.25,
+  "spec": "ショートリーチ",
+  "maker": "日立",
+  "pdfs": [
+   {
+    "file": "管理番号006　ＺＸ７５　.pdf",
+    "pages": []
+   }
+  ],
+  "flag": "",
+  "caution": "一般仕様のカタログの数字。ショートリーチ仕様は違う場合あり"
+ },
+ {
+  "no": 27,
+  "name": "PC228US-10⑤",
+  "class": 0.7,
+  "spec": "スタンダード",
+  "maker": "コマツ",
+  "pdfs": [
+   {
+    "file": "管理番号027　PC228US-10.pdf",
+    "pages": []
+   }
+  ],
+  "flag": "",
+  "caution": ""
+ },
+ {
+  "no": 28,
+  "name": "ZX135USK-3HG（ロング",
+  "class": 0.45,
+  "spec": "ロングブーム",
+  "maker": "日立",
+  "pdfs": [
+   {
+    "file": "管理番号028　ＺＸ１３５ロング.pdf",
+    "pages": []
+   }
+  ],
+  "flag": "",
+  "caution": ""
+ },
+ {
+  "no": 29,
+  "name": "PC30",
+  "class": 0.1,
+  "spec": "スタンダード",
+  "maker": "コマツ",
+  "pdfs": [
+   {
+    "file": "管理番号029　PC30MR-3.pdf",
+    "pages": []
+   }
+  ],
+  "flag": "",
+  "caution": ""
+ },
+ {
+  "no": 30,
+  "name": "PC78",
+  "class": 0.25,
+  "spec": "スタンダード",
+  "maker": "コマツ",
+  "pdfs": [
+   {
+    "file": "管理番号030　PC78US-10.pdf",
+    "pages": []
+   }
+  ],
+  "flag": "",
+  "caution": ""
+ },
+ {
+  "no": 31,
+  "name": "CAT314ELCR（プロボ）",
+  "class": 0.45,
+  "spec": "プロボ",
+  "maker": "CAT",
+  "pdfs": [
+   {
+    "file": "管理番号031　CAT314ELCRプロボ.pdf",
+    "pages": []
+   }
+  ],
+  "flag": "",
+  "caution": ""
+ },
+ {
+  "no": 32,
+  "name": "CAT320ERR",
+  "class": 0.7,
+  "spec": "クレーン仕様",
+  "maker": "CAT",
+  "pdfs": [
+   {
+    "file": "管理番号032　CAT320E.pdf",
+    "pages": []
+   }
+  ],
+  "flag": "",
+  "caution": ""
+ },
+ {
+  "no": 33,
+  "name": "ZX20U-5A",
+  "class": 0.1,
+  "spec": "スタンダード",
+  "maker": "日立",
+  "pdfs": [],
+  "flag": "PDFなし（日立公式サイトで探す）",
+  "caution": ""
+ },
+ {
+  "no": 34,
+  "name": "SK135SRLC-3（ショート）",
+  "class": 0.45,
+  "spec": "ショートリーチ",
+  "maker": "コベルコ",
+  "pdfs": [
+   {
+    "file": "管理番号034　SK135SR ショートリーチ.pdf",
+    "pages": []
+   }
+  ],
+  "flag": "",
+  "caution": ""
+ },
+ {
+  "no": 35,
+  "name": "PC138US-10③",
+  "class": 0.45,
+  "spec": "クレーン仕様",
+  "maker": "コマツ",
+  "pdfs": [
+   {
+    "file": "管理番号035　PC138US-10 クレーン仕様.pdf",
+    "pages": []
+   }
+  ],
+  "flag": "",
+  "caution": ""
+ },
+ {
+  "no": 36,
+  "name": "ZX225USRLCK-5B④",
+  "class": 0.7,
+  "spec": "ロングブーム",
+  "maker": "日立",
+  "pdfs": [
+   {
+    "file": "管理番号036　ZX225USRLCK-5B セミロング仕様と関連資料.pdf",
+    "pages": []
+   }
+  ],
+  "flag": "",
+  "caution": ""
+ },
+ {
+  "no": 37,
+  "name": "CAT325",
+  "class": 0.7,
+  "spec": "クレーン仕様, ビックヘッド",
+  "maker": "CAT",
+  "pdfs": [
+   {
+    "file": "管理番号004　CAT325-07.pdf",
+    "pages": []
+   }
+  ],
+  "flag": "",
+  "caution": ""
+ }
+]
