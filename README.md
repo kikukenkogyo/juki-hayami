@@ -1,6 +1,9 @@
 # 重機早見表
 
-菊建興業が保有する重機34台の寸法・重さを、iPhone・iPad ですぐ見るためのアプリです。
+菊建興業が保有する重機34台と、アタッチメント103台（83機種）の寸法・重さ・能力を、iPhone・iPad ですぐ見るためのアプリです。
+
+- 一番上の「重機｜アタッチメント」で切り替え
+- 重機の詳細の一番下「このクラスに付くアタッチメント」で、同じクラスのアタッチメント一覧へ飛べる
 
 - 公開アドレス: https://kikukenkogyo.github.io/juki-hayami/
 - 元のカタログ PDF: `OneDrive\Desktop\AI作業場\重機・アタッチメント情報\`
@@ -30,14 +33,27 @@ Claude がやること:
 - 画面のファイルや画像は自動で新しくなる。`sw.js` の保存の仕方そのものを変えたときだけ `VERSION` を上げる
 - `git commit` → `git push`（反映まで1〜2分）
 
+## アタッチメントの数字を直したいとき・増えた／減ったとき
+
+Claude に「重機早見表のアタッチメント ○○ の重量を○○に直して」「○○をアタッチメントに追加して」と頼む。
+
+Claude がやること:
+
+- 数字は `att.json` だけを直す（理由は `tools/att_resolve.json` に書き足す）
+- 追加は `tools/att_mapping.json` に機種（または管理番号）を足し、カタログがあれば読んで `att.json` に追加、`python -X utf8 -I tools/make_images.py <PDFフォルダ> att` でページ画像を作る
+- 台帳は Notion（アタッチメント）が正。管理番号の重なり（12・46・52・94・95）は Notion を直したら `att_mapping.json` と `att_resolve.json` の `allowDupUnits` も直す
+- `node --test "test/*.test.mjs"` を通す（台数103台・画像の実在も検査する。台数が変わったら `test/att.test.mjs` の 103 も直す）
+- `git commit` → `git push`
+
 ## 中身
 
 | ファイル | 役割 |
 |---|---|
-| `juki.json` | 34台のデータ |
+| `juki.json` | 重機34台のデータ |
+| `att.json` | アタッチメント83機種のデータ |
 | `img/` | カタログのページ画像 |
 | `index.html` `style.css` `app.js` | 画面 |
 | `lib.js` | 検索・絞り込み |
 | `sw.js` `manifest.json` | 電波なし対応・ホーム画面アイコン |
-| `tools/` | データづくりの道具と記録（対応表、2回読みの結果、食い違いの決め方） |
+| `tools/` | データづくりの道具と記録（対応表、2回読みの結果、食い違いの決め方。アタッチメントは `att_` で始まるもの） |
 | `docs/` | 設計書・作業手順書 |
