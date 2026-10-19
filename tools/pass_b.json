@@ -1,0 +1,2259 @@
+[
+ {
+  "no": 1,
+  "name": "PC138US-11（ビックヘッド）",
+  "class": 0.45,
+  "spec": "ビックヘッド",
+  "maker": "コマツ",
+  "values": {
+   "mass_t": {
+    "v": 16.2,
+    "note": "マルマテクニカ対応機 階上解体仕様の機械質量16,200kg（ATT未装着・ブレードレス）",
+    "check": false
+   },
+   "width_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "height_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "length_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "crawler_width_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "tail_radius_mm": {
+    "v": 1610,
+    "note": "階上解体仕様の行",
+    "check": false
+   },
+   "ground_pressure_kpa": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "max_work_height_mm": {
+    "v": 6260,
+    "note": "アームトップピン位置最大・ATT装着時の作業高さ",
+    "check": false
+   },
+   "max_reach_mm": {
+    "v": 5460,
+    "note": "アームトップピン位置・ATT装着時 前方5,460（側方3,600）",
+    "check": false
+   },
+   "max_dig_depth_mm": {
+    "v": 2130,
+    "note": "アームトップピン位置の作業深さ",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "管理番号001　PC138US-11（ハンマーヘッド）.pdf",
+    "page": 2,
+    "where": "解体分野仕様車諸元表-1 PC138US-11 階上解体仕様の行（マーカー部）"
+   }
+  ]
+ },
+ {
+  "no": 2,
+  "name": "SK350DLC-10③（セパ）",
+  "class": 1.2,
+  "spec": "セパレートブーム",
+  "maker": "コベルコ",
+  "values": {
+   "mass_t": {
+    "v": 34.8,
+    "note": "カタログはSK350LC-9（標準機）。セパレートブーム仕様・-10の値ではない",
+    "check": false
+   },
+   "width_mm": {
+    "v": 3190,
+    "note": "SK350LC-9 600mmシュー時（標準機カタログ）",
+    "check": false
+   },
+   "height_mm": {
+    "v": 3420,
+    "note": "全体図（HDアーム3.3m・1.4m3バケット装着時）の全高。標準機",
+    "check": false
+   },
+   "length_mm": {
+    "v": 11200,
+    "note": "全体図の全長（HDアーム3.3m）。標準機、セパブーム時は異なる可能性",
+    "check": false
+   },
+   "crawler_width_mm": {
+    "v": 600,
+    "note": "標準シュー",
+    "check": false
+   },
+   "tail_radius_mm": {
+    "v": 3500,
+    "note": "全体図R3,500",
+    "check": false
+   },
+   "ground_pressure_kpa": {
+    "v": 65,
+    "note": "SK350LC 600mmシュー時 65{0.66}",
+    "check": false
+   },
+   "max_work_height_mm": {
+    "v": 10580,
+    "note": "最大掘削高さ（HDアーム3.3m）。解体アタッチ時の値は記載なし",
+    "check": false
+   },
+   "max_reach_mm": {
+    "v": 11260,
+    "note": "最大掘削半径（HDアーム3.3m）",
+    "check": false
+   },
+   "max_dig_depth_mm": {
+    "v": 7560,
+    "note": "HDアーム3.3m",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "管理番号002　ＳＫ350セパ.pdf",
+    "page": 2,
+    "where": "全体図・作動範囲図・各種シュー・主な仕様（SK330/SK350LC-9 標準機カタログ）"
+   }
+  ]
+ },
+ {
+  "no": 3,
+  "name": "SK350DLC-9②（ロング）",
+  "class": 1.2,
+  "spec": "超ロングブーム",
+  "maker": "コベルコ",
+  "values": {
+   "mass_t": {
+    "v": null,
+    "note": "超ロング仕様の質量は記載なし（候補: 標準機SK350LC 33,600kg）",
+    "check": false
+   },
+   "width_mm": {
+    "v": 3200,
+    "note": "SK350LC 600mmシュー時（標準機の外形寸法図。SK320LC-6相当の旧型カタログ）",
+    "check": false
+   },
+   "height_mm": {
+    "v": 3050,
+    "note": "3つ折れ超ロング仕様 格納姿勢図の高さ寸法（輸送時と明記なし）。標準機の全高は3,360",
+    "check": false
+   },
+   "length_mm": {
+    "v": 14240,
+    "note": "3つ折れ超ロング仕様 格納姿勢図の全長",
+    "check": false
+   },
+   "crawler_width_mm": {
+    "v": 600,
+    "note": "標準機外形寸法図",
+    "check": false
+   },
+   "tail_radius_mm": {
+    "v": null,
+    "note": "SK350の後端旋回半径は記載なし（図にSK210/250のみ）",
+    "check": false
+   },
+   "ground_pressure_kpa": {
+    "v": null,
+    "note": "超ロング仕様の接地圧は記載なし（候補: 標準機SK350LC 63kPa{0.64}）",
+    "check": false
+   },
+   "max_work_height_mm": {
+    "v": 22410,
+    "note": "3つ折れ超ロングアタッチメント仕様 刃先最大作業高さ（中間ブーム除去時は19,770）",
+    "check": false
+   },
+   "max_reach_mm": {
+    "v": 20870,
+    "note": "刃先最大作業半径（最大作業可能半径は13,370。中間ブーム除去時18,250）",
+    "check": false
+   },
+   "max_dig_depth_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "管理番号003　SK350 超ロング　三つ折れ.pdf",
+    "page": 1,
+    "where": "仕様表・外形寸法（SK350LC標準機）"
+   },
+   {
+    "file": "管理番号003　SK350 超ロング　三つ折れ.pdf",
+    "page": 2,
+    "where": "SK350LC 3つ折れ超ロングアタッチメント仕様 作業範囲図"
+   }
+  ]
+ },
+ {
+  "no": 5,
+  "name": "SK35SR-7",
+  "class": 0.1,
+  "spec": "スタンダード",
+  "maker": "コベルコ",
+  "values": {
+   "mass_t": {
+    "v": null,
+    "note": "列が特定できない（候補: ゴムクローラ キャノピ=3,660kg, キャブ=3,830kg）",
+    "check": false
+   },
+   "width_mm": {
+    "v": 1700,
+    "note": "300mmゴム/鉄クローラ共通",
+    "check": false
+   },
+   "height_mm": {
+    "v": null,
+    "note": "列が特定できない（候補: キャノピ=2,510, キャブ=2,550。キャノピ/キャブ上面高さ）",
+    "check": false
+   },
+   "length_mm": {
+    "v": 4820,
+    "note": "全体図の全長（輸送姿勢）",
+    "check": false
+   },
+   "crawler_width_mm": {
+    "v": 300,
+    "note": "",
+    "check": false
+   },
+   "tail_radius_mm": {
+    "v": 850,
+    "note": "全体図R850（基本ウエイト）",
+    "check": false
+   },
+   "ground_pressure_kpa": {
+    "v": null,
+    "note": "列が特定できない（候補: ゴム キャノピ=32.8, キャブ=34.3）",
+    "check": false
+   },
+   "max_work_height_mm": {
+    "v": null,
+    "note": "列が特定できない（候補: 最大掘削高さ キャノピ=5,040, キャブ=4,870 標準アーム1.37m）",
+    "check": false
+   },
+   "max_reach_mm": {
+    "v": 5350,
+    "note": "最大掘削半径（標準アーム1.37m）",
+    "check": false
+   },
+   "max_dig_depth_mm": {
+    "v": null,
+    "note": "列が特定できない（候補: キャノピ=2,970, キャブ=3,050 標準アーム）",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "管理番号005　SK35SR-7.pdf",
+    "page": 16,
+    "where": "主な仕様・質量表"
+   },
+   {
+    "file": "管理番号005　SK35SR-7.pdf",
+    "page": 17,
+    "where": "全体図・作動範囲表"
+   }
+  ]
+ },
+ {
+  "no": 6,
+  "name": "ZX75US-3（コアマン）",
+  "class": 0.25,
+  "spec": "コアマン",
+  "maker": "日立",
+  "values": {
+   "mass_t": {
+    "v": 7.2,
+    "note": "標準仕様（コアマン仕様の記載なし）",
+    "check": false
+   },
+   "width_mm": {
+    "v": 2320,
+    "note": "M 全幅（K クローラ全幅も2,320）",
+    "check": false
+   },
+   "height_mm": {
+    "v": 2690,
+    "note": "G キャブ高さ（輸送時全高）",
+    "check": false
+   },
+   "length_mm": {
+    "v": 5870,
+    "note": "L 全長",
+    "check": false
+   },
+   "crawler_width_mm": {
+    "v": 450,
+    "note": "標準グローサシュー",
+    "check": false
+   },
+   "tail_radius_mm": {
+    "v": 1290,
+    "note": "E 後端旋回半径",
+    "check": false
+   },
+   "ground_pressure_kpa": {
+    "v": 31,
+    "note": "",
+    "check": false
+   },
+   "max_work_height_mm": {
+    "v": 7210,
+    "note": "最大掘削高さ（標準アーム1.62m）",
+    "check": false
+   },
+   "max_reach_mm": {
+    "v": 6430,
+    "note": "最大掘削半径（標準アーム1.62m）",
+    "check": false
+   },
+   "max_dig_depth_mm": {
+    "v": 4110,
+    "note": "標準アーム1.62m",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "管理番号006　ＺＸ７５　.pdf",
+    "page": 10,
+    "where": "仕様・作業範囲・寸法表"
+   }
+  ]
+ },
+ {
+  "no": 7,
+  "name": "SK135SRD-7③（セパ）",
+  "class": 0.45,
+  "spec": "セパレートブーム",
+  "maker": "コベルコ",
+  "values": {
+   "mass_t": {
+    "v": 17.6,
+    "note": "セパレートブーム仕様 本体一体型 SK135SRD-7（LCは17,800）",
+    "check": false
+   },
+   "width_mm": {
+    "v": 2490,
+    "note": "メインブーム兼用機/輸送姿勢図の全幅（500mmシュー）",
+    "check": false
+   },
+   "height_mm": {
+    "v": 2860,
+    "note": "セパレートブーム仕様 本体一体型の輸送姿勢高さ（キャブ上面2,960）",
+    "check": false
+   },
+   "length_mm": {
+    "v": 8220,
+    "note": "セパレートブーム仕様 本体一体型 SK135SRD（LCは8,300）",
+    "check": false
+   },
+   "crawler_width_mm": {
+    "v": 500,
+    "note": "輸送姿勢図",
+    "check": false
+   },
+   "tail_radius_mm": {
+    "v": 1670,
+    "note": "輸送姿勢図R1,670",
+    "check": false
+   },
+   "ground_pressure_kpa": {
+    "v": 55,
+    "note": "SK135SRD-7（LCは53）",
+    "check": false
+   },
+   "max_work_height_mm": {
+    "v": 9350,
+    "note": "アームトップピン位置の最大作業高さ（セパブーム本体一体型）",
+    "check": false
+   },
+   "max_reach_mm": {
+    "v": 8070,
+    "note": "最大作業半径（縦向き時）。横向き時5,800",
+    "check": false
+   },
+   "max_dig_depth_mm": {
+    "v": 4400,
+    "note": "アームトップピン位置",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "管理番号007　ＳK135ＳRD-7④セパ.pdf",
+    "page": 8,
+    "where": "主な仕様・外形寸法"
+   },
+   {
+    "file": "管理番号007　ＳK135ＳRD-7④セパ.pdf",
+    "page": 9,
+    "where": "セパレートブーム仕様 作業範囲表"
+   }
+  ]
+ },
+ {
+  "no": 8,
+  "name": "CAT315-07",
+  "class": 0.45,
+  "spec": "クレーン仕様",
+  "maker": "CAT",
+  "values": {
+   "mass_t": {
+    "v": 13.3,
+    "note": "SC（ショベルクレーン）仕様",
+    "check": false
+   },
+   "width_mm": {
+    "v": 2490,
+    "note": "トラック幅 500mmシュー時（SC仕様標準）",
+    "check": false
+   },
+   "height_mm": {
+    "v": 2890,
+    "note": "ブーム（輸送姿勢）2.5Mアーム。キャブ上端2,810",
+    "check": false
+   },
+   "length_mm": {
+    "v": 7310,
+    "note": "輸送姿勢時 2.5Mアーム",
+    "check": false
+   },
+   "crawler_width_mm": {
+    "v": 500,
+    "note": "SC仕様標準 トリプルグローサ",
+    "check": false
+   },
+   "tail_radius_mm": {
+    "v": 1490,
+    "note": "2.53tカウンタウエイト時（SC仕様標準）",
+    "check": false
+   },
+   "ground_pressure_kpa": {
+    "v": 43.1,
+    "note": "",
+    "check": false
+   },
+   "max_work_height_mm": {
+    "v": 9330,
+    "note": "最大掘削高さ 2.5Mアーム",
+    "check": false
+   },
+   "max_reach_mm": {
+    "v": 8220,
+    "note": "最大床面掘削半径 2.5Mアーム（最大掘削半径の記載なし）",
+    "check": false
+   },
+   "max_dig_depth_mm": {
+    "v": 5480,
+    "note": "2.5Mアーム",
+    "check": false
+   },
+   "crane_capacity_t": {
+    "v": 2.9,
+    "note": "定置 作業半径3.6m以下",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "管理番号008　CAT315.pdf",
+    "page": 3,
+    "where": "仕様パターン・ショベルクレーン定格荷重表"
+   },
+   {
+    "file": "管理番号008　CAT315.pdf",
+    "page": 4,
+    "where": "仕様値・寸法/作業範囲"
+   }
+  ]
+ },
+ {
+  "no": 9,
+  "name": "PC450LC-11",
+  "class": 1.6,
+  "spec": "スタンダード",
+  "maker": "コマツ",
+  "values": {
+   "mass_t": {
+    "v": 45.22,
+    "note": "PC450LC-8 機械質量45,220kg（旧型-8カタログ）",
+    "check": false
+   },
+   "width_mm": {
+    "v": 3490,
+    "note": "全幅 輸送時3,165/作業時3,490（大きい方）",
+    "check": false
+   },
+   "height_mm": {
+    "v": 3660,
+    "note": "全高（グローサ高さ含む）",
+    "check": false
+   },
+   "length_mm": {
+    "v": 12040,
+    "note": "全長",
+    "check": false
+   },
+   "crawler_width_mm": {
+    "v": 600,
+    "note": "",
+    "check": false
+   },
+   "tail_radius_mm": {
+    "v": 3645,
+    "note": "",
+    "check": false
+   },
+   "ground_pressure_kpa": {
+    "v": 78,
+    "note": "PC450LC-8",
+    "check": false
+   },
+   "max_work_height_mm": {
+    "v": 10925,
+    "note": "最大掘削高さ 3.4m標準アーム",
+    "check": false
+   },
+   "max_reach_mm": {
+    "v": 12005,
+    "note": "最大掘削半径 3.4m標準アーム",
+    "check": false
+   },
+   "max_dig_depth_mm": {
+    "v": 7790,
+    "note": "3.4m標準アーム",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "管理番号009　ＰＣ450ＬＣ-8.pdf",
+    "page": 1,
+    "where": "仕様表・作業範囲表"
+   }
+  ]
+ },
+ {
+  "no": 10,
+  "name": "CAT308ECR",
+  "class": 0.25,
+  "spec": "スタンダード",
+  "maker": "CAT",
+  "values": {
+   "mass_t": {
+    "v": 7.59,
+    "note": "標準仕様列。kg値7,590",
+    "check": false
+   },
+   "width_mm": {
+    "v": 2320,
+    "note": "輸送時全幅（トラック全幅）",
+    "check": false
+   },
+   "height_mm": {
+    "v": 2630,
+    "note": "輸送時",
+    "check": false
+   },
+   "length_mm": {
+    "v": 6280,
+    "note": "輸送時",
+    "check": false
+   },
+   "crawler_width_mm": {
+    "v": 450,
+    "note": "標準シュー450TG",
+    "check": false
+   },
+   "tail_radius_mm": {
+    "v": 1290,
+    "note": "",
+    "check": false
+   },
+   "ground_pressure_kpa": {
+    "v": 33.1,
+    "note": "標準仕様列",
+    "check": false
+   },
+   "max_work_height_mm": {
+    "v": 7390,
+    "note": "最大掘削高さ（標準アーム・標準バケット）",
+    "check": false
+   },
+   "max_reach_mm": {
+    "v": 6390,
+    "note": "最大掘削半径（標準アーム）",
+    "check": false
+   },
+   "max_dig_depth_mm": {
+    "v": 4140,
+    "note": "標準アーム",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "管理番号010　CAT308E CR.pdf",
+    "page": 1,
+    "where": "外形図・主要諸元表"
+   },
+   {
+    "file": "管理番号010　CAT308E CR.pdf",
+    "page": 3,
+    "where": "作業範囲表"
+   }
+  ]
+ },
+ {
+  "no": 11,
+  "name": "SK75SRD-3E",
+  "class": 0.25,
+  "spec": "スタンダード",
+  "maker": "コベルコ",
+  "values": {
+   "mass_t": {
+    "v": 7.85,
+    "note": "SK75SRD-3列。kg値7,850",
+    "check": false
+   },
+   "width_mm": {
+    "v": 2300,
+    "note": "B-全幅",
+    "check": false
+   },
+   "height_mm": {
+    "v": 2710,
+    "note": "C-全高（輸送時の明記なし）",
+    "check": false
+   },
+   "length_mm": {
+    "v": 5830,
+    "note": "A-全長（輸送時の明記なし）",
+    "check": false
+   },
+   "crawler_width_mm": {
+    "v": 450,
+    "note": "主要装備品で450mm等高シューが標準",
+    "check": false
+   },
+   "tail_radius_mm": {
+    "v": 1290,
+    "note": "",
+    "check": false
+   },
+   "ground_pressure_kpa": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "max_work_height_mm": {
+    "v": 7410,
+    "note": "最大掘削高さ",
+    "check": false
+   },
+   "max_reach_mm": {
+    "v": 6480,
+    "note": "最大掘削半径",
+    "check": false
+   },
+   "max_dig_depth_mm": {
+    "v": 4160,
+    "note": "",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "管理番号011　SK75SRD-3E.pdf",
+    "page": 1,
+    "where": "主要装備品表（シュー）"
+   },
+   {
+    "file": "管理番号011　SK75SRD-3E.pdf",
+    "page": 3,
+    "where": "主な仕様・作動範囲図"
+   }
+  ]
+ },
+ {
+  "no": 12,
+  "name": "CAT318CW",
+  "class": 0.7,
+  "spec": "ナロータイプクローラー",
+  "maker": "CAT",
+  "values": {
+   "mass_t": {
+    "v": null,
+    "note": "列が特定できない（候補: GLC-T5=19.2, GLC-T5SC=19.3, GLC-T5QC=19.9, GLD-T5解体仕様=20.0）",
+    "check": false
+   },
+   "width_mm": {
+    "v": 2490,
+    "note": "トラック全幅（全仕様共通）。全幅ミラー・ハンドル含む/除く=2,925/2,520",
+    "check": false
+   },
+   "height_mm": {
+    "v": null,
+    "note": "列が特定できない（候補: GLC-T5=3,120, GLC-T5SC=3,120, GLC-T5QC=3,170, GLD-T5解体仕様=3,120）。輸送時",
+    "check": false
+   },
+   "length_mm": {
+    "v": null,
+    "note": "列が特定できない（候補: GLC-T5=8,860, GLC-T5SC=8,860, GLC-T5QC=8,875, GLD-T5解体仕様=8,860）。輸送時",
+    "check": false
+   },
+   "crawler_width_mm": {
+    "v": 500,
+    "note": "全仕様共通",
+    "check": false
+   },
+   "tail_radius_mm": {
+    "v": 2540,
+    "note": "全仕様共通",
+    "check": false
+   },
+   "ground_pressure_kpa": {
+    "v": null,
+    "note": "列が特定できない（候補: GLC-T5=50, GLC-T5SC=50, GLC-T5QC=51, GLD-T5解体仕様=54）",
+    "check": false
+   },
+   "max_work_height_mm": {
+    "v": null,
+    "note": "最大掘削高さ。列が特定できない（候補: GLC-T5=9,280, GLC-T5SC=9,280, GLC-T5QC=9,620, GLD-T5解体仕様=9,290）",
+    "check": false
+   },
+   "max_reach_mm": {
+    "v": null,
+    "note": "最大掘削半径。列が特定できない（候補: GLC-T5=9,390, GLC-T5SC=9,390, GLC-T5QC=9,700, GLD-T5解体仕様=9,390）",
+    "check": false
+   },
+   "max_dig_depth_mm": {
+    "v": null,
+    "note": "列が特定できない（候補: GLC-T5=6,420, GLC-T5SC=6,420, GLC-T5QC=6,750, GLD-T5解体仕様=6,430）",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "管理番号012　ＣＡＴ318ＣＬＮ　詳細.pdf",
+    "page": 1,
+    "where": "主要諸元表・作業範囲表（318C LN）"
+   }
+  ]
+ },
+ {
+  "no": 14,
+  "name": "PC228US-3②",
+  "class": 0.7,
+  "spec": "スタンダード",
+  "maker": "コマツ",
+  "values": {
+   "mass_t": {
+    "v": 21.5,
+    "note": "機械質量（PC228US-3列）kg値21,500",
+    "check": false
+   },
+   "width_mm": {
+    "v": 2980,
+    "note": "仕様表の全幅（上部旋回体1,335+1,645と同じ）。クローラ全幅は外形図で2,800（解体仕様2,980）",
+    "check": false
+   },
+   "height_mm": {
+    "v": 3035,
+    "note": "輸送時",
+    "check": false
+   },
+   "length_mm": {
+    "v": 8700,
+    "note": "輸送時（解体仕様は8,800）",
+    "check": false
+   },
+   "crawler_width_mm": {
+    "v": 600,
+    "note": "",
+    "check": false
+   },
+   "tail_radius_mm": {
+    "v": 1680,
+    "note": "",
+    "check": false
+   },
+   "ground_pressure_kpa": {
+    "v": 50,
+    "note": "",
+    "check": false
+   },
+   "max_work_height_mm": {
+    "v": 10700,
+    "note": "最大掘削高さ",
+    "check": false
+   },
+   "max_reach_mm": {
+    "v": 9875,
+    "note": "最大掘削半径",
+    "check": false
+   },
+   "max_dig_depth_mm": {
+    "v": 6620,
+    "note": "",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "管理番号013・014　ＰＣ228ＵＳ-3.pdf",
+    "page": 1,
+    "where": "仕様表・外形図/作業範囲図"
+   }
+  ]
+ },
+ {
+  "no": 15,
+  "name": "SK135SR-3②（カメラ1）",
+  "class": 0.45,
+  "spec": "クレーン仕様",
+  "maker": "コベルコ",
+  "values": {
+   "mass_t": {
+    "v": 13.6,
+    "note": "SK135SR列、標準シュー装着時の運転質量13,600kg。ハイリーチクレーン仕様の質量は記載なし",
+    "check": false
+   },
+   "width_mm": {
+    "v": 2490,
+    "note": "全体図（クローラ全幅、500mmシュー）",
+    "check": false
+   },
+   "height_mm": {
+    "v": 2840,
+    "note": "全体図の全高（輸送時の明記なし）",
+    "check": false
+   },
+   "length_mm": {
+    "v": 7410,
+    "note": "全体図の全長（SK135SR）",
+    "check": false
+   },
+   "crawler_width_mm": {
+    "v": 500,
+    "note": "標準",
+    "check": false
+   },
+   "tail_radius_mm": {
+    "v": 1490,
+    "note": "",
+    "check": false
+   },
+   "ground_pressure_kpa": {
+    "v": 43,
+    "note": "SK135SR・500mmシュー。kgf/cm²値0.44併記",
+    "check": false
+   },
+   "max_work_height_mm": {
+    "v": 9190,
+    "note": "最大掘削高さ（2.38mアーム）",
+    "check": false
+   },
+   "max_reach_mm": {
+    "v": 8340,
+    "note": "最大掘削半径（2.38mアーム）",
+    "check": false
+   },
+   "max_dig_depth_mm": {
+    "v": 5520,
+    "note": "2.38mアーム",
+    "check": false
+   },
+   "crane_capacity_t": {
+    "v": 2.9,
+    "note": "SK135SR[LC]-3 定置吊り 作業半径2.4〜3.0m（最大吊り上げ能力2.9t×2.4m）。走行吊り1.4t",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "管理番号015　SK135SR-3 クレーン.pdf",
+    "page": 14,
+    "where": "全体図・作動範囲図・各種シュー"
+   },
+   {
+    "file": "管理番号015　SK135SR-3 クレーン.pdf",
+    "page": 15,
+    "where": "主な仕様"
+   },
+   {
+    "file": "管理番号015　SK135SR-3 クレーン.pdf",
+    "page": 16,
+    "where": "ハイリーチクレーン仕様・定格総荷重"
+   }
+  ]
+ },
+ {
+  "no": 17,
+  "name": "SK135SRD-5③（カメラ2）",
+  "class": 0.45,
+  "spec": "クレーン仕様",
+  "maker": "コベルコ",
+  "values": {
+   "mass_t": {
+    "v": 14.3,
+    "note": "SK135SRD 基本ウエイト時14,300kg（基本ウエイトが標準。追加ウエイト時14,900kg）",
+    "check": false
+   },
+   "width_mm": {
+    "v": 2490,
+    "note": "B-全幅",
+    "check": false
+   },
+   "height_mm": {
+    "v": 2960,
+    "note": "C-全高（輸送時の明記なし）",
+    "check": false
+   },
+   "length_mm": {
+    "v": 7410,
+    "note": "A-全長（輸送時の明記なし）",
+    "check": false
+   },
+   "crawler_width_mm": {
+    "v": 500,
+    "note": "主要装備品で500mmシューが標準",
+    "check": false
+   },
+   "tail_radius_mm": {
+    "v": 1490,
+    "note": "",
+    "check": false
+   },
+   "ground_pressure_kpa": {
+    "v": 45,
+    "note": "基本ウエイト時（追加ウエイト時47）",
+    "check": false
+   },
+   "max_work_height_mm": {
+    "v": 9190,
+    "note": "最大掘削高さ",
+    "check": false
+   },
+   "max_reach_mm": {
+    "v": 8340,
+    "note": "最大掘削半径",
+    "check": false
+   },
+   "max_dig_depth_mm": {
+    "v": 5520,
+    "note": "",
+    "check": false
+   },
+   "crane_capacity_t": {
+    "v": null,
+    "note": "カタログに記載なし（ハイリーチクレーンはオプション扱いの記載のみ）",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "管理番号017　SK135ﾊｲﾘｰﾁｸﾚｰﾝ.pdf",
+    "page": 3,
+    "where": "主な仕様・作業範囲図"
+   },
+   {
+    "file": "管理番号017　SK135ﾊｲﾘｰﾁｸﾚｰﾝ.pdf",
+    "page": 4,
+    "where": "主要装備品"
+   }
+  ]
+ },
+ {
+  "no": 18,
+  "name": "PC228US-11⑥（クレーン）",
+  "class": 0.7,
+  "spec": "クレーン仕様",
+  "maker": "コマツ",
+  "values": {
+   "mass_t": {
+    "v": 22.6,
+    "note": "機械質量（PC228US-11列）kg値22,600",
+    "check": false
+   },
+   "width_mm": {
+    "v": 2980,
+    "note": "輸送時全幅（クローラ全幅2,980と同じ）",
+    "check": false
+   },
+   "height_mm": {
+    "v": 3240,
+    "note": "輸送時（グローサ高さ含む）",
+    "check": false
+   },
+   "length_mm": {
+    "v": 8825,
+    "note": "輸送時（外形図では8,830）",
+    "check": false
+   },
+   "crawler_width_mm": {
+    "v": 600,
+    "note": "",
+    "check": false
+   },
+   "tail_radius_mm": {
+    "v": 1785,
+    "note": "",
+    "check": false
+   },
+   "ground_pressure_kpa": {
+    "v": 49,
+    "note": "",
+    "check": false
+   },
+   "max_work_height_mm": {
+    "v": 10700,
+    "note": "最大掘削高さ",
+    "check": false
+   },
+   "max_reach_mm": {
+    "v": 9875,
+    "note": "最大掘削半径",
+    "check": false
+   },
+   "max_dig_depth_mm": {
+    "v": 6620,
+    "note": "",
+    "check": false
+   },
+   "crane_capacity_t": {
+    "v": 2.9,
+    "note": "最大定格荷重（JCA規格）。定置吊り作業半径6.5m以下で2.9t",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "管理番号018　PC228US-11 クレーン仕様.pdf",
+    "page": 1,
+    "where": "外形図/作業範囲図・仕様表"
+   },
+   {
+    "file": "管理番号018　PC228US-11 クレーン仕様.pdf",
+    "page": 3,
+    "where": "アームクレーン仕様・定格吊上荷重表"
+   }
+  ]
+ },
+ {
+  "no": 19,
+  "name": "ZX225USRK-6⑤",
+  "class": 0.7,
+  "spec": "クレーン仕様",
+  "maker": "日立",
+  "values": {
+   "mass_t": {
+    "v": 25,
+    "note": "ZX225USRK-6（解体仕様機ハイグレード）kg値25,000",
+    "check": false
+   },
+   "width_mm": {
+    "v": 2910,
+    "note": "M-全幅（旋回体全幅と同じ）。K-クローラ全幅2,800",
+    "check": false
+   },
+   "height_mm": {
+    "v": 3090,
+    "note": "N-全高（輸送時の明記なし。G-キャブ高さ2,950）",
+    "check": false
+   },
+   "length_mm": {
+    "v": 9000,
+    "note": "L-全長（輸送時の明記なし）",
+    "check": false
+   },
+   "crawler_width_mm": {
+    "v": 600,
+    "note": "強化型グローサシュー",
+    "check": false
+   },
+   "tail_radius_mm": {
+    "v": 2000,
+    "note": "",
+    "check": false
+   },
+   "ground_pressure_kpa": {
+    "v": 56,
+    "note": "kgf/cm²値0.57併記",
+    "check": false
+   },
+   "max_work_height_mm": {
+    "v": 11230,
+    "note": "最大掘削高さ（Kアーム2.91m）",
+    "check": false
+   },
+   "max_reach_mm": {
+    "v": 10110,
+    "note": "最大掘削半径（Kアーム2.91m）",
+    "check": false
+   },
+   "max_dig_depth_mm": {
+    "v": 6620,
+    "note": "Kアーム2.91m",
+    "check": false
+   },
+   "crane_capacity_t": {
+    "v": null,
+    "note": "列が特定できない（MLクレーン仕様機の記載はZX225USR/ZX225USRLC=2.9t（作業半径6.2m以下）のみ。USRKのクレーン記載なし）",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "管理番号019　ZX225USRK-6クレーン.pdf",
+    "page": 3,
+    "where": "仕様・仕様パターン"
+   },
+   {
+    "file": "管理番号019　ZX225USRK-6クレーン.pdf",
+    "page": 4,
+    "where": "作業範囲・寸法"
+   },
+   {
+    "file": "管理番号019　ZX225USRK-6クレーン.pdf",
+    "page": 5,
+    "where": "MLクレーン仕様機"
+   }
+  ]
+ },
+ {
+  "no": 20,
+  "name": "ZX135USK-3HG（ショート）",
+  "class": 0.45,
+  "spec": "ショートリーチ",
+  "maker": "日立",
+  "values": {
+   "mass_t": {
+    "v": 17.2,
+    "note": "Kキャブ・圧砕機仕様(HSC1100R)の運転質量。ブレーカ仕様16.42/バケット仕様15.3、機体質量14.28",
+    "check": false
+   },
+   "width_mm": {
+    "v": 2500,
+    "note": "全幅(バックミラー除く)。クローラ全幅2,490",
+    "check": false
+   },
+   "height_mm": {
+    "v": 2870,
+    "note": "輸送時全高の記載なし。Kキャブ高さ（低頭キャブは2,540）",
+    "check": false
+   },
+   "length_mm": {
+    "v": 5330,
+    "note": "輸送時全長",
+    "check": false
+   },
+   "crawler_width_mm": {
+    "v": 500,
+    "note": "グローサシュー",
+    "check": false
+   },
+   "tail_radius_mm": {
+    "v": 1530,
+    "note": "増量カウンタウエイト付き",
+    "check": false
+   },
+   "ground_pressure_kpa": {
+    "v": 60,
+    "note": "Kキャブ・圧砕機仕様。ブレーカ57/バケット53",
+    "check": false
+   },
+   "max_work_height_mm": {
+    "v": 8320,
+    "note": "圧砕機仕様(HSC1100R)の最大作業高さ。ブレーカ8,100/バケット7,050",
+    "check": false
+   },
+   "max_reach_mm": {
+    "v": 7370,
+    "note": "圧砕機仕様の最大作業半径。ブレーカ7,200/バケット6,140",
+    "check": false
+   },
+   "max_dig_depth_mm": {
+    "v": 2530,
+    "note": "バケット仕様の最大作業深さ。圧砕機3,750/ブレーカ3,500",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "管理番号020　ZX135USK-3ショートリーチ.pdf",
+    "page": 2,
+    "where": "寸法表・寸法図"
+   },
+   {
+    "file": "管理番号020　ZX135USK-3ショートリーチ.pdf",
+    "page": 3,
+    "where": "仕様表・作業範囲表"
+   }
+  ]
+ },
+ {
+  "no": 22,
+  "name": "CAT320DRR②",
+  "class": 0.7,
+  "spec": "スタンダード",
+  "maker": "CAT",
+  "values": {
+   "mass_t": {
+    "v": 22.8,
+    "note": "320D RR GLZ(スタンダード)T6",
+    "check": false
+   },
+   "width_mm": {
+    "v": 2800,
+    "note": "全幅(トラック全幅)。上部旋回体全幅(ミラー含む)3,130",
+    "check": false
+   },
+   "height_mm": {
+    "v": 3030,
+    "note": "全高(ブーム上端/輸送姿勢時)",
+    "check": false
+   },
+   "length_mm": {
+    "v": 8770,
+    "note": "全長(輸送姿勢時)",
+    "check": false
+   },
+   "crawler_width_mm": {
+    "v": 600,
+    "note": "600TG(トリプルグローサ)",
+    "check": false
+   },
+   "tail_radius_mm": {
+    "v": 2000,
+    "note": "",
+    "check": false
+   },
+   "ground_pressure_kpa": {
+    "v": 52,
+    "note": "GLZ",
+    "check": false
+   },
+   "max_work_height_mm": {
+    "v": 9410,
+    "note": "最大掘削高さ(5.7mブーム/2.9mアーム GLZ)",
+    "check": false
+   },
+   "max_reach_mm": {
+    "v": 9940,
+    "note": "最大掘削半径(GLZ)",
+    "check": false
+   },
+   "max_dig_depth_mm": {
+    "v": 6640,
+    "note": "GLZ",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "管理番号022　ＣＡＴ320ＤＲＲ.pdf",
+    "page": 2,
+    "where": "運転質量/寸法/接地圧表・作業範囲表"
+   }
+  ]
+ },
+ {
+  "no": 23,
+  "name": "ZX225USRK-3HG③（ショート）",
+  "class": 0.7,
+  "spec": "三段ショートリーチ",
+  "maker": "日立",
+  "values": {
+   "mass_t": {
+    "v": null,
+    "note": "列が特定できない（カタログは標準2ピースブーム・2.91m Kアームの解体仕様機のみで三段ショートリーチの記載なし。候補: ZX225USRK-3=23,400kg）",
+    "check": false
+   },
+   "width_mm": {
+    "v": 2860,
+    "note": "輸送時全幅(ZX225USRK-3)。クローラ全幅・旋回体全幅は2,800",
+    "check": false
+   },
+   "height_mm": {
+    "v": null,
+    "note": "列が特定できない（カタログは標準2ピースブーム・2.91m Kアームの解体仕様機のみで三段ショートリーチの記載なし。候補: ZX225USRK-3=輸送時全高3,080）",
+    "check": false
+   },
+   "length_mm": {
+    "v": null,
+    "note": "列が特定できない（カタログは標準2ピースブーム・2.91m Kアームの解体仕様機のみで三段ショートリーチの記載なし。候補: ZX225USRK-3=輸送時全長8,850）",
+    "check": false
+   },
+   "crawler_width_mm": {
+    "v": 600,
+    "note": "強化型グローサシュー（本体の値）",
+    "check": false
+   },
+   "tail_radius_mm": {
+    "v": 1990,
+    "note": "本体の値",
+    "check": false
+   },
+   "ground_pressure_kpa": {
+    "v": null,
+    "note": "列が特定できない（カタログは標準2ピースブーム・2.91m Kアームの解体仕様機のみで三段ショートリーチの記載なし。候補: ZX225USRK-3=52kPa(0.53)）",
+    "check": false
+   },
+   "max_work_height_mm": {
+    "v": null,
+    "note": "列が特定できない（カタログは標準2ピースブーム・2.91m Kアームの解体仕様機のみで三段ショートリーチの記載なし。候補: ZX225USRK-3=最大掘削高さ10,050）",
+    "check": false
+   },
+   "max_reach_mm": {
+    "v": null,
+    "note": "列が特定できない（カタログは標準2ピースブーム・2.91m Kアームの解体仕様機のみで三段ショートリーチの記載なし。候補: ZX225USRK-3=最大掘削半径9,920）",
+    "check": false
+   },
+   "max_dig_depth_mm": {
+    "v": null,
+    "note": "列が特定できない（カタログは標準2ピースブーム・2.91m Kアームの解体仕様機のみで三段ショートリーチの記載なし。候補: ZX225USRK-3=6,670）",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "管理番号016・019　ZX225USRK-3HG.pdf",
+    "page": 1,
+    "where": "寸法表"
+   },
+   {
+    "file": "管理番号016・019　ZX225USRK-3HG.pdf",
+    "page": 3,
+    "where": "仕様表・作業範囲表"
+   }
+  ]
+ },
+ {
+  "no": 24,
+  "name": "ZX135USK-3PB③（セパ）",
+  "class": 0.45,
+  "spec": "セパレートブーム",
+  "maker": "日立",
+  "values": {
+   "mass_t": {
+    "v": 14.5,
+    "note": "一般仕様カタログ(ZX135USK-3解体仕様機)の値。セパレートブーム仕様の記載なし",
+    "check": false
+   },
+   "width_mm": {
+    "v": 2500,
+    "note": "M全幅。クローラ全幅2,490。一般仕様カタログ(ZX135USK-3解体仕様機)の値。セパレートブーム仕様の記載なし",
+    "check": false
+   },
+   "height_mm": {
+    "v": 2870,
+    "note": "N全高（寸法図の輸送姿勢）。一般仕様カタログ(ZX135USK-3解体仕様機)の値。セパレートブーム仕様の記載なし",
+    "check": false
+   },
+   "length_mm": {
+    "v": 7360,
+    "note": "L全長（寸法図の輸送姿勢）。一般仕様カタログ(ZX135USK-3解体仕様機)の値。セパレートブーム仕様の記載なし",
+    "check": false
+   },
+   "crawler_width_mm": {
+    "v": 500,
+    "note": "グローサシュー",
+    "check": false
+   },
+   "tail_radius_mm": {
+    "v": 1480,
+    "note": "",
+    "check": false
+   },
+   "ground_pressure_kpa": {
+    "v": 46,
+    "note": "一般仕様カタログ(ZX135USK-3解体仕様機)の値。セパレートブーム仕様の記載なし",
+    "check": false
+   },
+   "max_work_height_mm": {
+    "v": 9240,
+    "note": "最大掘削高さ(2.52m Kアーム)。一般仕様カタログ(ZX135USK-3解体仕様機)の値。セパレートブーム仕様の記載なし",
+    "check": false
+   },
+   "max_reach_mm": {
+    "v": 8380,
+    "note": "最大掘削半径(2.52m Kアーム)。一般仕様カタログ(ZX135USK-3解体仕様機)の値。セパレートブーム仕様の記載なし",
+    "check": false
+   },
+   "max_dig_depth_mm": {
+    "v": 5530,
+    "note": "2.52m Kアーム。一般仕様カタログ(ZX135USK-3解体仕様機)の値。セパレートブーム仕様の記載なし",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "管理番号004　ZX135USK-3.pdf",
+    "page": 5,
+    "where": "寸法表・作業範囲表"
+   },
+   {
+    "file": "管理番号004　ZX135USK-3.pdf",
+    "page": 6,
+    "where": "仕様表"
+   }
+  ]
+ },
+ {
+  "no": 25,
+  "name": "SK350LC①",
+  "class": 1.2,
+  "spec": "ナロータイプクローラー",
+  "maker": "コベルコ",
+  "values": {
+   "mass_t": {
+    "v": 35.3,
+    "note": "SK350DLC-9(標準クローラ)の値。カタログにナロー仕様の記載なし（装備表でSK350Dのナロー仕様は設定なし）。SK350D-9は34.4",
+    "check": false
+   },
+   "width_mm": {
+    "v": null,
+    "note": "列が特定できない（ナロータイプクローラーの値なし。候補: SK350D/DLC 全幅=3,190）",
+    "check": false
+   },
+   "height_mm": {
+    "v": 3420,
+    "note": "C-全高（全体図の輸送姿勢）",
+    "check": false
+   },
+   "length_mm": {
+    "v": 11200,
+    "note": "A-全長（全体図の輸送姿勢）",
+    "check": false
+   },
+   "crawler_width_mm": {
+    "v": 600,
+    "note": "標準装備600mmシュー（700/800はオプション）",
+    "check": false
+   },
+   "tail_radius_mm": {
+    "v": 3500,
+    "note": "D-後端半径",
+    "check": false
+   },
+   "ground_pressure_kpa": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "max_work_height_mm": {
+    "v": 10580,
+    "note": "最大掘削高さ(SK350D[LC]標準ブーム)",
+    "check": false
+   },
+   "max_reach_mm": {
+    "v": 11260,
+    "note": "最大掘削半径",
+    "check": false
+   },
+   "max_dig_depth_mm": {
+    "v": 7560,
+    "note": "SK350D[LC]",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "管理番号025　ＳＫ350ＬＣ　詳細.pdf",
+    "page": 1,
+    "where": "主な仕様・全体図・作業範囲表"
+   },
+   {
+    "file": "管理番号025　ＳＫ350ＬＣスタンダード.pdf",
+    "page": 1,
+    "where": "主要装備品表（シュー・ナロー仕様）"
+   }
+  ]
+ },
+ {
+  "no": 26,
+  "name": "ZX75US-3②（ショート）",
+  "class": 0.25,
+  "spec": "ショートリーチ",
+  "maker": "日立",
+  "values": {
+   "mass_t": {
+    "v": 7.2,
+    "note": "一般仕様カタログ(ZX75US-3)の値。ショートリーチ仕様の記載なし",
+    "check": false
+   },
+   "width_mm": {
+    "v": 2320,
+    "note": "M全幅（クローラ全幅も2,320）",
+    "check": false
+   },
+   "height_mm": {
+    "v": 2690,
+    "note": "キャブ高さ（輸送時全高）",
+    "check": false
+   },
+   "length_mm": {
+    "v": 5870,
+    "note": "L全長（寸法図）。一般仕様カタログ(ZX75US-3)の値。ショートリーチ仕様の記載なし",
+    "check": false
+   },
+   "crawler_width_mm": {
+    "v": 450,
+    "note": "グローサシュー",
+    "check": false
+   },
+   "tail_radius_mm": {
+    "v": 1290,
+    "note": "",
+    "check": false
+   },
+   "ground_pressure_kpa": {
+    "v": 31,
+    "note": "一般仕様カタログ(ZX75US-3)の値。ショートリーチ仕様の記載なし",
+    "check": false
+   },
+   "max_work_height_mm": {
+    "v": 7210,
+    "note": "最大掘削高さ(1.62m標準アーム)。一般仕様カタログ(ZX75US-3)の値。ショートリーチ仕様の記載なし",
+    "check": false
+   },
+   "max_reach_mm": {
+    "v": 6430,
+    "note": "最大掘削半径(1.62m標準アーム)。一般仕様カタログ(ZX75US-3)の値。ショートリーチ仕様の記載なし",
+    "check": false
+   },
+   "max_dig_depth_mm": {
+    "v": 4110,
+    "note": "1.62m標準アーム。一般仕様カタログ(ZX75US-3)の値。ショートリーチ仕様の記載なし",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "管理番号006　ＺＸ７５　.pdf",
+    "page": 10,
+    "where": "仕様表・作業範囲表・寸法表"
+   }
+  ]
+ },
+ {
+  "no": 27,
+  "name": "PC228US-10⑤",
+  "class": 0.7,
+  "spec": "スタンダード",
+  "maker": "コマツ",
+  "values": {
+   "mass_t": {
+    "v": 22,
+    "note": "機械質量(PC228US-10標準)。LCは23.4、解体仕様は25.1",
+    "check": false
+   },
+   "width_mm": {
+    "v": 2980,
+    "note": "全幅(輸送時)=上部旋回体幅。クローラ全幅2,800、ミラー含む3,285",
+    "check": false
+   },
+   "height_mm": {
+    "v": 3240,
+    "note": "全高(輸送時)グローサ高さ含む",
+    "check": false
+   },
+   "length_mm": {
+    "v": 8730,
+    "note": "全長(輸送時)",
+    "check": false
+   },
+   "crawler_width_mm": {
+    "v": 600,
+    "note": "トリプルグローサシュー",
+    "check": false
+   },
+   "tail_radius_mm": {
+    "v": 1680,
+    "note": "",
+    "check": false
+   },
+   "ground_pressure_kpa": {
+    "v": 50,
+    "note": "PC228US-10",
+    "check": false
+   },
+   "max_work_height_mm": {
+    "v": 10700,
+    "note": "最大掘削高さ(標準)",
+    "check": false
+   },
+   "max_reach_mm": {
+    "v": 9875,
+    "note": "最大掘削半径",
+    "check": false
+   },
+   "max_dig_depth_mm": {
+    "v": 6620,
+    "note": "",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "管理番号027　PC228US-10.pdf",
+    "page": 20,
+    "where": "仕様表・外形図・作業範囲"
+   }
+  ]
+ },
+ {
+  "no": 28,
+  "name": "ZX135USK-3HG（ロング",
+  "class": 0.45,
+  "spec": "ロングブーム",
+  "maker": "日立",
+  "values": {
+   "mass_t": {
+    "v": 15.8,
+    "note": "ZX135USK-3ハイリフト仕様機",
+    "check": false
+   },
+   "width_mm": {
+    "v": 2500,
+    "note": "寸法図の全幅。クローラ全幅2,490",
+    "check": false
+   },
+   "height_mm": {
+    "v": 2820,
+    "note": "輸送時全高の表記なし。寸法図のキャブ上面高さ（フロント高さ2,680）",
+    "check": false
+   },
+   "length_mm": {
+    "v": 8490,
+    "note": "寸法図の全長（フロント折りたたみ姿勢）",
+    "check": false
+   },
+   "crawler_width_mm": {
+    "v": 500,
+    "note": "グローサシュー(G500)",
+    "check": false
+   },
+   "tail_radius_mm": {
+    "v": 1530,
+    "note": "",
+    "check": false
+   },
+   "ground_pressure_kpa": {
+    "v": 48,
+    "note": "",
+    "check": false
+   },
+   "max_work_height_mm": {
+    "v": 13750,
+    "note": "NPK製1,400kg圧砕機装着時の最大作業高さ（アーム先端ピン11,580）",
+    "check": false
+   },
+   "max_reach_mm": {
+    "v": 8770,
+    "note": "NPK製1,400kg圧砕機装着時の最大作業半径",
+    "check": false
+   },
+   "max_dig_depth_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "管理番号028　ＺＸ１３５ロング.pdf",
+    "page": 2,
+    "where": "寸法図・仕様表・作業範囲図"
+   }
+  ]
+ },
+ {
+  "no": 29,
+  "name": "PC30",
+  "class": 0.1,
+  "spec": "スタンダード",
+  "maker": "コマツ",
+  "values": {
+   "mass_t": {
+    "v": null,
+    "note": "列が特定できない（候補: キャノピ=2910kg, キャブ=3060kg。〈〉内は3100/3250）",
+    "check": false
+   },
+   "width_mm": {
+    "v": 1550,
+    "note": "",
+    "check": false
+   },
+   "height_mm": {
+    "v": 2520,
+    "note": "輸送時",
+    "check": false
+   },
+   "length_mm": {
+    "v": 4560,
+    "note": "輸送時",
+    "check": false
+   },
+   "crawler_width_mm": {
+    "v": 300,
+    "note": "",
+    "check": false
+   },
+   "tail_radius_mm": {
+    "v": null,
+    "note": "列が特定できない（候補: キャノピ=775〈855〉, キャブ=885〈885〉）",
+    "check": false
+   },
+   "ground_pressure_kpa": {
+    "v": null,
+    "note": "列が特定できない（候補: キャノピ=26.7〈28.4〉, キャブ=28.0〈29.7〉）",
+    "check": false
+   },
+   "max_work_height_mm": {
+    "v": 4840,
+    "note": "最大掘削高さ",
+    "check": false
+   },
+   "max_reach_mm": {
+    "v": 5050,
+    "note": "最大掘削半径",
+    "check": false
+   },
+   "max_dig_depth_mm": {
+    "v": 2760,
+    "note": "",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "管理番号029　PC30MR-3.pdf",
+    "page": 3,
+    "where": "PC30MR-3 外形図/作業範囲図・仕様表"
+   }
+  ]
+ },
+ {
+  "no": 30,
+  "name": "PC78",
+  "class": 0.25,
+  "spec": "スタンダード",
+  "maker": "コマツ",
+  "values": {
+   "mass_t": {
+    "v": 7.4,
+    "note": "ブレード付き（ブレードレス6920kg）",
+    "check": false
+   },
+   "width_mm": {
+    "v": 2330,
+    "note": "",
+    "check": false
+   },
+   "height_mm": {
+    "v": 2730,
+    "note": "輸送時・グローサ高さ含む",
+    "check": false
+   },
+   "length_mm": {
+    "v": 5770,
+    "note": "輸送時",
+    "check": false
+   },
+   "crawler_width_mm": {
+    "v": 450,
+    "note": "",
+    "check": false
+   },
+   "tail_radius_mm": {
+    "v": 1390,
+    "note": "",
+    "check": false
+   },
+   "ground_pressure_kpa": {
+    "v": 33,
+    "note": "ブレード付き（ブレードレス30.9）",
+    "check": false
+   },
+   "max_work_height_mm": {
+    "v": 7300,
+    "note": "最大掘削高さ・標準アーム1.65m",
+    "check": false
+   },
+   "max_reach_mm": {
+    "v": 6380,
+    "note": "最大掘削半径・標準アーム",
+    "check": false
+   },
+   "max_dig_depth_mm": {
+    "v": 4100,
+    "note": "標準アーム",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "管理番号030　PC78US-10.pdf",
+    "page": 1,
+    "where": "外形図/作業範囲図・仕様表"
+   }
+  ]
+ },
+ {
+  "no": 31,
+  "name": "CAT314ELCR（プロボ）",
+  "class": 0.45,
+  "spec": "プロボ",
+  "maker": "CAT",
+  "values": {
+   "mass_t": {
+    "v": 15.06,
+    "note": "手書き「15,060kg（バケットレス）」",
+    "check": false
+   },
+   "width_mm": {
+    "v": 2490,
+    "note": "S-PROBO作動範囲図の後面図",
+    "check": false
+   },
+   "height_mm": {
+    "v": 3000,
+    "note": "後面図の最高部3000（側面図の輸送姿勢は2810）",
+    "check": false
+   },
+   "length_mm": {
+    "v": 5593,
+    "note": "輸送姿勢（図面寸法）",
+    "check": false
+   },
+   "crawler_width_mm": {
+    "v": 500,
+    "note": "",
+    "check": false
+   },
+   "tail_radius_mm": {
+    "v": 1490,
+    "note": "図面の旋回中心〜後端寸法",
+    "check": false
+   },
+   "ground_pressure_kpa": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "max_work_height_mm": {
+    "v": null,
+    "note": "カタログに記載なし（図中6541はアーム先端ピン高さ6.5m）",
+    "check": false
+   },
+   "max_reach_mm": {
+    "v": null,
+    "note": "カタログに記載なし（作動範囲図に数値表記なし）",
+    "check": false
+   },
+   "max_dig_depth_mm": {
+    "v": 2321,
+    "note": "作動範囲図のGL下寸法（解体アタッチ）",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "管理番号031　CAT314ELCRプロボ.pdf",
+    "page": 3,
+    "where": "A251-EPLN-01-01 S-PROBO作動範囲図・外形図"
+   },
+   {
+    "file": "管理番号031　CAT314ELCRプロボ.pdf",
+    "page": 4,
+    "where": "S-PROBO アーム先端ピン高さ6.5m"
+   }
+  ]
+ },
+ {
+  "no": 32,
+  "name": "CAT320ERR",
+  "class": 0.7,
+  "spec": "クレーン仕様",
+  "maker": "CAT",
+  "values": {
+   "mass_t": {
+    "v": 23.2,
+    "note": "GLC-T6SC ショベルクレーン列",
+    "check": false
+   },
+   "width_mm": {
+    "v": 2800,
+    "note": "輸送時トラック全幅（上部旋回体全幅3200）",
+    "check": false
+   },
+   "height_mm": {
+    "v": 3150,
+    "note": "輸送時ガードレール上端",
+    "check": false
+   },
+   "length_mm": {
+    "v": 8820,
+    "note": "輸送時",
+    "check": false
+   },
+   "crawler_width_mm": {
+    "v": 600,
+    "note": "600TG",
+    "check": false
+   },
+   "tail_radius_mm": {
+    "v": 2080,
+    "note": "",
+    "check": false
+   },
+   "ground_pressure_kpa": {
+    "v": 53,
+    "note": "ショベルクレーン列",
+    "check": false
+   },
+   "max_work_height_mm": {
+    "v": 9410,
+    "note": "最大掘削高さ・GLC列",
+    "check": false
+   },
+   "max_reach_mm": {
+    "v": 9940,
+    "note": "最大掘削半径・GLC列",
+    "check": false
+   },
+   "max_dig_depth_mm": {
+    "v": 6640,
+    "note": "GLC列",
+    "check": false
+   },
+   "crane_capacity_t": {
+    "v": 2.9,
+    "note": "2.9t×6.5m",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "管理番号032　CAT320E.pdf",
+    "page": 1,
+    "where": "外形図・主要諸元"
+   },
+   {
+    "file": "管理番号032　CAT320E.pdf",
+    "page": 3,
+    "where": "作業範囲・ショベルクレーン吊り上げ能力"
+   }
+  ]
+ },
+ {
+  "no": 34,
+  "name": "SK135SRLC-3（ショート）",
+  "class": 0.45,
+  "spec": "ショートリーチ",
+  "maker": "コベルコ",
+  "values": {
+   "mass_t": {
+    "v": 16.3,
+    "note": "0.8m3解体バケット含む。カタログはSK135SRDLC-2",
+    "check": false
+   },
+   "width_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "height_mm": {
+    "v": 2980,
+    "note": "外形寸法図の全高（輸送姿勢）",
+    "check": false
+   },
+   "length_mm": {
+    "v": 5450,
+    "note": "外形寸法図の全長",
+    "check": false
+   },
+   "crawler_width_mm": {
+    "v": 500,
+    "note": "主要装備品 500mm等高シュー",
+    "check": false
+   },
+   "tail_radius_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   },
+   "ground_pressure_kpa": {
+    "v": 49,
+    "note": "",
+    "check": false
+   },
+   "max_work_height_mm": {
+    "v": 7720,
+    "note": "バケット最大作業高さ（0.8m3HDバケット付き）",
+    "check": false
+   },
+   "max_reach_mm": {
+    "v": 6500,
+    "note": "バケット最大作業半径",
+    "check": false
+   },
+   "max_dig_depth_mm": {
+    "v": 2950,
+    "note": "バケット最大作業深さ",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "管理番号034　SK135SR ショートリーチ.pdf",
+    "page": 2,
+    "where": "外形寸法図・作動範囲図・主な仕様・主要装備品"
+   }
+  ]
+ },
+ {
+  "no": 35,
+  "name": "PC138US-10③",
+  "class": 0.45,
+  "spec": "クレーン仕様",
+  "maker": "コマツ",
+  "values": {
+   "mass_t": {
+    "v": 13.3,
+    "note": "PC138US-10機械質量（クレーン仕様別の記載なし）",
+    "check": false
+   },
+   "width_mm": {
+    "v": 2490,
+    "note": "",
+    "check": false
+   },
+   "height_mm": {
+    "v": 2850,
+    "note": "輸送時・グローサ含む（クレーン仕様は回転灯取外し前3150）",
+    "check": false
+   },
+   "length_mm": {
+    "v": 7260,
+    "note": "輸送時",
+    "check": false
+   },
+   "crawler_width_mm": {
+    "v": 500,
+    "note": "",
+    "check": false
+   },
+   "tail_radius_mm": {
+    "v": 1480,
+    "note": "",
+    "check": false
+   },
+   "ground_pressure_kpa": {
+    "v": 42.2,
+    "note": "",
+    "check": false
+   },
+   "max_work_height_mm": {
+    "v": 9340,
+    "note": "最大掘削高さ・標準アーム2.5m",
+    "check": false
+   },
+   "max_reach_mm": {
+    "v": 8300,
+    "note": "最大掘削半径・標準アーム",
+    "check": false
+   },
+   "max_dig_depth_mm": {
+    "v": 5480,
+    "note": "標準アーム",
+    "check": false
+   },
+   "crane_capacity_t": {
+    "v": 2.9,
+    "note": "アームクレーン最大定格荷重",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "管理番号035　PC138US-10 クレーン仕様.pdf",
+    "page": 9,
+    "where": "アームクレーン仕様・定格吊上荷重表"
+   },
+   {
+    "file": "管理番号035　PC138US-10 クレーン仕様.pdf",
+    "page": 11,
+    "where": "外形図/作業範囲図・仕様表"
+   }
+  ]
+ },
+ {
+  "no": 36,
+  "name": "ZX225USRLCK-5B④",
+  "class": 0.7,
+  "spec": "ロングブーム",
+  "maker": "日立",
+  "values": {
+   "mass_t": {
+    "v": null,
+    "note": "カタログに記載なし（-5B）。参考: 同梱-6ハイリフト資料30000kg",
+    "check": false
+   },
+   "width_mm": {
+    "v": null,
+    "note": "カタログに記載なし（-5B）。参考: -6資料 輸送時全幅2990",
+    "check": false
+   },
+   "height_mm": {
+    "v": 2800,
+    "note": "-5B作業範囲図の※2800（輸送姿勢フロント高さ、シューラグ含まず）。キャブ高さ記載なし",
+    "check": false
+   },
+   "length_mm": {
+    "v": 10800,
+    "note": "-5B作業範囲図の輸送姿勢全長",
+    "check": false
+   },
+   "crawler_width_mm": {
+    "v": null,
+    "note": "カタログに記載なし（-5B）。参考: -6資料600",
+    "check": false
+   },
+   "tail_radius_mm": {
+    "v": 2000,
+    "note": "-5B作業範囲図の旋回中心〜後端寸法",
+    "check": false
+   },
+   "ground_pressure_kpa": {
+    "v": null,
+    "note": "カタログに記載なし（-5B）。参考: -6資料67kPa",
+    "check": false
+   },
+   "max_work_height_mm": {
+    "v": 14350,
+    "note": "-5B解体仕様のアーム先端最大高さ（アタッチ含まず）",
+    "check": false
+   },
+   "max_reach_mm": {
+    "v": 7570,
+    "note": "-5B解体仕様のアーム先端最大半径",
+    "check": false
+   },
+   "max_dig_depth_mm": {
+    "v": null,
+    "note": "カタログに記載なし",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "管理番号036　ZX225USRLCK-5B セミロング仕様と関連資料.pdf",
+    "page": 1,
+    "where": "ZX225USRLCK-5B 解体仕様 作業範囲図"
+   },
+   {
+    "file": "管理番号036　ZX225USRLCK-5B セミロング仕様と関連資料.pdf",
+    "page": 3,
+    "where": "ZX225USRLCK-6 ハイリフト仕様（参考のみ）"
+   }
+  ]
+ },
+ {
+  "no": 37,
+  "name": "CAT325",
+  "class": 0.7,
+  "spec": "クレーン仕様, ビックヘッド",
+  "maker": "CAT",
+  "values": {
+   "mass_t": {
+    "v": 22.59,
+    "note": "標準クローラ・標準/ショベルクレーン列（PDFの黄色マーカー列）。ロングクローラは23230",
+    "check": false
+   },
+   "width_mm": {
+    "v": 2800,
+    "note": "トラック全幅・標準クローラ（ロング2980）",
+    "check": false
+   },
+   "height_mm": {
+    "v": 3205,
+    "note": "輸送姿勢時ブーム上端・標準クローラ",
+    "check": false
+   },
+   "length_mm": {
+    "v": 8677,
+    "note": "輸送姿勢時・標準クローラ（ロング8868）",
+    "check": false
+   },
+   "crawler_width_mm": {
+    "v": 600,
+    "note": "600mmトリプルグローサーシュー時の寸法注記より",
+    "check": false
+   },
+   "tail_radius_mm": {
+    "v": 1780,
+    "note": "",
+    "check": false
+   },
+   "ground_pressure_kpa": {
+    "v": 60,
+    "note": "標準クローラ・標準/SC列（ロング56）",
+    "check": false
+   },
+   "max_work_height_mm": {
+    "v": 10930,
+    "note": "最大掘削高さ・強化型0.9m3バケット時",
+    "check": false
+   },
+   "max_reach_mm": {
+    "v": 9670,
+    "note": "最大床面掘削半径（最大掘削半径の記載なし）",
+    "check": false
+   },
+   "max_dig_depth_mm": {
+    "v": 6600,
+    "note": "",
+    "check": false
+   },
+   "crane_capacity_t": {
+    "v": null,
+    "note": "カタログに定格荷重表の記載なし（モニタ表示例に定格荷重2.9t）",
+    "check": false
+   }
+  },
+  "source": [
+   {
+    "file": "管理番号004　CAT325-07.pdf",
+    "page": 3,
+    "where": "仕様値・寸法・作業範囲"
+   },
+   {
+    "file": "管理番号004　CAT325-07.pdf",
+    "page": 4,
+    "where": "ショベルクレーン(SC)仕様"
+   }
+  ]
+ }
+]
