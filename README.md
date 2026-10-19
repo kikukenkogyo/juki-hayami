@@ -1,0 +1,39 @@
+# 重機早見表
+
+菊建興業が保有する重機34台の寸法・重さを、iPhone・iPad ですぐ見るためのアプリです。
+
+- 公開アドレス: https://kikukenkogyo.github.io/juki-hayami/
+- 元のカタログ PDF: `OneDrive\Desktop\AI作業場\重機・アタッチメント情報\`
+
+## iPhone・iPad で使う
+
+1. Safari で公開アドレスを開く
+2. 下の「共有」ボタン（四角から矢印が出ているマーク）を押す
+3. 「ホーム画面に追加」を押す → 右上の「追加」
+4. ホーム画面のピンクのアイコンから開く
+
+一度開けば、電波の悪い現場や地下でも見られます。
+
+## 数字を直したいとき・重機が増えた／減ったとき
+
+Claude に「重機早見表の○番の全幅を○○に直して」「○○を重機早見表に追加して」と頼む。
+
+Claude がやること:
+
+- 数字は `juki.json` だけを直す（`index.html` は触らない）
+- 追加は `tools/mapping.json` に台を足し、カタログを読んで `juki.json` に追加、`python -X utf8 -I tools/make_images.py <PDFフォルダ>` でページ画像を作る
+- `node --test "test/*.test.mjs"` と形の検査（`tools/schema.mjs` の `validate`）を通す
+- 画面のファイル（`index.html`・`style.css`・`app.js`・`lib.js`）を直したときは、`sw.js` の `VERSION` を1つ上げる
+- `git commit` → `git push`（反映まで1〜2分）
+
+## 中身
+
+| ファイル | 役割 |
+|---|---|
+| `juki.json` | 34台のデータ |
+| `img/` | カタログのページ画像 |
+| `index.html` `style.css` `app.js` | 画面 |
+| `lib.js` | 検索・絞り込み |
+| `sw.js` `manifest.json` | 電波なし対応・ホーム画面アイコン |
+| `tools/` | データづくりの道具と記録（対応表、2回読みの結果、食い違いの決め方） |
+| `docs/` | 設計書・作業手順書 |
