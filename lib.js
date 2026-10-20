@@ -79,9 +79,8 @@ export function filterAtts(atts, cond) {
 
 // ---- 重機に付くアタッチメント（酒井さんのルール 2026-10-20） ----
 // - ふつうの重機: 自分のクラスだけ
-// - ビックヘッド・ショートリーチ: 自分のクラス＋1つ上のクラス
-// - 例外: 0.25 のショートリーチは 0.25 クラスだけ／0.45 のショートリーチは 0.7 クラスだけ
-//         CAT325（37番）は 0.7 クラス＋SV380
+// - ビックヘッド・ショートリーチ: 1つ上のクラスだけ（自分のクラスは付かない）
+// - 例外: 0.25 のショートリーチは 0.25 クラスだけ／CAT325（37番）は 0.7 クラス＋SV380
 export const CLASSES = [0.1, 0.25, 0.45, 0.7, 1.2, 1.6];
 const FIT_SPECIAL = { 37: { classes: [0.7], extra: ["sv380"], extraNames: ["SV380"] } };
 
@@ -92,8 +91,7 @@ export function attFit(m) {
   const big = short || /ビックヘッド|ビッグヘッド/.test(spec);
   const up = CLASSES[CLASSES.indexOf(m.class) + 1];
   const classes = short && m.class === 0.25 ? [0.25]
-    : short && m.class === 0.45 ? [0.7]
-    : big && up ? [m.class, up] : [m.class];
+    : big && up ? [up] : [m.class];
   return { classes, extra: [], extraNames: [] };
 }
 

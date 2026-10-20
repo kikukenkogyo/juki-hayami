@@ -138,9 +138,9 @@ test("ふつうの重機は自分のクラスだけ", () => {
   assert.deepEqual(fitOf(14).classes, [0.7]);
   assert.deepEqual(fitOf(30).classes, [0.25]);
 });
-test("ビックヘッド・ショートリーチは1つ上のクラスも付く", () => {
-  assert.deepEqual(fitOf(1).classes, [0.45, 0.7]);
-  assert.deepEqual(fitOf(23).classes, [0.7, 1.2]);
+test("ビックヘッド・ショートリーチは1つ上のクラスだけ", () => {
+  assert.deepEqual(fitOf(1).classes, [0.7]);
+  assert.deepEqual(fitOf(23).classes, [1.2]);
 });
 test("0.25 のショートリーチは 0.25 だけ", () => assert.deepEqual(fitOf(26).classes, [0.25]));
 test("0.45 のショートリーチは 0.7 だけ", () => {
