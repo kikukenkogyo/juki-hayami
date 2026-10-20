@@ -140,11 +140,13 @@ test("ふつうの重機は自分のクラスだけ", () => {
 });
 test("ビックヘッド・ショートリーチは1つ上のクラスも付く", () => {
   assert.deepEqual(fitOf(1).classes, [0.45, 0.7]);
-  assert.deepEqual(fitOf(20).classes, [0.45, 0.7]);
-  assert.deepEqual(fitOf(34).classes, [0.45, 0.7]);
   assert.deepEqual(fitOf(23).classes, [0.7, 1.2]);
 });
 test("0.25 のショートリーチは 0.25 だけ", () => assert.deepEqual(fitOf(26).classes, [0.25]));
+test("0.45 のショートリーチは 0.7 だけ", () => {
+  assert.deepEqual(fitOf(20).classes, [0.7]);
+  assert.deepEqual(fitOf(34).classes, [0.7]);
+});
 test("CAT325 は 0.7 クラス＋SV380", () => {
   assert.deepEqual(fitOf(37).classes, [0.7]);
   assert.deepEqual(fitOf(37).extra, ["sv380"]);
