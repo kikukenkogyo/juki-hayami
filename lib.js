@@ -68,11 +68,33 @@ function attMatches(a, q) {
   return hay.includes(q);
 }
 
+// extra: クラスが違っても一覧に入れる機種の id（例: CAT325 に付く SV380）
 export function filterAtts(atts, cond) {
   const q = normalize(cond.query);
+  const extra = cond.extra ?? [];
   return atts.filter((a) => attMatches(a, q)
-    && (!cond.classes.length || cond.classes.includes(a.class))
+    && (!cond.classes.length || cond.classes.includes(a.class) || extra.includes(a.id))
     && (!cond.kinds.length || cond.kinds.includes(a.kind)));
+}
+
+// ---- 重機に付くアタッチメント（酒井さんのルール 2026-10-20） ----
+// - ふつうの重機: 自分のクラスだけ
+// - ビックヘッド・ショートリーチ: 自分のクラス＋1つ上のクラス
+// - 例外: 0.25 のショートリーチは 0.25 クラスだけ／CAT325（37番）は 0.7 クラス＋SV380
+export const CLASSES = [0.1, 0.25, 0.45, 0.7, 1.2, 1.6];
+const FIT_SPECIAL = { 37: { classes: [0.7], extra: ["sv380"], extraNames: ["SV380"] } };
+
+export function attFit(m) {
+  if (m.no != null && FIT_SPECIAL[m.no]) return FIT_SPECIAL[m.no];
+  const big = /ビックヘッド|ビッグヘッド|ショートリーチ/.test(m.spec ?? "");
+  const up = CLASSES[CLASSES.indexOf(m.class) + 1];
+  const classes = big && m.class !== 0.25 && up ? [m.class, up] : [m.class];
+  return { classes, extra: [], extraNames: [] };
+}
+
+// ボタンやお知らせに出す「0.45・0.7㎥」「0.7㎥＋SV380」
+export function fitText(fit) {
+  return fit.classes.join("・") + "㎥" + fit.extraNames.map((n) => "＋" + n).join("");
 }
 
 export function sortAtts(atts) {

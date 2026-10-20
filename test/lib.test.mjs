@@ -128,3 +128,33 @@ test("formatAttValue の空欄とカタログなし", () => {
   assert.equal(formatAttValue("mass_kg", { v: null, note: "カタログなし", check: false }, false), "カタログなし");
   assert.equal(formatAttValue("mass_kg", undefined), "カタログに記載なし");
 });
+
+// ---- 重機に付くアタッチメント（2026-10-20 酒井さんのルール） ----
+import { attFit, fitText } from "../lib.js";
+import { readFileSync } from "node:fs";
+
+const fitOf = (no) => attFit(JSON.parse(readFileSync(new URL("../juki.json", import.meta.url), "utf8")).find((m) => m.no === no));
+test("ふつうの重機は自分のクラスだけ", () => {
+  assert.deepEqual(fitOf(14).classes, [0.7]);
+  assert.deepEqual(fitOf(30).classes, [0.25]);
+});
+test("ビックヘッド・ショートリーチは1つ上のクラスも付く", () => {
+  assert.deepEqual(fitOf(1).classes, [0.45, 0.7]);
+  assert.deepEqual(fitOf(20).classes, [0.45, 0.7]);
+  assert.deepEqual(fitOf(34).classes, [0.45, 0.7]);
+  assert.deepEqual(fitOf(23).classes, [0.7, 1.2]);
+});
+test("0.25 のショートリーチは 0.25 だけ", () => assert.deepEqual(fitOf(26).classes, [0.25]));
+test("CAT325 は 0.7 クラス＋SV380", () => {
+  assert.deepEqual(fitOf(37).classes, [0.7]);
+  assert.deepEqual(fitOf(37).extra, ["sv380"]);
+  assert.equal(fitText(fitOf(37)), "0.7㎥＋SV380");
+  const real = JSON.parse(readFileSync(new URL("../att.json", import.meta.url), "utf8"));
+  assert.ok(real.some((a) => a.id === "sv380" && a.class === 1.2), "att.json に sv380 がある");
+});
+test("extra の機種はクラスが違っても出る（種類の絞り込みは効く）", () => {
+  const list = [...atts, A("sv380", "SV380", "圧砕", 1.2, "オカダ", [90])];
+  assert.ok(ids(filterAtts(list, { ...anone, classes: [0.7], extra: ["sv380"] })).includes("sv380"));
+  assert.ok(!ids(filterAtts(list, { ...anone, classes: [0.7] })).includes("sv380"));
+  assert.ok(!ids(filterAtts(list, { ...anone, classes: [0.7], kinds: ["ブレーカ"], extra: ["sv380"] })).includes("sv380"));
+});

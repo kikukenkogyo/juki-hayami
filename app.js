@@ -1,6 +1,5 @@
-import { filterMachines, sortMachines, parseLimit, formatValue, detailNote, KINDS, filterAtts, sortAtts, formatAttValue } from "./lib.js";
+import { filterMachines, sortMachines, parseLimit, formatValue, detailNote, KINDS, filterAtts, sortAtts, formatAttValue, CLASSES, attFit, fitText } from "./lib.js";
 
-const CLASSES = [0.1, 0.25, 0.45, 0.7, 1.2, 1.6];
 const SECTIONS = [
   ["本体", [["mass_t", "運転質量"], ["width_mm", "全幅"], ["height_mm", "全高（輸送時）"], ["length_mm", "全長（輸送時）"],
     ["crawler_width_mm", "シュー幅"], ["tail_radius_mm", "後端旋回半径"], ["ground_pressure_kpa", "接地圧"]]],
@@ -31,6 +30,7 @@ let tab = "juki";
 let cameFromList = false;
 const selected = new Set();
 const aSelected = new Set(), kSelected = new Set();
+let fitFor = null; // 重機の詳細から飛んできたときの { m, fit }。クラスを押し直したら消す
 
 // 何か入っているのに数字として読めない欄は赤枠にして、条件が効いていないことを知らせる
 function limit(id) {
@@ -93,7 +93,7 @@ function renderDetail(m) {
     ${m.caution ? `<p class="caution">${esc(m.caution)}</p>` : ""}
     ${secs}${pages}
     ${src ? `<p class="src">出典: ${src}</p>` : ""}
-    <a class="jump" href="#att/c/${m.class}">このクラス（${m.class}㎥）に付くアタッチメント →</a>`;
+    <a class="jump" href="#att/fit/${m.no}">この重機に付くアタッチメント（${esc(fitText(attFit(m)))}） →</a>`;
 }
 
 // ---- アタッチメント ----
@@ -114,7 +114,8 @@ function renderAttList() {
     $("alist").innerHTML = `<p class="count">アタッチメントのデータを読み込めませんでした。電波のある所でもう一度開いてください。</p>`;
     return;
   }
-  const hits = sortAtts(filterAtts(atts, { query: $("aq").value, classes: [...aSelected], kinds: [...kSelected] }));
+  renderFitNote();
+  const hits = sortAtts(filterAtts(atts, { query: $("aq").value, classes: [...aSelected], kinds: [...kSelected], extra: fitFor?.fit.extra ?? [] }));
   $("alist").innerHTML = hits.map(attCard).join("") || `<p class="count">当てはまる機種がありません</p>`;
   const units = hits.reduce((s, a) => s + a.units.length, 0);
   $("acount").textContent = `${hits.length}機種（${units}台） / 全${atts.length}機種`;
@@ -159,22 +160,45 @@ function setTab(t) {
   $("alist").hidden = t !== "att";
 }
 
-// 重機からのジャンプ: 検索と種類は消して、そのクラスだけ選んだ状態にする
-function showOnlyClass(value) {
+// 重機からのジャンプ: 検索と種類は消して、付くクラスだけ選んだ状態にする
+function showOnlyClasses(values, from = null) {
   $("aq").value = "";
   kSelected.clear();
   for (const b of $("akinds").querySelectorAll("button")) b.setAttribute("aria-pressed", "false");
   aSelected.clear();
-  if (CLASSES.includes(value)) aSelected.add(value);
-  for (const b of $("aclasses").querySelectorAll("button")) b.setAttribute("aria-pressed", String(Number(b.dataset.c) === value));
+  for (const v of values) if (CLASSES.includes(v)) aSelected.add(v);
+  for (const b of $("aclasses").querySelectorAll("button")) b.setAttribute("aria-pressed", String(aSelected.has(Number(b.dataset.c))));
+  fitFor = from;
+}
+
+// 「○○に付くアタッチメント」のお知らせ（×で解除）
+function renderFitNote() {
+  let el = $("afit");
+  if (!el) {
+    el = document.createElement("p");
+    el.id = "afit";
+    $("acount").before(el);
+  }
+  el.hidden = !fitFor;
+  if (!fitFor) return;
+  const { m, fit } = fitFor;
+  el.innerHTML = `<span>${esc(label(m))} ${esc(m.name)} に付く：${esc(fitText(fit))}</span><button type="button" aria-label="解除">×</button>`;
+  el.querySelector("button").onclick = () => { showOnlyClasses([]); renderAttList(); };
 }
 
 function route() {
   let h = "";
   try { h = decodeURIComponent(location.hash); } catch { /* 壊れたアドレスは一覧に戻す */ }
-  // 重機の詳細から「このクラスに付くアタッチメント」: そのクラスだけ選んだ一覧にする
-  if (h.startsWith("#att/c/") && $("attBar")) {
-    showOnlyClass(Number(h.slice(7)));
+  // 重機の詳細から「この重機に付くアタッチメント」: 付くクラス（＋個別の機種）だけの一覧にする
+  // #att/c/ は前の版のボタン（保存された古い画面）用
+  if ((h.startsWith("#att/fit/") || h.startsWith("#att/c/")) && $("attBar")) {
+    if (h.startsWith("#att/fit/")) {
+      if (!loaded) return; // 重機のデータを読み終わってから main() がもう一度呼ぶ
+      const fm = machines.find((x) => String(x.no) === h.slice(9));
+      if (fm) showOnlyClasses(attFit(fm).classes, { m: fm, fit: attFit(fm) }); else showOnlyClasses([]);
+    } else {
+      showOnlyClasses([Number(h.slice(7))]);
+    }
     history.replaceState(null, "", "#att");
     h = "#att";
     renderAttList();
@@ -212,6 +236,7 @@ function setup() {
   const toggle = (box, set, key, conv) => $(box).addEventListener("click", (e) => {
     const b = e.target.closest("button"); if (!b) return;
     const v = conv(b.dataset[key]);
+    if (box === "aclasses") fitFor = null; // クラスを選び直したら「○○に付く」は解除
     set.has(v) ? set.delete(v) : set.add(v);
     b.setAttribute("aria-pressed", String(set.has(v)));
     renderAttList();
