@@ -1,4 +1,4 @@
-import { filterMachines, sortMachines, parseLimit, formatValue, detailNote, KINDS, filterAtts, sortAtts, formatAttValue, CLASSES, attFit, fitText } from "./lib.js";
+import { filterMachines, sortMachines, parseLength, parseMass, judgeMachine, formatValue, detailNote, KINDS, filterAtts, sortAtts, formatAttValue, CLASSES, attFit, fitText } from "./lib.js";
 
 const SECTIONS = [
   ["本体", [["mass_t", "運転質量"], ["width_mm", "全幅"], ["height_mm", "全高（輸送時）"], ["length_mm", "全長（輸送時）"],
@@ -18,6 +18,7 @@ const ATT_SECTIONS = (a) => [
 ];
 
 const $ = (id) => document.getElementById(id);
+const SITE_IDS = ["pass", "height", "mass", "site"];
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => `&#${c.charCodeAt(0)};`);
 const label = (m) => (m.no == null ? "番号なし" : String(m.no).padStart(3, "0"));
 const hashOf = (m) => (m.no == null ? `#name-${encodeURIComponent(m.name)}` : `#no-${m.no}`);
@@ -33,40 +34,66 @@ const aSelected = new Set(), kSelected = new Set();
 let fitFor = null; // 重機の詳細から飛んできたときの { m, fit }。クラスを押し直したら消す
 
 // 何か入っているのに数字として読めない欄は赤枠にして、条件が効いていないことを知らせる
-function limit(id) {
-  const el = $(id), v = parseLimit(el.value);
+function limit(id, parse) {
+  const el = $(id);
+  if (!el) return null; // 古い index.html と組み合わさったとき
+  const v = parse(el.value);
   el.classList.toggle("bad", el.value.trim() !== "" && v === null);
   return v;
 }
 
 function cond() {
-  return {
-    query: $("q").value,
-    classes: [...selected],
-    maxWidth: limit("maxWidth"),
-    maxHeight: limit("maxHeight"),
-    maxMass: limit("maxMass"),
-  };
+  return { query: $("q").value, classes: [...selected] };
 }
 
-function card(m) {
+function siteCond() {
+  return { pass: limit("pass", parseLength), height: limit("height", parseLength), mass: limit("mass", parseMass), site: limit("site", parseLength) };
+}
+
+// 閉じていても入れた条件が分かるように、見出しに出す
+function renderSiteSummary(s) {
+  const el = $("siteSummary");
+  if (!el) return;
+  const mm = (n) => n.toLocaleString("en-US");
+  const parts = [s.pass != null && `幅${mm(s.pass)}`, s.height != null && `高さ${mm(s.height)}`,
+    s.mass != null && `${s.mass}t`, s.site != null && `作業場所${mm(s.site)}`].filter(Boolean);
+  el.textContent = "現場条件チェック" + (parts.length ? `（${parts.join("・")}）` : "");
+}
+
+const MARK = { ok: "○", tight: "△", unknown: "？", ng: "×" };
+
+function card(m, j = null) {
   const short = (k) => formatValue(k, m.values[k]).replace("カタログに記載なし", "記載なし").replace(" ⚠要確認", "⚠");
   const n = (k, t) => `<div><small>${t}</small><b>${esc(short(k))}</b></div>`;
+  const judge = j ? `<div class="why ${j.status}"><b>${MARK[j.status]}</b>${j.reasons.map((r) =>
+    `<span class="${r.status}">${esc(r.text)}</span>`).join("")}</div>` : "";
   return `<a class="card" href="${hashOf(m)}">
     <div class="top"><span class="no">${label(m)}</span><span class="name">${esc(m.name)}</span>
-    <span class="spec">${m.class}㎥・${esc(m.spec)}</span>${m.caution ? `<span class="ref">※参考値</span>` : ""}</div>
-    <div class="nums">${n("width_mm", "全幅")}${n("height_mm", "全高")}${n("mass_t", "重量")}</div></a>`;
+    <span class="spec">${m.class}㎥・${esc(m.spec)}</span>${m.caution ? `<span class="ref">⚠参考値</span>` : ""}</div>
+    ${judge}<div class="nums">${n("width_mm", "全幅")}${n("height_mm", "全高")}${n("mass_t", "重量")}</div></a>`;
 }
 
+// 現場条件を入れたら、全台に ○△？× を付けて ○→△→？→× の順に並べる（×はたたむ）
 function renderList() {
   if (!loaded) return;
-  const { hits, unknown } = filterMachines(machines, cond());
-  let html = sortMachines(hits).map(card).join("");
-  if (unknown.length) {
-    html += `<h2 class="group">寸法不明（条件で判定できない機種）</h2>` + sortMachines(unknown).map(card).join("");
+  const site = siteCond();
+  renderSiteSummary(site);
+  const { hits } = filterMachines(machines, cond());
+  const sorted = sortMachines(hits);
+  const judged = sorted.map((m) => ({ m, j: judgeMachine(m, site) }));
+  if (!judged.length || !judged[0].j) {
+    $("list").innerHTML = sorted.map((m) => card(m)).join("") || `<p class="count">当てはまる機種がありません</p>`;
+    $("count").textContent = `${hits.length}台 / 全${machines.length}台`;
+    return;
   }
-  $("list").innerHTML = html || `<p class="count">当てはまる機種がありません</p>`;
-  $("count").textContent = `${hits.length}台` + (unknown.length ? `＋寸法不明${unknown.length}台` : "") + ` / 全${machines.length}台`;
+  const by = (s) => judged.filter((x) => x.j.status === s);
+  const cards = (xs) => xs.map((x) => card(x.m, x.j)).join("");
+  const group = (s, title) => (by(s).length ? `<h2 class="group ${s}">${MARK[s]} ${title}（${by(s).length}台）</h2>${cards(by(s))}` : "");
+  const ng = by("ng");
+  $("list").innerHTML = group("ok", "通れる") + group("tight", "ぎりぎり")
+    + group("unknown", "データなし・要確認")
+    + (ng.length ? `<details class="ngs"><summary>× 通れない ${ng.length}台（タップで開く）</summary><div class="nglist">${cards(ng)}</div></details>` : "");
+  $("count").textContent = ["ok", "tight", "unknown", "ng"].map((s) => `${MARK[s]}${by(s).length}`).join("・") + ` / ${hits.length}台`;
 }
 
 function renderDetail(m) {
@@ -228,7 +255,7 @@ function setup() {
     b.setAttribute("aria-pressed", String(selected.has(c)));
     renderList();
   });
-  for (const id of ["q", "maxWidth", "maxHeight", "maxMass"]) $(id).addEventListener("input", renderList);
+  for (const id of ["q", ...SITE_IDS]) $(id)?.addEventListener("input", renderList);
   // 古い index.html（アタッチメントの欄なし）と組み合わさっても重機側は動かす
   if (!$("attBar")) return;
   $("aclasses").innerHTML = $("classes").innerHTML;
@@ -250,7 +277,7 @@ function setup() {
     location.hash = b.dataset.tab === "att" ? "#att" : "";
   });
   $("clear").addEventListener("click", () => {
-    for (const id of ["maxWidth", "maxHeight", "maxMass"]) $(id).value = "";
+    for (const id of SITE_IDS) if ($(id)) $(id).value = "";
     renderList();
   });
   $("list").addEventListener("click", (e) => { if (e.target.closest(".card")) cameFromList = true; });

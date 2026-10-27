@@ -58,7 +58,10 @@ details { margin: 4px 0; }
 summary { cursor: pointer; color: var(--pink); font-weight: 600; min-height: 32px; line-height: 32px; }
 .limits { display: grid; gap: 6px; padding: 4px 0 8px; }
 .limits label { display: flex; align-items: center; gap: 6px; }
+.limits label span { width: 8.5em; line-height: 1.2; }
+.limits label small { display: block; color: var(--sub); font-size: 12px; }
 .limits input { width: 7em; height: 40px; padding: 0 8px; text-align: right; }
+.hint { margin: 0; color: var(--sub); font-size: 12px; line-height: 1.4; }
 .limits button { justify-self: start; height: 40px; padding: 0 14px; border-radius: 10px; border: 1px solid var(--line); background: var(--card); color: var(--text); }
 .count { margin: 2px 0; color: var(--sub); font-size: 14px; }
 
@@ -106,7 +109,25 @@ dd.warn { color: var(--warn); }
 .jump { display: block; margin: 20px 0 0; padding: 12px; text-align: center; border-radius: 12px; border: 1px solid var(--pink); color: var(--pink); font-weight: 700; text-decoration: none; background: var(--card); }
 .units { font-variant-numeric: tabular-nums; }
 
+/* 現場条件チェックの ○△？× */
+:root { --ok: #15803d; --tight: #b45309; --ng: #b91c1c; }
+@media (prefers-color-scheme: dark) { :root { --ok: #4ade80; --tight: #f0b35c; --ng: #f87171; } }
+.group.ok { color: var(--ok); }
+.group.tight { color: var(--tight); }
+.group.unknown { color: var(--sub); }
+.why { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 10px; margin-top: 4px; font-size: 14px; font-variant-numeric: tabular-nums; }
+.why > b { font-size: 18px; }
+.why.ok > b, .why .ok { color: var(--ok); }
+.why.tight > b, .why .tight { color: var(--tight); }
+.why.unknown > b, .why .unknown { color: var(--sub); }
+.why.ng > b, .why .ng { color: var(--ng); }
+.ngs { margin-top: 12px; }
+.ngs > summary { color: var(--ng); }
+.nglist { display: grid; gap: 8px; margin-top: 4px; }
+
 /* 重機の詳細から飛んできたときの「○○に付く」お知らせ */
 #afit { display: flex; align-items: center; gap: 8px; margin: 4px 0; padding: 6px 6px 6px 10px; border-radius: 10px; background: var(--pink-soft); font-size: 14px; font-weight: 600; }
 #afit span { flex: 1; min-width: 0; }
 #afit button { flex: none; width: 36px; height: 36px; border: 0; border-radius: 8px; background: var(--card); color: var(--pink); font-size: 18px; }
+/* 現場条件を開いている間は上に貼り付けない（スマホで一覧が見えなくなるため） */
+.bar:has(details[open]) { position: static; }

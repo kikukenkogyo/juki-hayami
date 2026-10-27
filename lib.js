@@ -39,6 +39,61 @@ export function filterMachines(machines, cond) {
   return { hits, unknown };
 }
 
+// ---- 現場条件チェック（2026-10-27 酒井さんと決めた形） ----
+// - 通る所の幅↔全幅、高さの制限↔全高、重さの制限↔機械の重さ（アタッチメント抜き）、
+//   作業場所の幅↔後端旋回半径（真ん中に置いた目安。半径が幅の半分に収まるか）
+// - 余裕が合計300mm未満なら△（作業場所は片側150mm未満）。重さは○か×だけ
+// - 数字が空欄の条件は？。印の強さは × ＞ ？ ＞ △ ＞ ○
+
+// 長さ: 「2400」「2,400mm」「2400ミリ」「2.4m」「2.4メートル」。100未満の数はメートルとみなす
+export function parseLength(input) {
+  const s = normalize(input).replace(/,/g, "");
+  const m = s.match(/^(\d+(?:\.\d+)?)(mm|ミリ(?:メートル)?|cm|センチ(?:メートル)?|m|メートル)?$/);
+  if (!m) return null;
+  const n = Number(m[1]), u = m[2] ?? "";
+  if (/^(cm|センチ)/.test(u)) return Math.round(n * 10);
+  if (/^(m|メートル)$/.test(u) || (u === "" && n < 100)) return Math.round(n * 1000);
+  return n;
+}
+
+// 重さ: 「8」「8t」「8トン」「8000kg」。100以上の数はkgとみなす
+export function parseMass(input) {
+  const s = normalize(input).replace(/,/g, "");
+  const m = s.match(/^(\d+(?:\.\d+)?)(t|トン|kg|キロ(?:グラム)?)?$/);
+  if (!m) return null;
+  const n = Number(m[1]), u = m[2] ?? "";
+  return /^(kg|キロ)/.test(u) || (u === "" && n >= 100) ? n / 1000 : n;
+}
+
+export const TIGHT_MM = 300;
+export const STATUS_ORDER = ["ok", "tight", "unknown", "ng"];
+const RANK = { ok: 0, tight: 1, unknown: 2, ng: 3 };
+const mm = (n) => Math.round(n).toLocaleString("en-US");
+const t1 = (n) => (Math.round(n * 10) / 10).toFixed(1);
+
+const CHECKS = [
+  { key: "pass", value: "width_mm", name: "幅", tight: TIGHT_MM, room: (lim, v) => lim - v, fmt: mm, unit: "" },
+  { key: "height", value: "height_mm", name: "高さ", tight: TIGHT_MM, room: (lim, v) => lim - v, fmt: mm, unit: "" },
+  { key: "mass", value: "mass_t", name: "重さ", tight: 0, room: (lim, v) => lim - v, fmt: t1, unit: "t" },
+  { key: "site", value: "tail_radius_mm", name: "後ろ半径", tight: TIGHT_MM / 2, room: (lim, v) => lim / 2 - v, fmt: mm, unit: "", side: true },
+];
+
+// site: { pass, height, mass, site }（入れていない所は null）。条件が1つも無ければ null を返す
+export function judgeMachine(m, site) {
+  const used = CHECKS.filter((c) => site[c.key] !== null && site[c.key] !== undefined);
+  if (!used.length) return null;
+  const reasons = used.map((c) => {
+    const v = m.values[c.value]?.v;
+    if (v === null || v === undefined) return { status: "unknown", text: `${c.name}不明` };
+    const room = c.room(site[c.key], v);
+    const head = `${c.name}${c.fmt(v)}${c.unit}`;
+    if (room < 0) return { status: "ng", text: `${head}／${c.fmt(-room)}${c.unit}オーバー` };
+    return { status: room < c.tight ? "tight" : "ok", text: `${head}／${c.side ? "片側" : ""}余裕${c.fmt(room)}${c.unit}` };
+  });
+  const status = reasons.reduce((s, r) => (RANK[r.status] > RANK[s] ? r.status : s), "ok");
+  return { status, reasons };
+}
+
 export function sortMachines(machines) {
   return [...machines].sort((a, b) =>
     a.class - b.class || (a.no ?? Infinity) - (b.no ?? Infinity));

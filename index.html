@@ -22,11 +22,13 @@
   <input id="q" type="search" placeholder="機種名・番号・仕様（例: 228, ロング）" autocomplete="off">
   <div id="classes" class="chips" role="group" aria-label="クラス"></div>
   <details id="limits">
-    <summary>寸法で絞る</summary>
+    <summary id="siteSummary">現場条件チェック</summary>
     <div class="limits">
-      <label>全幅 <input id="maxWidth" inputmode="decimal" placeholder="mm"> mm以下</label>
-      <label>全高 <input id="maxHeight" inputmode="decimal" placeholder="mm"> mm以下</label>
-      <label>重量 <input id="maxMass" inputmode="decimal" placeholder="t"> t以下</label>
+      <label><span>通る所の幅<small>道路・門・通路</small></span><input id="pass" enterkeyhint="done" autocomplete="off" placeholder="例 2400"> mm</label>
+      <label><span>高さの制限<small>ガード下・電線・梁</small></span><input id="height" enterkeyhint="done" autocomplete="off" placeholder="例 3000"> mm</label>
+      <label><span>重さの制限<small>橋・スラブ・地盤</small></span><input id="mass" enterkeyhint="done" autocomplete="off" placeholder="例 8"> t</label>
+      <label><span>作業場所の幅<small>その場で回れるか</small></span><input id="site" enterkeyhint="done" autocomplete="off" placeholder="例 4000"> mm</label>
+      <p class="hint">キーボードのマイクで話して入れられます（「2.4メートル」も可）。△＝余裕300mm未満。重さはアタッチメントを付けない重さ。作業場所は真ん中に置いたときの目安で、壁に寄せて置く場合は見ていません。</p>
       <button id="clear" type="button">条件を消す</button>
     </div>
   </details>
