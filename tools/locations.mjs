@@ -16,6 +16,8 @@ const text = (p) => {
   }
 };
 const clean = (s) => s.replace(/\s+/g, " ").trim();
+// 現在地の数式は「🏭 工場」「🚧 九段南」のように目印の絵文字を付けてくるので、文字だけにする
+const place = (s) => clean(s.replace(/[\p{Extended_Pictographic}️‍]/gu, ""));
 const numOf = (s) => { const m = String(s).match(/\d+/); return m ? Number(m[0]) : null; };
 
 export function jukiLocations(pages) {
@@ -34,7 +36,7 @@ export function attLocations(pages) {
   for (const pg of pages) {
     const p = pg.properties;
     const code = clean(text(p["管理番号"]));
-    const loc = clean(text(p["現在地"])) || clean(text(p["所在地"]));
+    const loc = place(text(p["現在地"])) || place(text(p["所在地"]));
     const name = clean(text(p["名称"]) || text(p["識別名"]));
     if (name) out.push({ code, name, loc: loc || null });
   }

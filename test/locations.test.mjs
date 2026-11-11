@@ -42,6 +42,12 @@ const locs = {
   ],
 };
 
+test("アタッチメント: 現在地の絵文字（🏭🟢🚧）は外す", () => {
+  const pg = (s) => ({ properties: { 管理番号: rt("A-001"), 名称: rt("X"), 現在地: fm(s), 所在地: sel(null) } });
+  assert.deepEqual(attLocations(["🏭 工場", "🟢 置場", "🚧 🏭 工場", "🚧 その他（修理屋等）"].map(pg)).map((r) => r.loc),
+    ["工場", "置場", "工場", "その他（修理屋等）"]);
+});
+
 test("空いている＝置き場・置場・工場・アキコ", () => {
   for (const l of ["置き場", "置場", "工場", "アキコ"]) assert.ok(isFree(l));
   for (const l of ["九段南", "和光建機", "メーカー", null]) assert.ok(!isFree(l));
