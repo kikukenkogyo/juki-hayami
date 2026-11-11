@@ -10,8 +10,15 @@ const text = (p) => {
     case "title": case "rich_text": return (p[p.type] ?? []).map((t) => t.plain_text).join("");
     case "formula": {
       const f = p.formula ?? {};
-      return f.type === "string" ? f.string ?? "" : f.type === "number" && f.number != null ? String(f.number) : "";
+      return f.type === "string" ? f.string ?? "" : f.type === "number" && f.number != null ? String(f.number)
+        : f.type === "date" ? f.date?.start ?? "" : "";
     }
+    case "rollup": {
+      const r = p.rollup ?? {};
+      if (r.type === "array") return (r.array ?? []).map(text).filter(Boolean).join(" / ");
+      return r.type === "number" ? (r.number == null ? "" : String(r.number)) : r.type === "date" ? r.date?.start ?? "" : "";
+    }
+    case "date": return p.date?.start ?? "";
     default: return "";
   }
 };
@@ -19,6 +26,18 @@ const clean = (s) => s.replace(/\s+/g, " ").trim();
 // 現在地の数式は「🏭 工場」「🚧 九段南」のように目印の絵文字を付けてくるので、文字だけにする
 const place = (s) => clean(s.replace(/[\p{Extended_Pictographic}\uFE0F\u200D]/gu, ""));
 const numOf = (s) => { const m = String(s).match(/\d+/); return m ? Number(m[0]) : null; };
+
+// 使えるかどうか（故障報告から出す数式）。中身はそのまま持ち、画面側で読む
+export function jukiStates(pages) {
+  const out = {};
+  for (const pg of pages) {
+    const p = pg.properties;
+    const no = numOf(text(p["管理番号"]));
+    const st = { state: clean(text(p["現在状態"])), last: clean(text(p["最新報告区分"])), plan: clean(text(p["修理予定"])), date: clean(text(p["最新報告日"])) };
+    if (no != null && (st.state || st.last)) out[no] = st;
+  }
+  return out;
+}
 
 export function jukiLocations(pages) {
   const out = {};
@@ -38,7 +57,8 @@ export function attLocations(pages) {
     const code = clean(text(p["管理番号"]));
     const loc = place(text(p["現在地"])) || place(text(p["所在地"]));
     const name = clean(text(p["名称"]) || text(p["識別名"]));
-    if (name) out.push({ code, name, loc: loc || null });
+    const state = clean(text(p["状態"])), last = clean(text(p["最新報告区分"])), trouble = clean(text(p["故障内容"]));
+    if (name) out.push({ code, name, loc: loc || null, ...(state || last ? { state, last, trouble } : {}) });
   }
   return out.sort((a, b) => a.code.localeCompare(b.code));
 }

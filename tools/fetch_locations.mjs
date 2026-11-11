@@ -4,7 +4,7 @@
 // - locations.json は公開するときにだけ作る（.gitignore 済み。所在の履歴を GitHub に残さないため）
 // - 読めなかったときは、今公開中の locations.json をそのまま使う（古い時刻のまま出る）
 import fs from "node:fs";
-import { jukiLocations, attLocations } from "./locations.mjs";
+import { jukiLocations, jukiStates, attLocations } from "./locations.mjs";
 
 const out = process.argv[2] ?? "locations.json";
 const LIVE = "https://kikukenkogyo.github.io/juki-hayami/locations.json";
@@ -43,7 +43,7 @@ async function main() {
   try {
     if (!token) throw new Error("NOTION_TOKEN がありません");
     const [jp, ap] = await Promise.all([queryAll(token, SOURCES.juki), queryAll(token, SOURCES.att)]);
-    const data = { updated: new Date().toISOString(), juki: jukiLocations(jp), att: attLocations(ap) };
+    const data = { updated: new Date().toISOString(), juki: jukiLocations(jp), jukiState: jukiStates(jp), att: attLocations(ap) };
     fs.writeFileSync(out, JSON.stringify(data));
     console.log(`所在を書きました: 重機${Object.keys(data.juki).length}台・アタッチメント${data.att.length}台`);
   } catch (e) {
