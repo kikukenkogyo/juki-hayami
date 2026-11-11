@@ -131,3 +131,11 @@ dd.warn { color: var(--warn); }
 #afit button { flex: none; width: 36px; height: 36px; border: 0; border-radius: 8px; background: var(--card); color: var(--pink); font-size: 18px; }
 /* 現場条件を開いている間は上に貼り付けない（スマホで一覧が見えなくなるため） */
 .bar:has(details[open]) { position: static; }
+
+/* 所在（Notion から。2026-11-11〜） */
+.place { display: inline-block; margin-top: 4px; font-size: 14px; font-weight: 600; color: var(--sub); }
+.place.free { color: var(--ok); }
+.limits label.free { gap: 8px; font-weight: 600; }
+.limits label.free input { width: 22px; height: 22px; }
+.stamp { font-size: 12px; }
+.stamp:empty { display: none; }

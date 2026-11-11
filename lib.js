@@ -94,6 +94,42 @@ export function judgeMachine(m, site) {
   return { status, reasons };
 }
 
+// ---- 所在（locations.json。公開するときに Notion から作る。2026-11-11〜） ----
+// 「空いている」は Notion の「空いている重機」ビューと同じ: 置き場・工場・アキコ
+export const FREE_PLACES = ["置き場", "置場", "工場", "アキコ"];
+export const isFree = (loc) => FREE_PLACES.includes(loc);
+
+export function jukiPlace(m, locs) {
+  return (m.no != null && locs?.juki?.[m.no]) || null;
+}
+
+// アタッチメントは名前で Notion の台とつなぐ（Notion は 2026-10 に A-001〜 へ番号を振り直したため、
+// 早見表の古い管理番号では引けない）。①② は台の区別なので外す。
+// まず（）の中まで同じ名前、無ければ（）を外した名前で探す。2機種が同じ台を取り合ったら shared を付ける
+const attKey = (s, strip) => normalize(String(s ?? "").replace(/[①-⑳]/g, "").replace(strip ? /[（(][^）)]*[）)]/g : /$^/, ""))
+  .replace(/[^a-z0-9ぁ-ゖァ-ヺー一-鿿]/g, "");
+
+export function matchAttPlaces(atts, locs) {
+  const rows = locs?.att ?? [];
+  const out = new Map(), claims = new Map();
+  for (const a of atts) {
+    let hit = rows.filter((r) => attKey(r.name) === attKey(a.name));
+    if (!hit.length) hit = rows.filter((r) => attKey(r.name, true) === attKey(a.name, true));
+    out.set(a.id, hit);
+    for (const r of hit) claims.set(r, (claims.get(r) ?? 0) + 1);
+  }
+  for (const [id, hit] of out) out.set(id, hit.map((r) => ({ code: r.code, loc: r.loc, shared: claims.get(r) > 1 })));
+  return out;
+}
+
+// 「工場2・九段南1」のようにまとめる（不明は最後）。1台なら所在だけ
+export function placeSummary(places) {
+  const count = new Map();
+  for (const p of places) count.set(p.loc ?? "不明", (count.get(p.loc ?? "不明") ?? 0) + 1);
+  return [...count].sort(([a], [b]) => (a === "不明") - (b === "不明"))
+    .map(([loc, n]) => (places.length > 1 ? `${loc}${n}` : loc)).join("・");
+}
+
 export function sortMachines(machines) {
   return [...machines].sort((a, b) =>
     a.class - b.class || (a.no ?? Infinity) - (b.no ?? Infinity));

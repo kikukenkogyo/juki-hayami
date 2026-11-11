@@ -1,4 +1,4 @@
-import { filterMachines, sortMachines, parseLength, parseMass, judgeMachine, formatValue, detailNote, KINDS, filterAtts, sortAtts, formatAttValue, CLASSES, attFit, fitText } from "./lib.js";
+import { filterMachines, sortMachines, parseLength, parseMass, judgeMachine, formatValue, detailNote, KINDS, filterAtts, sortAtts, formatAttValue, CLASSES, attFit, fitText, isFree, jukiPlace, matchAttPlaces, placeSummary } from "./lib.js";
 
 const SECTIONS = [
   ["本体", [["mass_t", "運転質量"], ["width_mm", "全幅"], ["height_mm", "全高（輸送時）"], ["length_mm", "全長（輸送時）"],
@@ -32,6 +32,23 @@ let cameFromList = false;
 const selected = new Set();
 const aSelected = new Set(), kSelected = new Set();
 let fitFor = null; // 重機の詳細から飛んできたときの { m, fit }。クラスを押し直したら消す
+let locs = null; // 所在（locations.json）。無い・読めないときは null で、所在は出さない
+let attPlaceMap = new Map(); // アタッチメントの id → Notion の台 [{ code, loc, shared }]
+const refreshAttPlaces = () => { if (locs && atts.length) attPlaceMap = matchAttPlaces(atts, locs); };
+function attPlaceText(a) {
+  const rows = attPlaceMap.get(a.id) ?? [];
+  if (!rows.length) return "Notionの台帳に無し";
+  return placeSummary(rows) + (rows.some((r) => r.shared) ? "（同じ名前の機種と区別できない台あり）" : "");
+}
+
+// 「11/11 14:30」。2時間より古ければ古いと知らせる
+function stampText() {
+  if (!locs?.updated) return "";
+  const d = new Date(locs.updated);
+  const t = `${d.getMonth() + 1}/${d.getDate()} ${d.getHours()}:${String(d.getMinutes()).padStart(2, "0")}`;
+  return `所在は ${t} 時点（Notion）` + (Date.now() - d > 2 * 3600e3 ? "・古いかもしれません" : "");
+}
+const placeTag = (loc) => (loc ? `<span class="place${isFree(loc) ? " free" : ""}">📍${esc(loc)}</span>` : "");
 
 // 何か入っているのに数字として読めない欄は赤枠にして、条件が効いていないことを知らせる
 function limit(id, parse) {
@@ -51,12 +68,12 @@ function siteCond() {
 }
 
 // 閉じていても入れた条件が分かるように、見出しに出す
-function renderSiteSummary(s) {
+function renderSiteSummary(s, freeOnly) {
   const el = $("siteSummary");
   if (!el) return;
   const mm = (n) => n.toLocaleString("en-US");
   const parts = [s.pass != null && `幅${mm(s.pass)}`, s.height != null && `高さ${mm(s.height)}`,
-    s.mass != null && `${s.mass}t`, s.site != null && `作業場所${mm(s.site)}`].filter(Boolean);
+    s.mass != null && `${s.mass}t`, s.site != null && `作業場所${mm(s.site)}`, freeOnly && "空きのみ"].filter(Boolean);
   el.textContent = "現場条件チェック" + (parts.length ? `（${parts.join("・")}）` : "");
 }
 
@@ -70,15 +87,19 @@ function card(m, j = null) {
   return `<a class="card" href="${hashOf(m)}">
     <div class="top"><span class="no">${label(m)}</span><span class="name">${esc(m.name)}</span>
     <span class="spec">${m.class}㎥・${esc(m.spec)}</span>${m.caution ? `<span class="ref">⚠参考値</span>` : ""}</div>
-    ${judge}<div class="nums">${n("width_mm", "全幅")}${n("height_mm", "全高")}${n("mass_t", "重量")}</div></a>`;
+    ${placeTag(jukiPlace(m, locs))}${judge}<div class="nums">${n("width_mm", "全幅")}${n("height_mm", "全高")}${n("mass_t", "重量")}</div></a>`;
 }
 
 // 現場条件を入れたら、全台に ○△？× を付けて ○→△→？→× の順に並べる（×はたたむ）
 function renderList() {
   if (!loaded) return;
   const site = siteCond();
-  renderSiteSummary(site);
-  const { hits } = filterMachines(machines, cond());
+  const freeOnly = Boolean(locs && $("freeOnly")?.checked);
+  renderSiteSummary(site, freeOnly);
+  let { hits } = filterMachines(machines, cond());
+  // 「空いている重機だけ」: 所在が置き場・工場・アキコの台だけ
+  if (freeOnly) hits = hits.filter((m) => isFree(jukiPlace(m, locs)));
+  if ($("stamp")) $("stamp").textContent = stampText();
   const sorted = sortMachines(hits);
   const judged = sorted.map((m) => ({ m, j: judgeMachine(m, site) }));
   if (!judged.length || !judged[0].j) {
@@ -118,6 +139,7 @@ function renderDetail(m) {
     <div class="dhead"><span class="no">${label(m)}</span> <span class="name">${esc(m.name)}</span>
       <div class="spec">${esc(m.maker)}・${m.class}㎥・${esc(m.spec)}</div></div>
     ${m.caution ? `<p class="caution">${esc(m.caution)}</p>` : ""}
+    ${locs ? `<h2 class="sec">今の所在</h2><dl><div><dt>所在</dt><dd>${esc(jukiPlace(m, locs) ?? "Notionに記録なし")}<small>${esc(stampText())}</small></dd></div></dl>` : ""}
     ${secs}${pages}
     ${src ? `<p class="src">出典: ${src}</p>` : ""}
     <a class="jump" href="#att/fit/${m.no}">この重機に付くアタッチメント（${esc(fitText(attFit(m)))}） →</a>`;
@@ -132,7 +154,7 @@ function attCard(a) {
   return `<a class="card" href="#att/${a.id}">
     <div class="top"><span class="name">${esc(a.name)}</span>
     <span class="spec">${esc(a.maker)}・${a.class}㎥・${esc(a.kind)}・保有${a.units.length}台</span>${a.caution ? `<span class="ref">※参考値</span>` : ""}</div>
-    <div class="nums">${n("mass_kg", "重量")}${a.kind === "ブレーカ" ? n("chisel_mm", "チゼル径") : n("open_mm", "開口幅")}${n("base_t", "適合")}</div></a>`;
+    ${locs ? `<span class="place">📍${esc(attPlaceText(a))}</span>` : ""}<div class="nums">${n("mass_kg", "重量")}${a.kind === "ブレーカ" ? n("chisel_mm", "チゼル径") : n("open_mm", "開口幅")}${n("base_t", "適合")}</div></a>`;
 }
 
 function renderAttList() {
@@ -160,7 +182,9 @@ function renderAttDetail(a) {
     ? ATT_SECTIONS(a).map(([title, items]) =>
         `<h2 class="sec">${title}</h2><dl>${rows(items)}${title === "付けられる重機" ? classRow : ""}</dl>`).join("")
     : `<h2 class="sec">付けられる重機</h2><dl>${classRow}</dl>`;
-  const own = `<h2 class="sec">保有</h2><dl><div><dt>管理番号</dt><dd class="units">${unitNos(a)}（${a.units.length}台）</dd></div>${
+  const own = `<h2 class="sec">保有</h2><dl><div><dt>管理番号</dt><dd class="units">${unitNos(a)}（${a.units.length}台）</dd></div>${locs ? `<div><dt>今の所在<br><small>Notionの番号</small></dt><dd class="units">${
+      esc((attPlaceMap.get(a.id) ?? []).map((r) => `${r.code}（${r.loc ?? "所在なし"}）`).join("・") || "Notionの台帳に無し")}<small>${esc(stampText())}${
+      (attPlaceMap.get(a.id) ?? []).some((r) => r.shared) ? "。同じ名前の別機種の台も入っています" : ""}</small></dd></div>` : ""}${
     a.memo ? `<div><dt>備考</dt><dd>${esc(a.memo)}</dd></div>` : ""}</dl>`;
   const pages = a.images.length
     ? `<h2 class="sec">カタログのページ</h2><div class="pages">${a.images.map((p) =>
@@ -255,7 +279,7 @@ function setup() {
     b.setAttribute("aria-pressed", String(selected.has(c)));
     renderList();
   });
-  for (const id of ["q", ...SITE_IDS]) $(id)?.addEventListener("input", renderList);
+  for (const id of ["q", ...SITE_IDS, "freeOnly"]) $(id)?.addEventListener("input", renderList);
   // 古い index.html（アタッチメントの欄なし）と組み合わさっても重機側は動かす
   if (!$("attBar")) return;
   $("aclasses").innerHTML = $("classes").innerHTML;
@@ -278,6 +302,7 @@ function setup() {
   });
   $("clear").addEventListener("click", () => {
     for (const id of SITE_IDS) if ($(id)) $(id).value = "";
+    if ($("freeOnly")) $("freeOnly").checked = false;
     renderList();
   });
   $("list").addEventListener("click", (e) => { if (e.target.closest(".card")) cameFromList = true; });
@@ -294,6 +319,7 @@ async function loadAtts() {
     const res = await fetch("att.json", { cache: "no-cache" });
     if (!res.ok) throw new Error(res.status);
     atts = await res.json();
+    refreshAttPlaces();
     attState = "ok";
   } catch {
     attState = "error";
@@ -302,9 +328,28 @@ async function loadAtts() {
   if (location.hash.startsWith("#att/")) route();
 }
 
+// 所在は公開するときに Notion から作る。手元で開いたときなど、無ければ所在は出さない
+async function loadLocations() {
+  try {
+    const res = await fetch("locations.json", { cache: "no-cache" });
+    if (!res.ok) throw new Error(res.status);
+    const d = await res.json();
+    if (!d?.juki) throw new Error("形が違う");
+    locs = d;
+    refreshAttPlaces();
+  } catch {
+    return;
+  }
+  if ($("freeWrap")) $("freeWrap").hidden = false;
+  renderList();
+  renderAttList();
+  route();
+}
+
 async function main() {
   setup();
   loadAtts();
+  loadLocations();
   try {
     const res = await fetch("juki.json", { cache: "no-cache" });
     if (!res.ok) throw new Error(res.status);

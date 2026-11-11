@@ -1,0 +1,52 @@
+# 重機早見表を公開する（所在入り）
+# - main に上げたとき・30分ごと・手動（Actions の画面の「Run workflow」）で動く
+# - 公開する直前に Notion から所在を読んで locations.json を作る（リポジトリには入れない）
+# - Notion の鍵は Settings → Secrets and variables → Actions の NOTION_TOKEN
+# - 公開のしかたは Settings → Pages → Source を「GitHub Actions」にしておくこと
+# - GitHub は、60日間リポジトリに変更がないと30分ごとの実行を止める（メールが来たら Actions の画面で再開）
+name: 公開（所在入り）
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: 試験
+        run: node --test test/*.test.mjs
+      - name: Notion から所在を読む
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+        run: node tools/fetch_locations.mjs locations.json
+      - name: 公開するファイルをまとめる
+        run: |
+          mkdir _site
+          cp -r index.html app.js lib.js style.css sw.js manifest.json icon-192.png icon-512.png juki.json att.json img _site/
+          if [ -f locations.json ]; then cp locations.json _site/; fi
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deployment
+        uses: actions/deploy-pages@v4

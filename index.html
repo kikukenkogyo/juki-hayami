@@ -28,11 +28,13 @@
       <label><span>高さの制限<small>ガード下・電線・梁</small></span><input id="height" enterkeyhint="done" autocomplete="off" placeholder="例 3000"> mm</label>
       <label><span>重さの制限<small>橋・スラブ・地盤</small></span><input id="mass" enterkeyhint="done" autocomplete="off" placeholder="例 8"> t</label>
       <label><span>作業場所の幅<small>その場で回れるか</small></span><input id="site" enterkeyhint="done" autocomplete="off" placeholder="例 4000"> mm</label>
+      <label id="freeWrap" class="free" hidden><input type="checkbox" id="freeOnly"> 空いている重機だけ（置き場・工場・アキコ）</label>
       <p class="hint">キーボードのマイクで話して入れられます（「2.4メートル」も可）。△＝余裕300mm未満。重さはアタッチメントを付けない重さ。作業場所は真ん中に置いたときの目安で、壁に寄せて置く場合は見ていません。</p>
       <button id="clear" type="button">条件を消す</button>
     </div>
   </details>
   <p id="count" class="count"></p>
+  <p id="stamp" class="count stamp"></p>
   </div>
   <div id="attBar" hidden>
     <input id="aq" type="search" placeholder="機種名・番号・メーカー（例: 1100）" autocomplete="off">

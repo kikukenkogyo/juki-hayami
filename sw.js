@@ -1,11 +1,12 @@
 // 電波なしでも開けるようにする仕組み
-// - juki.json・att.json: 通信できれば新しい方。3秒たっても返事がない・エラーのときは保存分
+// - juki.json・att.json・locations.json（所在）: 通信できれば新しい方。3秒たっても返事がない・エラーのときは保存分
 // - 画面のファイルと画像: すぐ保存分を出し、裏で新しいものを取ってきて保存（次に開いたとき新しくなる）
 // 保存の形を大きく変えたときだけ VERSION を上げる（古い保存分を消す）
 const VERSION = "v4";
 const CACHE = `juki-hayami-${VERSION}`;
 const CORE = ["./", "index.html", "style.css", "app.js", "lib.js", "juki.json", "att.json", "manifest.json", "icon-192.png", "icon-512.png"];
-const DATA = ["juki.json", "att.json"];
+const IMG_LISTS = ["juki.json", "att.json"]; // ページ画像が書いてあるデータ
+const DATA = [...IMG_LISTS, "locations.json"];
 const DATA_TIMEOUT_MS = 3000;
 
 const fresh = (u) => new Request(u, { cache: "reload" });
@@ -15,7 +16,7 @@ self.addEventListener("install", (e) => {
     const cache = await caches.open(CACHE);
     await Promise.all(CORE.map(async (u) => cache.put(u, await fetch(fresh(u)))));
     // ページ画像も全部保存しておく（juki.json・att.json に書かれたもの）
-    const lists = await Promise.all(DATA.map(async (u) => (await cache.match(u)).json()));
+    const lists = await Promise.all(IMG_LISTS.map(async (u) => (await cache.match(u)).json()));
     const imgs = [...new Set(lists.flat().flatMap((m) => m.images))];
     await Promise.all(imgs.map(async (u) => {
       try { const res = await fetch(fresh(u)); if (res.ok) await cache.put(u, res); } catch { /* 次回に回す */ }
@@ -40,7 +41,7 @@ async function dataFirst(request, name) {
     if (!res.ok) throw new Error(String(res.status));
     await cache.put(name, res.clone());
     // 新しい機種の画像があれば、電波のあるうちに保存しておく
-    res.clone().json().then((ms) => ms.flatMap((m) => m.images).forEach(async (u) => {
+    res.clone().json().then((ms) => Array.isArray(ms) && ms.flatMap((m) => m.images).forEach(async (u) => {
       if (!(await cache.match(u))) cache.add(u).catch(() => {});
     })).catch(() => {});
     return res;
