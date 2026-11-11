@@ -17,7 +17,7 @@ const text = (p) => {
 };
 const clean = (s) => s.replace(/\s+/g, " ").trim();
 // 現在地の数式は「🏭 工場」「🚧 九段南」のように目印の絵文字を付けてくるので、文字だけにする
-const place = (s) => clean(s.replace(/[\p{Extended_Pictographic}️‍]/gu, ""));
+const place = (s) => clean(s.replace(/[\p{Extended_Pictographic}\uFE0F\u200D]/gu, ""));
 const numOf = (s) => { const m = String(s).match(/\d+/); return m ? Number(m[0]) : null; };
 
 export function jukiLocations(pages) {
