@@ -1,6 +1,6 @@
 # 重機早見表
 
-菊建興業が保有する重機34台と、アタッチメント103台（83機種）の寸法・重さ・能力を、iPhone・iPad ですぐ見るためのアプリです。
+菊建興業が保有する重機34台と、アタッチメント91台（76機種）の寸法・重さ・能力を、iPhone・iPad ですぐ見るためのアプリです。
 
 - 一番上の「重機｜アタッチメント」で切り替え
 - 重機の詳細の一番下「このクラスに付くアタッチメント」で、同じクラスのアタッチメント一覧へ飛べる
@@ -10,7 +10,7 @@
   - 「2.4」「2.4メートル」はメートル、「8000」「8000kg」はkgとして読む（キーボードのマイクで話して入れられる）
   - 判定の決まりは `lib.js` の `judgeMachine`、試験は `test/site.test.mjs`
 - 重機・アタッチメントの**今の所在**を出す（2026-11-11〜）。Notion から30分ごとに自動で読む
-  - 重機は「重機情報」の所在地（管理番号でつなぐ）。アタッチメントは「アタッチメント情報」の現在地（空なら所在地）を**名前で**つなぐ（Notion は A-001〜 に番号を振り直したため）
+  - 重機は「重機情報」の所在地（管理番号でつなぐ）。アタッチメントは「アタッチメント情報」の現在地（空なら所在地）を Notion の管理番号（A-001〜）でつなぎ、名前も合っているか確かめる（合わない台は所在を出さず「要確認」）
   - 現場条件チェックの「空いている重機だけ」＝所在が置き場・工場・アキコ（Notion の「空いている重機」ビューと同じ）
   - しくみ: `.github/workflows/publish.yml` が、公開の直前に `tools/fetch_locations.mjs` で `locations.json` を作る。**所在はリポジトリに入れない**（履歴に残さないため。.gitignore 済み）
   - 必要な設定（最初の1回）: ① Settings → Pages → Source を「GitHub Actions」 ② Notion で内部インテグレーションを作り、キクケンページ一式（重機情報・アタッチメント情報の親）に接続 ③ その鍵を Settings → Secrets and variables → Actions に `NOTION_TOKEN` で入れる
@@ -54,8 +54,9 @@ Claude がやること:
 
 - 数字は `att.json` だけを直す（理由は `tools/att_resolve.json` に書き足す）
 - 追加は `tools/att_mapping.json` に機種（または管理番号）を足し、カタログがあれば読んで `att.json` に追加、`python -X utf8 -I tools/make_images.py <PDFフォルダ> att` でページ画像を作る
-- 台帳は Notion（アタッチメント）が正。管理番号の重なり（12・46・52・94・95）は Notion を直したら `att_mapping.json` と `att_resolve.json` の `allowDupUnits` も直す
-- `node --test "test/*.test.mjs"` を通す（台数103台・画像の実在も検査する。台数が変わったら `test/att.test.mjs` の 103 も直す）
+- 台帳は Notion（アタッチメント情報）が正。管理番号は Notion と同じ A-001〜（units には数字で 1〜）。2026-11-11 に Notion の91台に合わせ、Notion に無い7機種（MR1800・MR1300・マグナム1800・マグナム1200・アイアンクロー500・TS-WB950V-F・TS-W1100V（フリー））を外した（画像ファイルは img/ に残してある）
+- Notion で台が増えた・減った・番号が変わったときは、公開中の locations.json を保存して `node tools/att_sync.mjs <保存したファイル>` で違いを見る → 外す機種を酒井さんに確認 → `--apply`。名前で決められない台は `tools/att_sync_pins.json` に「Notionの番号: 機種の id」で決める（A-025＝TS-W950V①＝シリンダーカバーなし、A-026＝②＝ふつう。2026-11-11 酒井さん）
+- `node --test "test/*.test.mjs"` を通す（台数91台・画像の実在も検査する。台数が変わったら `test/att.test.mjs` の 91 と `test/locations.test.mjs` の 91 も直す）
 - `git commit` → `git push`
 
 ## 中身
@@ -63,7 +64,7 @@ Claude がやること:
 | ファイル | 役割 |
 |---|---|
 | `juki.json` | 重機34台のデータ |
-| `att.json` | アタッチメント83機種のデータ |
+| `att.json` | アタッチメント76機種のデータ |
 | `img/` | カタログのページ画像 |
 | `index.html` `style.css` `app.js` | 画面 |
 | `lib.js` | 検索・絞り込み |

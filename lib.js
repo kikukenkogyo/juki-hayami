@@ -103,23 +103,22 @@ export function jukiPlace(m, locs) {
   return (m.no != null && locs?.juki?.[m.no]) || null;
 }
 
-// アタッチメントは名前で Notion の台とつなぐ（Notion は 2026-10 に A-001〜 へ番号を振り直したため、
-// 早見表の古い管理番号では引けない）。①② は台の区別なので外す。
-// まず（）の中まで同じ名前、無ければ（）を外した名前で探す。2機種が同じ台を取り合ったら shared を付ける
-const attKey = (s, strip) => normalize(String(s ?? "").replace(/[①-⑳]/g, "").replace(strip ? /[（(][^）)]*[）)]/g : /$^/, ""))
-  .replace(/[^a-z0-9ぁ-ゖァ-ヺー一-鿿]/g, "");
+// アタッチメントの台は Notion の管理番号（A-001 → 1）でつなぐ（2026-11-11 に att.json を Notion の台帳に合わせた）。
+// Notion がまた番号を振り直したときに別の台の所在を出さないよう、名前も合っているか確かめ、
+// 合わなければ所在は出さない（mismatch）。名前は（）の中まで同じ、または（）と①②を外して同じなら合っているとする
+export const attKey = (s, strip) => normalize(String(s ?? "").replace(/[\u2460-\u2473]/g, "").replace(strip ? /[（(][^）)]*[）)]/g : /$^/, ""))
+  .replace(/[^a-z0-9\u3041-\u3096\u30a1-\u30fa\u30fc\u4e00-\u9fff]/g, "");
+const sameName = (a, b) => attKey(a) === attKey(b) || attKey(a, true) === attKey(b, true);
 
-export function matchAttPlaces(atts, locs) {
+export function attPlaces(a, locs) {
   const rows = locs?.att ?? [];
-  const out = new Map(), claims = new Map();
-  for (const a of atts) {
-    let hit = rows.filter((r) => attKey(r.name) === attKey(a.name));
-    if (!hit.length) hit = rows.filter((r) => attKey(r.name, true) === attKey(a.name, true));
-    out.set(a.id, hit);
-    for (const r of hit) claims.set(r, (claims.get(r) ?? 0) + 1);
-  }
-  for (const [id, hit] of out) out.set(id, hit.map((r) => ({ code: r.code, loc: r.loc, shared: claims.get(r) > 1 })));
-  return out;
+  return a.units.map((no) => {
+    const r = rows.find((x) => Number(String(x.code).match(/\d+/)?.[0]) === no);
+    const code = "A-" + String(no).padStart(3, "0");
+    if (!r) return { code, loc: null, missing: true };
+    if (!sameName(a.name, r.name)) return { code, loc: null, mismatch: r.name };
+    return { code, loc: r.loc };
+  });
 }
 
 // 「工場2・九段南1」のようにまとめる（不明は最後）。1台なら所在だけ
@@ -155,7 +154,7 @@ export const KINDS = ["圧砕", "SRC", "小割", "カッター", "ブレーカ",
 
 function attMatches(a, q) {
   if (!q) return true;
-  const hay = [a.name, a.maker, a.kind, a.memo, ...a.units.flatMap((u) => [u, pad3(u)])].map(normalize).join("|");
+  const hay = [a.name, a.maker, a.kind, a.memo, ...a.units.flatMap((u) => [u, pad3(u), "a-" + pad3(u)])].map(normalize).join("|");
   return hay.includes(q);
 }
 

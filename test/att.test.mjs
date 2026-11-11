@@ -13,7 +13,7 @@ test("台帳の台数が抜けていない（対応表と同じ機種・台数�
   assert.deepEqual(atts.map((a) => a.id), mapping.map((m) => m.id));
   const count = (xs) => xs.reduce((s, x) => s + x.units.length, 0);
   assert.equal(count(atts), count(mapping));
-  assert.equal(count(atts), 103);
+  assert.equal(count(atts), 91); // Notion の台帳（A-001〜A-091。2026-11-11 に合わせた）
 });
 test("クラスはボタンの6種類のどれか", () => {
   for (const a of atts) assert.ok(CLASSES.includes(a.class), `${a.id} ${a.class}`);

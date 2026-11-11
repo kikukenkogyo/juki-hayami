@@ -1,4 +1,4 @@
-import { filterMachines, sortMachines, parseLength, parseMass, judgeMachine, formatValue, detailNote, KINDS, filterAtts, sortAtts, formatAttValue, CLASSES, attFit, fitText, isFree, jukiPlace, matchAttPlaces, placeSummary } from "./lib.js";
+import { filterMachines, sortMachines, parseLength, parseMass, judgeMachine, formatValue, detailNote, KINDS, filterAtts, sortAtts, formatAttValue, CLASSES, attFit, fitText, isFree, jukiPlace, attPlaces, placeSummary } from "./lib.js";
 
 const SECTIONS = [
   ["本体", [["mass_t", "運転質量"], ["width_mm", "全幅"], ["height_mm", "全高（輸送時）"], ["length_mm", "全長（輸送時）"],
@@ -33,13 +33,12 @@ const selected = new Set();
 const aSelected = new Set(), kSelected = new Set();
 let fitFor = null; // 重機の詳細から飛んできたときの { m, fit }。クラスを押し直したら消す
 let locs = null; // 所在（locations.json）。無い・読めないときは null で、所在は出さない
-let attPlaceMap = new Map(); // アタッチメントの id → Notion の台 [{ code, loc, shared }]
-const refreshAttPlaces = () => { if (locs && atts.length) attPlaceMap = matchAttPlaces(atts, locs); };
-function attPlaceText(a) {
-  const rows = attPlaceMap.get(a.id) ?? [];
-  if (!rows.length) return "Notionの台帳に無し";
-  return placeSummary(rows) + (rows.some((r) => r.shared) ? "（同じ名前の機種と区別できない台あり）" : "");
-}
+// Notion の台と名前が合わない・台が無いときは所在を出さず「要確認」（Notion の番号が変わったときなど）
+const attPlaceText = (a) => {
+  const ps = attPlaces(a, locs);
+  return placeSummary(ps) + (ps.some((p) => p.mismatch || p.missing) ? "・要確認" : "");
+};
+const placeNote = (p) => p.loc ?? (p.mismatch ? `Notionでは「${p.mismatch}」・要確認` : p.missing ? "Notionに無い" : "所在なし");
 
 // 「11/11 14:30」。2時間より古ければ古いと知らせる
 function stampText() {
@@ -146,7 +145,10 @@ function renderDetail(m) {
 }
 
 // ---- アタッチメント ----
-const unitNos = (a) => a.units.map((u) => "No." + String(u).padStart(3, "0")).join("・");
+// 管理番号は Notion と同じ A-001 の形で出す（所在が読めていれば台ごとに所在も）
+const unitNos = (a) => (locs
+  ? attPlaces(a, locs).map((p) => `${p.code}（${placeNote(p)}）`)
+  : a.units.map((u) => "A-" + String(u).padStart(3, "0"))).join("・");
 
 function attCard(a) {
   const short = (k) => formatAttValue(k, a.values[k], a.catalog).replace("カタログに記載なし", "記載なし").replace(" ⚠要確認", "⚠");
@@ -182,9 +184,8 @@ function renderAttDetail(a) {
     ? ATT_SECTIONS(a).map(([title, items]) =>
         `<h2 class="sec">${title}</h2><dl>${rows(items)}${title === "付けられる重機" ? classRow : ""}</dl>`).join("")
     : `<h2 class="sec">付けられる重機</h2><dl>${classRow}</dl>`;
-  const own = `<h2 class="sec">保有</h2><dl><div><dt>管理番号</dt><dd class="units">${unitNos(a)}（${a.units.length}台）</dd></div>${locs ? `<div><dt>今の所在<br><small>Notionの番号</small></dt><dd class="units">${
-      esc((attPlaceMap.get(a.id) ?? []).map((r) => `${r.code}（${r.loc ?? "所在なし"}）`).join("・") || "Notionの台帳に無し")}<small>${esc(stampText())}${
-      (attPlaceMap.get(a.id) ?? []).some((r) => r.shared) ? "。同じ名前の別機種の台も入っています" : ""}</small></dd></div>` : ""}${
+  const own = `<h2 class="sec">保有</h2><dl><div><dt>${locs ? "管理番号（所在）" : "管理番号"}</dt><dd class="units">${esc(unitNos(a))}（${a.units.length}台）${
+      locs ? `<small>${esc(stampText())}</small>` : ""}</dd></div>${
     a.memo ? `<div><dt>備考</dt><dd>${esc(a.memo)}</dd></div>` : ""}</dl>`;
   const pages = a.images.length
     ? `<h2 class="sec">カタログのページ</h2><div class="pages">${a.images.map((p) =>
@@ -319,7 +320,6 @@ async function loadAtts() {
     const res = await fetch("att.json", { cache: "no-cache" });
     if (!res.ok) throw new Error(res.status);
     atts = await res.json();
-    refreshAttPlaces();
     attState = "ok";
   } catch {
     attState = "error";
@@ -336,7 +336,6 @@ async function loadLocations() {
     const d = await res.json();
     if (!d?.juki) throw new Error("形が違う");
     locs = d;
-    refreshAttPlaces();
   } catch {
     return;
   }

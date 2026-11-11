@@ -184,94 +184,13 @@
   ]
  },
  {
-  "id": "mr1800",
-  "name": "MR1800",
-  "kind": "圧砕",
-  "class": 1.6,
-  "maker": "オオスミ",
-  "units": [
-   3
-  ],
-  "memo": "",
-  "catalog": false,
-  "values": {
-   "mass_kg": {
-    "v": null,
-    "note": "カタログなし",
-    "check": false
-   },
-   "length_mm": {
-    "v": null,
-    "note": "カタログなし",
-    "check": false
-   },
-   "width_mm": {
-    "v": null,
-    "note": "カタログなし",
-    "check": false
-   },
-   "height_mm": {
-    "v": null,
-    "note": "カタログなし",
-    "check": false
-   },
-   "open_mm": {
-    "v": null,
-    "note": "カタログなし",
-    "check": false
-   },
-   "force_kn": {
-    "v": null,
-    "note": "カタログなし",
-    "check": false
-   },
-   "blows_per_min": {
-    "v": null,
-    "note": "カタログなし",
-    "check": false
-   },
-   "chisel_mm": {
-    "v": null,
-    "note": "カタログなし",
-    "check": false
-   },
-   "base_t": {
-    "v": null,
-    "note": "カタログなし",
-    "check": false
-   },
-   "oil_lpm": {
-    "v": null,
-    "note": "カタログなし",
-    "check": false
-   },
-   "pressure_mpa": {
-    "v": null,
-    "note": "カタログなし",
-    "check": false
-   },
-   "rotation": {
-    "v": null,
-    "note": "カタログなし",
-    "check": false
-   },
-   "pipes": {
-    "v": null,
-    "note": "カタログなし",
-    "check": false
-   }
-  },
-  "source": [],
-  "images": []
- },
- {
   "id": "sv-47x",
   "name": "SV-47X",
   "kind": "圧砕",
   "class": 1.6,
   "maker": "ニューマチック",
   "units": [
-   4
+   3
   ],
   "memo": "",
   "catalog": true,
@@ -366,7 +285,7 @@
   "class": 1.6,
   "maker": "オカダ",
   "units": [
-   46
+   40
   ],
   "memo": "",
   "catalog": true,
@@ -458,7 +377,7 @@
   "class": 1.2,
   "maker": "オカダ",
   "units": [
-   5
+   4
   ],
   "memo": "",
   "catalog": true,
@@ -631,7 +550,7 @@
   "class": 1.2,
   "maker": "オオスミ",
   "units": [
-   7
+   5
   ],
   "memo": "",
   "catalog": true,
@@ -720,7 +639,7 @@
   "class": 1.2,
   "maker": "ニューマチック",
   "units": [
-   8
+   7
   ],
   "memo": "",
   "catalog": true,
@@ -815,7 +734,7 @@
   "class": 1.2,
   "maker": "ニューマチック",
   "units": [
-   9
+   8
   ],
   "memo": "",
   "catalog": true,
@@ -916,7 +835,7 @@
   "class": 1.2,
   "maker": "ニューマチック",
   "units": [
-   10
+   9
   ],
   "memo": "",
   "catalog": true,
@@ -1017,7 +936,7 @@
   "class": 1.2,
   "maker": "ニューマチック",
   "units": [
-   41
+   35
   ],
   "memo": "",
   "catalog": true,
@@ -1109,7 +1028,7 @@
   "class": 1.2,
   "maker": "オカダ",
   "units": [
-   47
+   41
   ],
   "memo": "",
   "catalog": false,
@@ -1190,7 +1109,7 @@
   "class": 1.2,
   "maker": "オカダ",
   "units": [
-   78
+   68
   ],
   "memo": "",
   "catalog": true,
@@ -1291,88 +1210,7 @@
   "class": 1.2,
   "maker": "甲南電機",
   "units": [
-   79
-  ],
-  "memo": "",
-  "catalog": false,
-  "values": {
-   "mass_kg": {
-    "v": null,
-    "note": "カタログなし",
-    "check": false
-   },
-   "length_mm": {
-    "v": null,
-    "note": "カタログなし",
-    "check": false
-   },
-   "width_mm": {
-    "v": null,
-    "note": "カタログなし",
-    "check": false
-   },
-   "height_mm": {
-    "v": null,
-    "note": "カタログなし",
-    "check": false
-   },
-   "open_mm": {
-    "v": null,
-    "note": "カタログなし",
-    "check": false
-   },
-   "force_kn": {
-    "v": null,
-    "note": "カタログなし",
-    "check": false
-   },
-   "blows_per_min": {
-    "v": null,
-    "note": "カタログなし",
-    "check": false
-   },
-   "chisel_mm": {
-    "v": null,
-    "note": "カタログなし",
-    "check": false
-   },
-   "base_t": {
-    "v": null,
-    "note": "カタログなし",
-    "check": false
-   },
-   "oil_lpm": {
-    "v": null,
-    "note": "カタログなし",
-    "check": false
-   },
-   "pressure_mpa": {
-    "v": null,
-    "note": "カタログなし",
-    "check": false
-   },
-   "rotation": {
-    "v": null,
-    "note": "カタログなし",
-    "check": false
-   },
-   "pipes": {
-    "v": null,
-    "note": "カタログなし",
-    "check": false
-   }
-  },
-  "source": [],
-  "images": []
- },
- {
-  "id": "mr1300",
-  "name": "MR1300",
-  "kind": "圧砕",
-  "class": 0.7,
-  "maker": "オオスミ",
-  "units": [
-   11
+   70
   ],
   "memo": "",
   "catalog": false,
@@ -1453,7 +1291,7 @@
   "class": 0.7,
   "maker": "ニューマチック",
   "units": [
-   12
+   10
   ],
   "memo": "",
   "catalog": true,
@@ -1548,8 +1386,8 @@
   "class": 0.7,
   "maker": "ニューマチック",
   "units": [
-   12,
-   13
+   11,
+   12
   ],
   "memo": "",
   "catalog": true,
@@ -1645,7 +1483,7 @@
   "class": 0.7,
   "maker": "タグチ工業",
   "units": [
-   15
+   13
   ],
   "memo": "",
   "catalog": false,
@@ -1726,7 +1564,7 @@
   "class": 0.7,
   "maker": "タグチ工業",
   "units": [
-   16
+   15
   ],
   "memo": "",
   "catalog": false,
@@ -1807,7 +1645,7 @@
   "class": 0.7,
   "maker": "オカダ",
   "units": [
-   17
+   14
   ],
   "memo": "",
   "catalog": true,
@@ -1900,12 +1738,10 @@
   "class": 0.7,
   "maker": "オカダ",
   "units": [
+   16,
+   17,
    18,
-   19,
-   20,
-   21,
-   22,
-   23
+   19
   ],
   "memo": "",
   "catalog": true,
@@ -1992,105 +1828,13 @@
   ]
  },
  {
-  "id": "ts-w1100v-free",
-  "name": "TS-W1100V（フリー）",
-  "kind": "圧砕",
-  "class": 0.7,
-  "maker": "オカダ",
-  "units": [
-   24
-  ],
-  "memo": "",
-  "catalog": true,
-  "values": {
-   "mass_kg": {
-    "v": 2400,
-    "note": "TS-W1100V 列（フリー旋回）。TS-WB1100V FR は 2,360",
-    "check": false
-   },
-   "length_mm": {
-    "v": 2525,
-    "note": "TS-WB1100V FRの値。TS-W1100V列は2450",
-    "check": false
-   },
-   "width_mm": {
-    "v": 1625,
-    "note": "最大全幅（TS-W1100V列も1625）",
-    "check": false
-   },
-   "height_mm": {
-    "v": null,
-    "note": "カタログに記載なし",
-    "check": false
-   },
-   "open_mm": {
-    "v": 1100,
-    "note": "最大/最小開口幅 1100/0（TS-W1100V列も同じ）",
-    "check": false
-   },
-   "force_kn": {
-    "v": 940,
-    "note": "表は「先端 破砕力」のみ（中央の記載なし）。TS-W1100V列も940",
-    "check": false
-   },
-   "blows_per_min": {
-    "v": null,
-    "note": "ブレーカではないため対象外",
-    "check": false
-   },
-   "chisel_mm": {
-    "v": null,
-    "note": "ブレーカではないため対象外",
-    "check": false
-   },
-   "base_t": {
-    "v": [
-     18,
-     25
-    ],
-    "note": "取付ショベルクラス 18〜25ton",
-    "check": false
-   },
-   "oil_lpm": {
-    "v": null,
-    "note": "カタログに記載なし",
-    "check": false
-   },
-   "pressure_mpa": {
-    "v": 30,
-    "note": "",
-    "check": false
-   },
-   "rotation": {
-    "v": "フリー",
-    "note": "FR（フリー旋回）",
-    "check": false
-   },
-   "pipes": {
-    "v": null,
-    "note": "カタログに記載なし",
-    "check": false
-   }
-  },
-  "source": [
-   {
-    "file": "TS-350・1100V.pdf",
-    "page": 1,
-    "where": "左下 TS-Wクラッシャー仕様表 TS-WB1100V FR/ARTS/HR列（FR側の数字）"
-   }
-  ],
-  "images": [
-   "img/att-d0341cbf-p1.jpg"
-  ]
- },
- {
   "id": "mr1100-8",
   "name": "MR1100-8",
   "kind": "圧砕",
   "class": 0.7,
   "maker": "オオスミ",
   "units": [
-   25
+   20
   ],
   "memo": "",
   "catalog": true,
@@ -2183,7 +1927,7 @@
   "class": 0.7,
   "maker": "フルカワ",
   "units": [
-   26
+   21
   ],
   "memo": "",
   "catalog": false,
@@ -2264,7 +2008,7 @@
   "class": 0.7,
   "maker": "オカダ",
   "units": [
-   42
+   37
   ],
   "memo": "",
   "catalog": false,
@@ -2345,8 +2089,8 @@
   "class": 0.7,
   "maker": "ニューマチック",
   "units": [
-   43,
-   44
+   36,
+   38
   ],
   "memo": "",
   "catalog": true,
@@ -2441,106 +2185,16 @@
   ]
  },
  {
-  "id": "magnum1800",
-  "name": "マグナム1800",
-  "kind": "小割",
-  "class": 0.7,
-  "maker": "サカト",
-  "units": [
-   46
-  ],
-  "memo": "",
-  "catalog": true,
-  "values": {
-   "mass_kg": {
-    "v": 1800,
-    "note": "Yシリーズ(1700Y)は1700kg",
-    "check": false
-   },
-   "length_mm": {
-    "v": 1920,
-    "note": "",
-    "check": false
-   },
-   "width_mm": {
-    "v": 530,
-    "note": "",
-    "check": false
-   },
-   "height_mm": {
-    "v": null,
-    "note": "カタログに記載なし",
-    "check": false
-   },
-   "open_mm": {
-    "v": 860,
-    "note": "",
-    "check": false
-   },
-   "force_kn": {
-    "v": 745,
-    "note": "破砕力(F.B.部) 76ton を換算",
-    "check": false
-   },
-   "blows_per_min": {
-    "v": null,
-    "note": "ブレーカ以外は対象外",
-    "check": false
-   },
-   "chisel_mm": {
-    "v": null,
-    "note": "ブレーカ以外は対象外",
-    "check": false
-   },
-   "base_t": {
-    "v": null,
-    "note": "0.7m³〜0.9m³クラス（適合ショベル）",
-    "check": false
-   },
-   "oil_lpm": {
-    "v": null,
-    "note": "カタログに記載なし",
-    "check": false
-   },
-   "pressure_mpa": {
-    "v": 31.4,
-    "note": "使用圧力 31.4MPa(320kgf/cm²)",
-    "check": false
-   },
-   "rotation": {
-    "v": null,
-    "note": "カタログで判断できない",
-    "check": false
-   },
-   "pipes": {
-    "v": null,
-    "note": "カタログに記載なし",
-    "check": false
-   }
-  },
-  "source": [
-   {
-    "file": "マグナム1400（坂戸小割0.7）.pdf",
-    "page": 1,
-    "where": "パクラ・マグナムシリーズ仕様 MAGNUM 1800 欄"
-   }
-  ],
-  "images": [
-   "img/att-0c58bef3-p1.jpg"
-  ]
- },
- {
   "id": "magnum1650",
   "name": "マグナム1650",
   "kind": "小割",
   "class": 0.7,
   "maker": "サカト",
   "units": [
-   49,
-   50,
-   51,
-   52,
-   53
+   42,
+   43,
+   44,
+   45
   ],
   "memo": "",
   "catalog": false,
@@ -2621,7 +2275,7 @@
   "class": 0.7,
   "maker": "サカト",
   "units": [
-   52
+   46
   ],
   "memo": "",
   "catalog": true,
@@ -2710,7 +2364,7 @@
   "class": 0.7,
   "maker": "オカダ",
   "units": [
-   55
+   47
   ],
   "memo": "",
   "catalog": false,
@@ -2791,9 +2445,9 @@
   "class": 0.7,
   "maker": "オカダ",
   "units": [
-   56,
-   57,
-   58
+   48,
+   49,
+   50
   ],
   "memo": "",
   "catalog": true,
@@ -2891,7 +2545,7 @@
   "class": 0.7,
   "maker": "オカダ",
   "units": [
-   59
+   51
   ],
   "memo": "",
   "catalog": true,
@@ -2980,7 +2634,7 @@
   "class": 0.7,
   "maker": "オカダ",
   "units": [
-   70
+   61
   ],
   "memo": "",
   "catalog": true,
@@ -3069,8 +2723,8 @@
   "class": 0.7,
   "maker": "オカダ",
   "units": [
-   71,
-   72
+   62,
+   63
   ],
   "memo": "",
   "catalog": true,
@@ -3168,7 +2822,7 @@
   "class": 0.7,
   "maker": "サカト",
   "units": [
-   73
+   64
   ],
   "memo": "",
   "catalog": false,
@@ -3249,7 +2903,7 @@
   "class": 0.7,
   "maker": "サカト",
   "units": [
-   74
+   65
   ],
   "memo": "",
   "catalog": false,
@@ -3330,7 +2984,7 @@
   "class": 0.7,
   "maker": "オカダ",
   "units": [
-   80
+   72
   ],
   "memo": "",
   "catalog": true,
@@ -3431,7 +3085,7 @@
   "class": 0.7,
   "maker": "オカダ",
   "units": [
-   81
+   71
   ],
   "memo": "",
   "catalog": true,
@@ -3532,7 +3186,7 @@
   "class": 0.7,
   "maker": "甲南電機",
   "units": [
-   82
+   73
   ],
   "memo": "",
   "catalog": false,
@@ -3613,7 +3267,7 @@
   "class": 0.7,
   "maker": "ニューマチック",
   "units": [
-   83
+   74
   ],
   "memo": "",
   "catalog": true,
@@ -3714,7 +3368,7 @@
   "class": 0.45,
   "maker": "フルカワ",
   "units": [
-   27
+   22
   ],
   "memo": "",
   "catalog": true,
@@ -3806,7 +3460,7 @@
   "class": 0.45,
   "maker": "フルカワ",
   "units": [
-   28
+   23
   ],
   "memo": "",
   "catalog": false,
@@ -3887,7 +3541,7 @@
   "class": 0.45,
   "maker": "フルカワ",
   "units": [
-   29
+   24
   ],
   "memo": "",
   "catalog": false,
@@ -3968,7 +3622,7 @@
   "class": 0.45,
   "maker": "オカダ",
   "units": [
-   30
+   25
   ],
   "memo": "",
   "catalog": true,
@@ -4066,7 +3720,7 @@
   "class": 0.45,
   "maker": "オカダ",
   "units": [
-   31
+   26
   ],
   "memo": "",
   "catalog": true,
@@ -4158,112 +3812,13 @@
   ]
  },
  {
-  "id": "ts-wb950v-f",
-  "name": "TS-WB950V-F",
-  "kind": "圧砕",
-  "class": 0.45,
-  "maker": "オカダ",
-  "units": [
-   32
-  ],
-  "memo": "",
-  "catalog": true,
-  "caution": "カタログに同じ名前が無いため、TS-W950V FR の数字です",
-  "values": {
-   "mass_kg": {
-    "v": 1400,
-    "note": "両カタログとも1,400（TS-350・1100V.pdfのFR/ARTS/HR = 1400/1630/1630 のFR）",
-    "check": false
-   },
-   "length_mm": {
-    "v": 2052,
-    "note": "TS-W950V.pdfの仕様表は「全高 2,052」と表記。別カタログ（TS-350・1100V.pdf）のFRは全長2050。同じ寸法とみて大きい方を全長に入れた",
-    "check": false
-   },
-   "width_mm": {
-    "v": 1395,
-    "note": "別カタログ（TS-350・1100V.pdf）1395。TS-W950V.pdfは1,394",
-    "check": false
-   },
-   "height_mm": {
-    "v": null,
-    "note": "TS-W950V.pdfの「全高2,052」は全長と同じ寸法とみて全長に入れた",
-    "check": false
-   },
-   "open_mm": {
-    "v": 950,
-    "note": "別カタログ（TS-350・1100V.pdf）950/0。TS-W950V.pdfは930/0",
-    "check": false
-   },
-   "force_kn": {
-    "v": 605,
-    "note": "両カタログとも605kN（TS-350・1100V.pdfは「先端 破砕力」表記）",
-    "check": false
-   },
-   "blows_per_min": {
-    "v": null,
-    "note": "ブレーカではないため対象外",
-    "check": false
-   },
-   "chisel_mm": {
-    "v": null,
-    "note": "ブレーカではないため対象外",
-    "check": false
-   },
-   "base_t": {
-    "v": [
-     12,
-     20
-    ],
-    "note": "取付ショベル 12〜20ton（TS-W950V.pdfでは「ロング」と注記）。別カタログ FR 12〜20 / ARTS・HR 16〜20",
-    "check": false
-   },
-   "oil_lpm": {
-    "v": null,
-    "note": "カタログに記載なし",
-    "check": false
-   },
-   "pressure_mpa": {
-    "v": 32,
-    "note": "TS-W950V.pdf 32MPa。別カタログ（TS-350・1100V.pdf）は30",
-    "check": false
-   },
-   "rotation": {
-    "v": "フリー",
-    "note": "TS-W950V FR（フリー旋回）。カタログにTS-WB950V-Fの名前は無い",
-    "check": false
-   },
-   "pipes": {
-    "v": null,
-    "note": "カタログに記載なし",
-    "check": false
-   }
-  },
-  "source": [
-   {
-    "file": "TS-350・1100V.pdf",
-    "page": 1,
-    "where": "左下 TS-Wクラッシャー仕様表 TS-W950V FR/ARTS/HR列（FR側の数字）"
-   },
-   {
-    "file": "TS-W950V.pdf",
-    "page": 2,
-    "where": "TS-W950V 仕様表"
-   }
-  ],
-  "images": [
-   "img/att-d0341cbf-p1.jpg",
-   "img/att-a8ce9b9f-p2.jpg"
-  ]
- },
- {
   "id": "mr900",
   "name": "MR900",
   "kind": "圧砕",
   "class": 0.45,
   "maker": "オオスミ",
   "units": [
-   33
+   27
   ],
   "memo": "",
   "catalog": true,
@@ -4355,7 +3910,7 @@
   "class": 0.45,
   "maker": "コマツ",
   "units": [
-   34
+   28
   ],
   "memo": "",
   "catalog": false,
@@ -4436,7 +3991,7 @@
   "class": 0.45,
   "maker": "ニューマチック",
   "units": [
-   45
+   39
   ],
   "memo": "",
   "catalog": true,
@@ -4528,9 +4083,9 @@
   "class": 0.45,
   "maker": "オカダ",
   "units": [
-   60,
-   61,
-   62
+   52,
+   53,
+   54
   ],
   "memo": "",
   "catalog": true,
@@ -4622,7 +4177,7 @@
   "class": 0.45,
   "maker": "オカダ",
   "units": [
-   63
+   55
   ],
   "memo": "",
   "catalog": true,
@@ -4712,7 +4267,7 @@
   "class": 0.45,
   "maker": "フルカワ",
   "units": [
-   64
+   57
   ],
   "memo": "",
   "catalog": false,
@@ -4793,7 +4348,7 @@
   "class": 0.45,
   "maker": "サカト",
   "units": [
-   65
+   56
   ],
   "memo": "",
   "catalog": true,
@@ -4877,94 +4432,13 @@
   ]
  },
  {
-  "id": "magnum1200",
-  "name": "マグナム1200",
-  "kind": "小割",
-  "class": 0.45,
-  "maker": "サカト",
-  "units": [
-   66
-  ],
-  "memo": "",
-  "catalog": false,
-  "values": {
-   "mass_kg": {
-    "v": null,
-    "note": "カタログなし",
-    "check": false
-   },
-   "length_mm": {
-    "v": null,
-    "note": "カタログなし",
-    "check": false
-   },
-   "width_mm": {
-    "v": null,
-    "note": "カタログなし",
-    "check": false
-   },
-   "height_mm": {
-    "v": null,
-    "note": "カタログなし",
-    "check": false
-   },
-   "open_mm": {
-    "v": null,
-    "note": "カタログなし",
-    "check": false
-   },
-   "force_kn": {
-    "v": null,
-    "note": "カタログなし",
-    "check": false
-   },
-   "blows_per_min": {
-    "v": null,
-    "note": "カタログなし",
-    "check": false
-   },
-   "chisel_mm": {
-    "v": null,
-    "note": "カタログなし",
-    "check": false
-   },
-   "base_t": {
-    "v": null,
-    "note": "カタログなし",
-    "check": false
-   },
-   "oil_lpm": {
-    "v": null,
-    "note": "カタログなし",
-    "check": false
-   },
-   "pressure_mpa": {
-    "v": null,
-    "note": "カタログなし",
-    "check": false
-   },
-   "rotation": {
-    "v": null,
-    "note": "カタログなし",
-    "check": false
-   },
-   "pipes": {
-    "v": null,
-    "note": "カタログなし",
-    "check": false
-   }
-  },
-  "source": [],
-  "images": []
- },
- {
   "id": "fe350-g",
   "name": "FE350-G",
   "kind": "カッター",
   "class": 0.45,
   "maker": "オオスミ",
   "units": [
-   75
+   67
   ],
   "memo": "0.25と0.45兼用機",
   "catalog": true,
@@ -5057,7 +4531,7 @@
   "class": 0.45,
   "maker": "オカダ",
   "units": [
-   76
+   66
   ],
   "memo": "",
   "catalog": true,
@@ -5153,7 +4627,7 @@
   "class": 0.45,
   "maker": "ニューマチック",
   "units": [
-   84
+   75
   ],
   "memo": "",
   "catalog": true,
@@ -5260,7 +4734,7 @@
   "class": 0.45,
   "maker": "甲南電機",
   "units": [
-   85
+   76
   ],
   "memo": "",
   "catalog": true,
@@ -5362,88 +4836,7 @@
   "class": 0.45,
   "maker": "飯田鐵工",
   "units": [
-   90
-  ],
-  "memo": "",
-  "catalog": false,
-  "values": {
-   "mass_kg": {
-    "v": null,
-    "note": "カタログなし",
-    "check": false
-   },
-   "length_mm": {
-    "v": null,
-    "note": "カタログなし",
-    "check": false
-   },
-   "width_mm": {
-    "v": null,
-    "note": "カタログなし",
-    "check": false
-   },
-   "height_mm": {
-    "v": null,
-    "note": "カタログなし",
-    "check": false
-   },
-   "open_mm": {
-    "v": null,
-    "note": "カタログなし",
-    "check": false
-   },
-   "force_kn": {
-    "v": null,
-    "note": "カタログなし",
-    "check": false
-   },
-   "blows_per_min": {
-    "v": null,
-    "note": "カタログなし",
-    "check": false
-   },
-   "chisel_mm": {
-    "v": null,
-    "note": "カタログなし",
-    "check": false
-   },
-   "base_t": {
-    "v": null,
-    "note": "カタログなし",
-    "check": false
-   },
-   "oil_lpm": {
-    "v": null,
-    "note": "カタログなし",
-    "check": false
-   },
-   "pressure_mpa": {
-    "v": null,
-    "note": "カタログなし",
-    "check": false
-   },
-   "rotation": {
-    "v": null,
-    "note": "カタログなし",
-    "check": false
-   },
-   "pipes": {
-    "v": null,
-    "note": "カタログなし",
-    "check": false
-   }
-  },
-  "source": [],
-  "images": []
- },
- {
-  "id": "ironclaw500",
-  "name": "アイアンクロー500",
-  "kind": "つかみ",
-  "class": 0.45,
-  "maker": "飯田鐵工",
-  "units": [
-   91
+   81
   ],
   "memo": "",
   "catalog": false,
@@ -5524,7 +4917,7 @@
   "class": 0.45,
   "maker": "タグチ工業",
   "units": [
-   92
+   82
   ],
   "memo": "",
   "catalog": true,
@@ -5622,7 +5015,7 @@
   "class": 0.45,
   "maker": "オカダ",
   "units": [
-   101
+   90
   ],
   "memo": "",
   "catalog": false,
@@ -5703,8 +5096,8 @@
   "class": 0.25,
   "maker": "オカダ",
   "units": [
-   35,
-   36
+   29,
+   30
   ],
   "memo": "",
   "catalog": true,
@@ -5797,7 +5190,7 @@
   "class": 0.25,
   "maker": "オカダ",
   "units": [
-   37
+   31
   ],
   "memo": "",
   "catalog": false,
@@ -5878,7 +5271,7 @@
   "class": 0.25,
   "maker": "オオスミ",
   "units": [
-   38
+   32
   ],
   "memo": "",
   "catalog": true,
@@ -5970,7 +5363,7 @@
   "class": 0.25,
   "maker": "ニューマチック",
   "units": [
-   39
+   33
   ],
   "memo": "",
   "catalog": true,
@@ -6071,7 +5464,7 @@
   "class": 0.25,
   "maker": "サカト",
   "units": [
-   67
+   59
   ],
   "memo": "",
   "catalog": true,
@@ -6160,7 +5553,7 @@
   "class": 0.25,
   "maker": "オカダ",
   "units": [
-   68
+   58
   ],
   "memo": "",
   "catalog": true,
@@ -6250,7 +5643,7 @@
   "class": 0.25,
   "maker": "ニューマチック",
   "units": [
-   69
+   60
   ],
   "memo": "",
   "catalog": true,
@@ -6345,7 +5738,7 @@
   "class": 0.25,
   "maker": "フルカワ",
   "units": [
-   86
+   78
   ],
   "memo": "",
   "catalog": true,
@@ -6452,7 +5845,7 @@
   "class": 0.25,
   "maker": "甲南電機",
   "units": [
-   87
+   77
   ],
   "memo": "",
   "catalog": true,
@@ -6553,8 +5946,8 @@
   "class": 0.25,
   "maker": "タグチ工業",
   "units": [
-   93,
-   94
+   83,
+   84
   ],
   "memo": "",
   "catalog": true,
@@ -6646,9 +6039,7 @@
   "class": 0.25,
   "maker": "飯田鐵工",
   "units": [
-   94,
-   95,
-   95
+   85
   ],
   "memo": "",
   "catalog": false,
@@ -6729,7 +6120,7 @@
   "class": 0.25,
   "maker": "オオスミ",
   "units": [
-   102
+   89
   ],
   "memo": "",
   "catalog": false,
@@ -6810,7 +6201,7 @@
   "class": 0.25,
   "maker": "オオスミ",
   "units": [
-   103
+   91
   ],
   "memo": "",
   "catalog": false,
@@ -6891,7 +6282,7 @@
   "class": 0.1,
   "maker": "オカダ",
   "units": [
-   40
+   34
   ],
   "memo": "",
   "catalog": true,
@@ -6984,7 +6375,7 @@
   "class": 0.1,
   "maker": "オオスミ",
   "units": [
-   77
+   69
   ],
   "memo": "",
   "catalog": true,
@@ -7076,7 +6467,7 @@
   "class": 0.1,
   "maker": "甲南電機",
   "units": [
-   88
+   79
   ],
   "memo": "",
   "catalog": true,
@@ -7178,7 +6569,7 @@
   "class": 0.1,
   "maker": "フルカワ",
   "units": [
-   89
+   80
   ],
   "memo": "",
   "catalog": true,
@@ -7285,7 +6676,7 @@
   "class": 0.1,
   "maker": "タグチ工業",
   "units": [
-   98
+   86
   ],
   "memo": "",
   "catalog": false,
@@ -7366,7 +6757,7 @@
   "class": 0.1,
   "maker": "タグチ工業",
   "units": [
-   99
+   88
   ],
   "memo": "",
   "catalog": true,
@@ -7458,7 +6849,7 @@
   "class": 0.1,
   "maker": "飯田鐵工",
   "units": [
-   100
+   87
   ],
   "memo": "",
   "catalog": false,

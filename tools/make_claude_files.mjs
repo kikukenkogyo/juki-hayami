@@ -33,7 +33,7 @@ writeCsv("重機一覧.csv",
 const AK = ["mass_kg", "length_mm", "width_mm", "height_mm", "open_mm", "force_kn", "blows_per_min", "chisel_mm", "base_t", "oil_lpm", "pressure_mpa"];
 writeCsv("アタッチメント一覧.csv",
   ["機種名", "種類", "クラス(㎥)", "メーカー", "保有台数", "管理番号", "重さ(kg)", "全長(mm)", "全幅(mm)", "全高(mm)", "最大開口幅(mm)", "破砕力・切断力(kN)", "打撃数(回/分)", "チゼル径(mm)", "適合ベースマシン(t)", "必要油量(L/min)", "使用圧力(MPa)", "カタログ", "備考", "数字の注記"],
-  att.map((a) => [a.name, a.kind, a.class, a.maker, a.units.length, a.units.join("・"), ...AK.map((k) => v(a.values[k])),
+  att.map((a) => [a.name, a.kind, a.class, a.maker, a.units.length, a.units.map((u) => "A-" + String(u).padStart(3, "0")).join("・"), ...AK.map((k) => v(a.values[k])),
     a.catalog ? "あり" : "なし", [a.memo, a.caution].filter(Boolean).join(" / "), notes(a.values, AK)]));
 
 console.log(`作りました: ${out}（重機${juki.length}台・アタッチメント${att.length}機種）`);

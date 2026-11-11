@@ -1,7 +1,8 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { jukiLocations, attLocations } from "../tools/locations.mjs";
-import { isFree, jukiPlace, matchAttPlaces, placeSummary } from "../lib.js";
+import fs from "node:fs";
+import { isFree, jukiPlace, attPlaces, placeSummary } from "../lib.js";
 
 const sel = (name) => ({ type: "select", select: name ? { name } : null });
 const num = (n) => ({ type: "number", number: n });
@@ -58,17 +59,22 @@ test("jukiPlace: 番号で引く、番号なし・所在なしは null", () => {
   assert.equal(jukiPlace({ no: null }, locs), null);
   assert.equal(jukiPlace({ no: 1 }, null), null);
 });
-test("matchAttPlaces: 名前でつなぐ（（）の中まで同じ→（）を外して）、①②は外す、取り合いは shared", () => {
-  const atts = [
-    { id: "a", name: "SV-24XR（5本配管）" }, { id: "b", name: "SV24" },
-    { id: "c", name: "TS-W950V（シリンダーカバーなし）" }, { id: "d", name: "TS-W950V" }, { id: "e", name: "MR1800" },
-  ];
-  const m = matchAttPlaces(atts, locs);
-  assert.deepEqual(m.get("a"), [{ code: "A-010", loc: "工場", shared: false }]);
-  assert.deepEqual(m.get("b").map((r) => r.loc), ["奥沢中", "工場"]);
-  assert.deepEqual(m.get("c").map((r) => [r.code, r.shared]), [["A-025", true], ["A-026", true]]);
-  assert.deepEqual(m.get("d").map((r) => r.code), ["A-025", "A-026"]);
-  assert.deepEqual(m.get("e"), []);
+test("attPlaces: Notion の番号（A-001→1）でつなぎ、名前も確かめる", () => {
+  assert.deepEqual(attPlaces({ name: "SV-24XR（5本配管）", units: [10] }, locs), [{ code: "A-010", loc: "工場" }]);
+  assert.deepEqual(attPlaces({ name: "SV24", units: [11, 12] }, locs).map((p) => p.loc), ["奥沢中", "工場"]);
+  // ①② と（）は外して比べる
+  assert.deepEqual(attPlaces({ name: "TS-W950V（シリンダーカバーなし）", units: [25] }, locs), [{ code: "A-025", loc: "工場" }]);
+  assert.deepEqual(attPlaces({ name: "TS-W950V", units: [26] }, locs), [{ code: "A-026", loc: null }]);
+  // 番号が振り直されて別の台になっていたら、所在は出さない
+  assert.deepEqual(attPlaces({ name: "MR900", units: [11] }, locs), [{ code: "A-011", loc: null, mismatch: "SV24" }]);
+  assert.deepEqual(attPlaces({ name: "MR900", units: [99] }, locs), [{ code: "A-099", loc: null, missing: true }]);
+  assert.deepEqual(attPlaces({ name: "SV24", units: [11] }, null), [{ code: "A-011", loc: null, missing: true }]);
+});
+test("実データ: att.json の名前と管理番号の形", () => {
+  const atts = JSON.parse(fs.readFileSync("att.json", "utf8"));
+  const all = atts.flatMap((a) => a.units);
+  assert.equal(new Set(all).size, all.length, "管理番号の重なりがない");
+  assert.deepEqual([...all].sort((x, y) => x - y), Array.from({ length: 91 }, (_, i) => i + 1), "A-001〜A-091 が1台ずつ");
 });
 test("placeSummary", () => {
   assert.equal(placeSummary([{ loc: "工場" }]), "工場");
