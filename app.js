@@ -281,6 +281,34 @@ function route() {
   }
 }
 
+// カタログのページは、アプリの中の重ね画面で開く（ホーム画面から開いたアプリには戻るボタンが無く、
+// 画像そのものへ飛ぶと戻れなくなるため。2026-11-11）。画像を押すと拡大／元に戻す、「✕ 閉じる」で詳細に戻る
+let viewerOpen = false;
+function openViewer(src) {
+  let v = $("viewer");
+  if (!v) {
+    v = document.createElement("div");
+    v.id = "viewer";
+    v.innerHTML = `<div class="vbar"><button type="button" class="back">✕ 閉じる</button><small>画像を押すと拡大</small></div><div class="vbody"><img alt="カタログのページ"></div>`;
+    document.body.append(v);
+    v.querySelector("button").addEventListener("click", () => history.back());
+    v.querySelector("img").addEventListener("click", (e) => e.currentTarget.classList.toggle("zoom"));
+  }
+  const img = v.querySelector("img");
+  img.classList.remove("zoom");
+  img.src = src;
+  v.hidden = false;
+  document.body.classList.add("noscroll");
+  viewerOpen = true;
+  history.pushState({ viewer: true }, ""); // 戻る操作（Android の戻る・ブラウザの戻る）でも閉じる
+}
+function closeViewer() {
+  if (!viewerOpen) return;
+  viewerOpen = false;
+  $("viewer").hidden = true;
+  document.body.classList.remove("noscroll");
+}
+
 function setup() {
   $("classes").innerHTML = CLASSES.map((c) => `<button type="button" data-c="${c}" aria-pressed="false">${c}</button>`).join("");
   $("classes").addEventListener("click", (e) => {
@@ -317,6 +345,13 @@ function setup() {
     renderList();
   });
   $("list").addEventListener("click", (e) => { if (e.target.closest(".card")) cameFromList = true; });
+  $("detailBody").addEventListener("click", (e) => {
+    const a = e.target.closest(".pages a");
+    if (!a) return;
+    e.preventDefault();
+    openViewer(a.getAttribute("href"));
+  });
+  window.addEventListener("popstate", closeViewer);
   $("back").addEventListener("click", () => {
     if (cameFromList) { cameFromList = false; history.back(); } else location.hash = tab === "att" ? "#att" : "";
   });

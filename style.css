@@ -147,3 +147,12 @@ dd.warn { color: var(--warn); }
 .state.ok, .state-dd.ok { color: var(--ok); }
 .state.warn, .state-dd.warn { color: var(--tight); }
 .state.ng, .state.repair, .state-dd.ng, .state-dd.repair { color: var(--ng); }
+
+/* カタログのページを開く重ね画面（2026-11-11〜） */
+body.noscroll { overflow: hidden; }
+#viewer { position: fixed; inset: 0; z-index: 10; display: flex; flex-direction: column; background: var(--bg); }
+#viewer .vbar { display: flex; align-items: center; gap: 12px; padding: calc(8px + env(safe-area-inset-top)) 16px 8px; border-bottom: 1px solid var(--line); }
+#viewer .vbar small { color: var(--sub); }
+#viewer .vbody { flex: 1; overflow: auto; -webkit-overflow-scrolling: touch; padding: 8px; }
+#viewer img { display: block; width: 100%; background: #fff; border-radius: 8px; }
+#viewer img.zoom { width: 250%; max-width: none; }
