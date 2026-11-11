@@ -47,7 +47,8 @@ function stampText() {
   const t = `${d.getMonth() + 1}/${d.getDate()} ${d.getHours()}:${String(d.getMinutes()).padStart(2, "0")}`;
   return `所在は ${t} 時点（Notion）` + (Date.now() - d > 2 * 3600e3 ? "・古いかもしれません" : "");
 }
-const placeTag = (loc) => (loc ? `<span class="place${isFree(loc) ? " free" : ""}">📍${esc(loc)}</span>` : "");
+// 所在は現場でも置き場でも緑の字（2026-11-11 酒井さん: 灰色は見づらい）
+const placeTag = (loc) => (loc ? `<span class="place free">📍${esc(loc)}</span>` : "");
 
 // 何か入っているのに数字として読めない欄は赤枠にして、条件が効いていないことを知らせる
 function limit(id, parse) {
