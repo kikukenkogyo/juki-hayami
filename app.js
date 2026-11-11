@@ -156,7 +156,7 @@ function attCard(a) {
   return `<a class="card" href="#att/${a.id}">
     <div class="top"><span class="name">${esc(a.name)}</span>
     <span class="spec">${esc(a.maker)}・${a.class}㎥・${esc(a.kind)}・保有${a.units.length}台</span>${a.caution ? `<span class="ref">※参考値</span>` : ""}</div>
-    ${locs ? `<span class="place">📍${esc(attPlaceText(a))}</span>` : ""}<div class="nums">${n("mass_kg", "重量")}${a.kind === "ブレーカ" ? n("chisel_mm", "チゼル径") : n("open_mm", "開口幅")}${n("base_t", "適合")}</div></a>`;
+    ${locs ? `<span class="place free">📍${esc(attPlaceText(a))}</span>` : ""}<div class="nums">${n("mass_kg", "重量")}${a.kind === "ブレーカ" ? n("chisel_mm", "チゼル径") : n("open_mm", "開口幅")}${n("base_t", "適合")}</div></a>`;
 }
 
 function renderAttList() {
