@@ -1,4 +1,4 @@
-import { filterMachines, sortMachines, parseLength, parseMass, judgeMachine, formatValue, detailNote, KINDS, filterAtts, sortAtts, formatAttValue, CLASSES, attFit, fitText, isFree, jukiPlace, attPlaces, placeSummary } from "./lib.js";
+import { filterMachines, sortMachines, parseLength, parseMass, judgeMachine, formatValue, detailNote, KINDS, filterAtts, sortAtts, formatAttValue, CLASSES, attFit, fitText, isFree, jukiPlace, attPlaces, placeSummary, jukiState, attStateSummary, STATE_MARK } from "./lib.js";
 
 const SECTIONS = [
   ["本体", [["mass_t", "運転質量"], ["width_mm", "全幅"], ["height_mm", "全高（輸送時）"], ["length_mm", "全長（輸送時）"],
@@ -49,6 +49,10 @@ function stampText() {
 }
 // 所在は現場でも置き場でも緑の字（2026-11-11 酒井さん: 灰色は見づらい）
 const placeTag = (loc) => (loc ? `<span class="place free">📍${esc(loc)}</span>` : "");
+// 使えるかどうか（Notion の状態をそのまま）。🟢正常 / 🟡不良 / 🔴故障 / 🔧修理中
+const stateTag = (level, text, detail = "") => (level
+  ? `<span class="state ${level}">${STATE_MARK[level]} ${esc(text)}${detail ? `<small>（${esc(detail)}）</small>` : ""}</span>` : "");
+const jukiStateTag = (m) => { const s = jukiState(m, locs); return s ? stateTag(s.level, s.label, s.level === "ok" ? "" : s.detail) : ""; };
 
 // 何か入っているのに数字として読めない欄は赤枠にして、条件が効いていないことを知らせる
 function limit(id, parse) {
@@ -87,7 +91,7 @@ function card(m, j = null) {
   return `<a class="card" href="${hashOf(m)}">
     <div class="top"><span class="no">${label(m)}</span><span class="name">${esc(m.name)}</span>
     <span class="spec">${m.class}㎥・${esc(m.spec)}</span>${m.caution ? `<span class="ref">⚠参考値</span>` : ""}</div>
-    ${placeTag(jukiPlace(m, locs))}${judge}<div class="nums">${n("width_mm", "全幅")}${n("height_mm", "全高")}${n("mass_t", "重量")}</div></a>`;
+    <div class="where">${placeTag(jukiPlace(m, locs))}${jukiStateTag(m)}</div>${judge}<div class="nums">${n("width_mm", "全幅")}${n("height_mm", "全高")}${n("mass_t", "重量")}</div></a>`;
 }
 
 // 現場条件を入れたら、全台に ○△？× を付けて ○→△→？→× の順に並べる（×はたたむ）
@@ -139,7 +143,11 @@ function renderDetail(m) {
     <div class="dhead"><span class="no">${label(m)}</span> <span class="name">${esc(m.name)}</span>
       <div class="spec">${esc(m.maker)}・${m.class}㎥・${esc(m.spec)}</div></div>
     ${m.caution ? `<p class="caution">${esc(m.caution)}</p>` : ""}
-    ${locs ? `<h2 class="sec">今の所在</h2><dl><div><dt>所在</dt><dd>${esc(jukiPlace(m, locs) ?? "Notionに記録なし")}<small>${esc(stampText())}</small></dd></div></dl>` : ""}
+    ${locs ? (() => {
+      const st = jukiState(m, locs);
+      return `<h2 class="sec">今の所在・状態</h2><dl><div><dt>所在</dt><dd>${esc(jukiPlace(m, locs) ?? "Notionに記録なし")}<small>${esc(stampText())}</small></dd></div>${
+        st ? `<div><dt>使えるか</dt><dd class="state-dd ${st.level}">${STATE_MARK[st.level]} ${esc(st.label)}${st.detail ? `<small>${esc(st.detail)}</small>` : ""}</dd></div>` : ""}</dl>`;
+    })() : ""}
     ${secs}${pages}
     ${src ? `<p class="src">出典: ${src}</p>` : ""}
     <a class="jump" href="#att/fit/${m.no}">この重機に付くアタッチメント（${esc(fitText(attFit(m)))}） →</a>`;
@@ -148,7 +156,7 @@ function renderDetail(m) {
 // ---- アタッチメント ----
 // 管理番号は Notion と同じ A-001 の形で出す（所在が読めていれば台ごとに所在も）
 const unitNos = (a) => (locs
-  ? attPlaces(a, locs).map((p) => `${p.code}（${placeNote(p)}）`)
+  ? attPlaces(a, locs).map((p) => `${p.code}（${placeNote(p)}${p.state ? `・${STATE_MARK[p.state.level]}${p.state.label}${p.state.level !== "ok" && p.state.detail ? "：" + p.state.detail : ""}` : ""}）`)
   : a.units.map((u) => "A-" + String(u).padStart(3, "0"))).join("・");
 
 function attCard(a) {
@@ -157,7 +165,8 @@ function attCard(a) {
   return `<a class="card" href="#att/${a.id}">
     <div class="top"><span class="name">${esc(a.name)}</span>
     <span class="spec">${esc(a.maker)}・${a.class}㎥・${esc(a.kind)}・保有${a.units.length}台</span>${a.caution ? `<span class="ref">※参考値</span>` : ""}</div>
-    ${locs ? `<span class="place free">📍${esc(attPlaceText(a))}</span>` : ""}<div class="nums">${n("mass_kg", "重量")}${a.kind === "ブレーカ" ? n("chisel_mm", "チゼル径") : n("open_mm", "開口幅")}${n("base_t", "適合")}</div></a>`;
+    ${locs ? `<div class="where"><span class="place free">📍${esc(attPlaceText(a))}</span>${
+      (() => { const s = attStateSummary(attPlaces(a, locs)); return s ? stateTag(s.level, s.text) : ""; })()}</div>` : ""}<div class="nums">${n("mass_kg", "重量")}${a.kind === "ブレーカ" ? n("chisel_mm", "チゼル径") : n("open_mm", "開口幅")}${n("base_t", "適合")}</div></a>`;
 }
 
 function renderAttList() {

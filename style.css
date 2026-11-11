@@ -139,3 +139,11 @@ dd.warn { color: var(--warn); }
 .limits label.free input { width: 22px; height: 22px; }
 .stamp { font-size: 12px; }
 .stamp:empty { display: none; }
+
+/* 使えるかどうか（Notion の状態。2026-11-11〜） */
+.where { display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 12px; }
+.state { display: inline-block; margin-top: 4px; font-size: 14px; font-weight: 700; }
+.state small { font-weight: 600; font-size: 12px; }
+.state.ok, .state-dd.ok { color: var(--ok); }
+.state.warn, .state-dd.warn { color: var(--tight); }
+.state.ng, .state.repair, .state-dd.ng, .state-dd.repair { color: var(--ng); }

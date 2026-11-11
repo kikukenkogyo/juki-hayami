@@ -117,8 +117,43 @@ export function attPlaces(a, locs) {
     const code = "A-" + String(no).padStart(3, "0");
     if (!r) return { code, loc: null, missing: true };
     if (!sameName(a.name, r.name)) return { code, loc: null, mismatch: r.name };
-    return { code, loc: r.loc };
+    // 状態の入っていない locations.json（2026-11-11 より前の形）なら状態は出さない
+    return { code, loc: r.loc, ...(r.state !== undefined ? { state: readState(r.state, r.last, r.trouble) } : {}) };
   });
+}
+
+// ---- 使えるかどうか（Notion の故障報告から出す数式をそのまま使う。2026-11-11〜） ----
+// 重機は「現在状態」、アタッチメントは「状態」: 🟢正常 / 🟡不良 / 🔴故障 / 🔧修理中。報告が1つも無い台は正常
+// detail は最新の報告区分（要観察（使用可）・修理依頼中など）と、修理予定・故障内容
+const unmark = (s) => String(s ?? "").replace(/[\p{Extended_Pictographic}\p{Variation_Selector}\p{Join_Control}]/gu, "").replace(/\s+/g, " ").trim();
+const LEVELS = { 正常: "ok", 不良: "warn", 故障: "ng", 修理中: "repair" };
+export const STATE_MARK = { ok: "🟢", warn: "🟡", ng: "🔴", repair: "🔧" };
+
+export function readState(state, last, ...more) {
+  const word = unmark(state);
+  if (!word) return { level: "ok", label: "正常", detail: "故障報告なし" };
+  const lastWord = unmark(last);
+  // 「故障」と「故障（使用不可）」のように同じ言葉で始まるなら、くわしい方を名前にする
+  const label = lastWord.startsWith(word) ? lastWord : word;
+  // 正常なら、直った昔の故障内容までは出さない
+  const detail = [lastWord !== label ? lastWord : "", ...(word === "正常" ? [] : more.map(unmark))].filter(Boolean).join("・");
+  return { level: LEVELS[word] ?? "warn", label, detail };
+}
+
+export function jukiState(m, locs) {
+  if (!locs || m.no == null) return null;
+  const s = locs.jukiState?.[m.no];
+  return s ? readState(s.state, s.last, s.plan) : readState("");
+}
+
+// アタッチメント1機種の台をまとめる: 全部正常なら「正常」、そうでなければ正常でない台だけ並べる
+export function attStateSummary(places) {
+  const st = places.filter((p) => p.state);
+  if (!st.length) return null;
+  const bad = st.filter((p) => p.state.level !== "ok");
+  if (!bad.length) return { level: "ok", text: places.length > 1 ? "全台正常" : "正常" };
+  const worst = ["repair", "ng", "warn"].find((l) => bad.some((p) => p.state.level === l));
+  return { level: worst, text: bad.map((p) => `${places.length > 1 ? p.code + " " : ""}${p.state.label}`).join("・") };
 }
 
 // 「工場2・九段南1」のようにまとめる（不明は最後）。1台なら所在だけ

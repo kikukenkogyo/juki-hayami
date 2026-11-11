@@ -1,8 +1,8 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { jukiLocations, attLocations } from "../tools/locations.mjs";
+import { jukiLocations, jukiStates, attLocations } from "../tools/locations.mjs";
 import fs from "node:fs";
-import { isFree, jukiPlace, attPlaces, placeSummary } from "../lib.js";
+import { isFree, jukiPlace, attPlaces, placeSummary, readState, jukiState, attStateSummary } from "../lib.js";
 
 const sel = (name) => ({ type: "select", select: name ? { name } : null });
 const num = (n) => ({ type: "number", number: n });
@@ -79,4 +79,39 @@ test("実データ: att.json の名前と管理番号の形", () => {
 test("placeSummary", () => {
   assert.equal(placeSummary([{ loc: "工場" }]), "工場");
   assert.equal(placeSummary([{ loc: "工場" }, { loc: null }, { loc: "工場" }, { loc: "九段南" }]), "工場2・九段南1・不明1");
+});
+
+// ---- 使えるかどうか（Notion の状態） ----
+test("jukiStates: 現在状態・最新報告区分・修理予定を取り出す（報告なしの台は入れない）", () => {
+  const pages = [
+    { properties: { 管理番号: num(2), 現在状態: fm("🟡 不良"), 最新報告区分: fm("🟡 要観察（使用可）"), 修理予定: { type: "rollup", rollup: { type: "array", array: [rt("福住現場終了後修理予定")] } } } },
+    { properties: { 管理番号: num(3), 現在状態: fm(""), 最新報告区分: fm("") } },
+  ];
+  assert.deepEqual(jukiStates(pages), { 2: { state: "🟡 不良", last: "🟡 要観察（使用可）", plan: "福住現場終了後修理予定", date: "" } });
+});
+test("readState: 絵文字を外して 正常/不良/故障/修理中 に分ける。正常なら昔の故障内容は出さない", () => {
+  assert.deepEqual(readState(""), { level: "ok", label: "正常", detail: "故障報告なし" });
+  assert.deepEqual(readState("🟡 不良", "🔵 修理依頼中", "現場完了後"), { level: "warn", label: "不良", detail: "修理依頼中・現場完了後" });
+  assert.deepEqual(readState("🔴 故障", "故障（使用不可）", "爪が破損"), { level: "ng", label: "故障（使用不可）", detail: "爪が破損" });
+  assert.deepEqual(readState("🔧 修理中", "修理中", ""), { level: "repair", label: "修理中", detail: "" });
+  assert.deepEqual(readState("🟢 正常", "復旧完了", "亀裂"), { level: "ok", label: "正常", detail: "復旧完了" });
+});
+test("jukiState: 報告の無い台は正常、所在を読めていなければ出さない", () => {
+  const l = { jukiState: { 6: { state: "🔴 故障", last: "🔴 故障（使用不可）", plan: "" } } };
+  assert.equal(jukiState({ no: 6 }, l).level, "ng");
+  assert.equal(jukiState({ no: 7 }, l).label, "正常");
+  assert.equal(jukiState({ no: 6 }, null), null);
+});
+test("attStateSummary: 全部正常なら全台正常、そうでなければ悪い台だけ", () => {
+  const p = (code, level, label) => ({ code, state: { level, label } });
+  assert.deepEqual(attStateSummary([p("A-016", "ok", "正常"), p("A-017", "ng", "故障"), p("A-018", "warn", "不良")]),
+    { level: "ng", text: "A-017 故障・A-018 不良" });
+  assert.deepEqual(attStateSummary([p("A-016", "ok", "正常"), p("A-019", "ok", "正常")]), { level: "ok", text: "全台正常" });
+  assert.deepEqual(attStateSummary([p("A-001", "repair", "修理中")]), { level: "repair", text: "修理中" });
+  assert.equal(attStateSummary([{ code: "A-001" }]), null);
+});
+test("attPlaces: 状態の入った台は state も付く", () => {
+  const l = { att: [{ code: "A-017", name: "TS-W1100V ARTS", loc: "工場", state: "🔴 故障", last: "故障（使用不可）", trouble: "爪が破損" }] };
+  assert.deepEqual(attPlaces({ name: "TS-W1100V ARTS", units: [17] }, l),
+    [{ code: "A-017", loc: "工場", state: { level: "ng", label: "故障（使用不可）", detail: "爪が破損" } }]);
 });
